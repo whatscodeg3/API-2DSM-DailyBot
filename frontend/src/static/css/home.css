@@ -8,13 +8,22 @@
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
     height: 100%;
-    
 }
+
+a {
+    text-decoration: none;
+}
+
 body::-webkit-scrollbar {
     width: 0px;               /* width of the entire scrollbar */
   }
@@ -40,6 +49,7 @@ a.diario {
     justify-content: space-between;
     width: 95%;
 }
+
 .tudo{
     width: 100%;
     height: 100%;
@@ -83,7 +93,7 @@ a.diario {
     margin-right: 15px;
 }
 
-.divscroll {
+.menu {
     width: 100%;
 }
 
@@ -105,7 +115,7 @@ a.diario {
 
 .linha2 {
     width: 0.3%;
-    height: 30%;
+    height: 60%;
     border: none;
     background-color: #F5E969;
 }
@@ -114,7 +124,7 @@ a.diario {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
+    padding-top: 20%;
     width: 100%;
 }
 
@@ -135,6 +145,7 @@ a.diario {
 
 .img-button {
     width: 30%;
+    cursor: pointer;
 }
 
 .img-robo {
@@ -175,6 +186,7 @@ a.diario {
     font-family: 'IBM Plex Sans';
     font-size: 2.5vw;
     text-align: left;
+    padding-bottom: 7%;
 }
 
 .titulo-remover {
@@ -182,29 +194,38 @@ a.diario {
     font-family: 'IBM Plex Sans';
     font-size: 2.5vw;
     text-align: right;
+    padding-bottom: 7%;
 }
 
 .cadastro-remocao {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20%;
+    padding-top: 10%;
     gap: 5%;
 }
 
-.botoes {
+.botao1 {
     width: 500px;
     height: 300px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
-#botao-remover{
-    right: 0;
+.botao2 {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-button {
+
+
+button#primeiro {
     width: 50%;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -213,6 +234,109 @@ button {
     color: white;
     background: #EA7A67;
     border: 3px solid #A92364;
-    box-shadow: 2px 4px 0px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 4px 5px 3px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    cursor: pointer;
 }
+
+button#botao-remover {
+    width: 50%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 2rem;
+    font-family: 'IBM Plex Sans';
+    color: white;
+    background: #EA7A67;
+    border: 3px solid #A92364;
+    box-shadow: -3px 4px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-option {
+    width: 80%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.txt {
+    border: none;
+    width: 100%;
+    font-size: 2rem;
+    outline: none;
+    padding-left: 1%;
+    padding-right: 2%;
+}
+
+.search-icon {
+    width: 40px;
+    margin-right: 15px;
+    margin-left: 1.5%;
+}
+
+#keyframe1 {
+    animation-duration: 3s;
+    animation-name: slidein-left;  
+}
+
+#keyframe2 {
+    animation-duration: 3s;
+    animation-name: slidein-right;  
+}
+
+#keyframe3 {
+    animation-duration: 0.8s;
+    animation-name: slidein-left;  
+}
+
+#keyframe4 {
+    animation-duration: 0.8s;
+    animation-name: slidein-right;  
+}
+
+#keyframe5 {
+    animation-duration: 4s;
+    animation-name: slidein-up;  
+}
+
+@keyframes slidein-left {
+    from {
+      margin-left: 50%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
+
+@keyframes slidein-right {
+    from {
+      margin-right: 50%;
+    }
+  
+    to {
+      margin-right: 0%;
+    }
+  }
+
+@keyframes slidein-up {
+    from {
+      margin-top: 100%;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+  }
