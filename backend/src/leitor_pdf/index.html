@@ -38,11 +38,40 @@
         });           
 
         btnRobo.addEventListener("click", () => {
-            let index1 = resultText.value.indexOf("DANIEL  FELICIANO");
-            let trecho = resultText.value.substring(index1-260, index1+120);
-            let trecho_tratado = ('...'+trecho+'...');
-            txtTratado.value = trecho_tratado;
-            
+            // let index1 = resultText.value.indexOf("DANIEL  FELICIANO");
+            // let trecho = resultText.value.substring(index1-260, index1+120);
+            // let trecho_tratado = ('...'+trecho+'...');
+            // txtTratado.value = trecho_tratado;
+
+
+
+            splitString = (stringToSplit, separator) => {
+                let arrayOfStrings = stringToSplit.split(separator);
+
+                txtTratado.value = arrayOfStrings;
+                alert(arrayOfStrings.indexOf('DANIEL'))
+                alert(arrayOfStrings[2077])
+                alert(arrayOfStrings[2078])
+
+
+
+            //     ---- PROVAVEL LOGICA PRA FAZER O ROBO RODAR ----
+            //     let indexPrimeiroNome = arrayOfStrings.indexOf({nome.inicial})
+            //     let indexSobrenome = arrayOfStrings.indexOf({nome.sobrenome})
+
+            //     if(indexPrimeiroNome+1 == indexSobrenome)
+            //         qr dizer q achou o nome e sobrenome da pessoa certa no pdf
+            //          ai segue e logica de pegar tantos index pra tras e pra frente pra retirar um trecho do texto
+                
+            }
+
+
+    
+            let texto = resultText.value;
+            texto = texto.replace(/  +/g, ' '); //tirando os double spaces do texto
+            texto = texto.replace(/, +/g, ',') // substituindo os ',   ' para somente ',' para assim não ficar duplicando na array
+            splitString(texto, ' ');
+        
         })
         </script>
 
