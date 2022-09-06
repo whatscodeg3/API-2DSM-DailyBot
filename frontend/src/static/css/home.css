@@ -134,6 +134,7 @@ a.diario {
     justify-content: center;
     align-items: end;
     padding-right: 2%;
+    overflow-y: hidden;
 }
 
 .conteudo-secundario-2 {
@@ -141,6 +142,7 @@ a.diario {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 
 .img-button {
@@ -187,6 +189,7 @@ a.diario {
     font-size: 2.5vw;
     text-align: left;
     padding-bottom: 7%;
+    overflow-y: hidden;
 }
 
 .titulo-remover {
@@ -195,6 +198,7 @@ a.diario {
     font-size: 2.5vw;
     text-align: right;
     padding-bottom: 7%;
+    overflow-y: hidden;
 }
 
 .cadastro-remocao {
@@ -213,6 +217,7 @@ a.diario {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    overflow-y: hidden;
 }
 
 .botao2 {
@@ -221,6 +226,7 @@ a.diario {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    overflow-y: hidden;
 }
 
 
@@ -237,6 +243,7 @@ button#primeiro {
     box-shadow: 3px 4px 5px 3px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     cursor: pointer;
+    overflow-y: hidden;
 }
 
 button#botao-remover {
@@ -251,6 +258,7 @@ button#botao-remover {
     box-shadow: -3px 4px 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     cursor: pointer;
+    overflow-y: hidden;
 }
 
 .search {
@@ -259,6 +267,8 @@ button#botao-remover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    overflow-y: hidden;
 }
 
 .search-option {
@@ -269,6 +279,8 @@ button#botao-remover {
     align-items: center;
     background-color: #fff;
     border-radius: 50px;
+    margin-bottom: 5%;
+    overflow-y: hidden;
 }
 
 .txt {
@@ -284,6 +296,10 @@ button#botao-remover {
     width: 40px;
     margin-right: 15px;
     margin-left: 1.5%;
+}
+
+.botoes {
+    padding-top: 4%;
 }
 
 #keyframe1 {
@@ -340,3 +356,114 @@ button#botao-remover {
       margin-top: 0%;
     }
   }
+        
+
+
+        
+        
+        /* TOGGLE BUTTON INICIO */
+        
+        
+        .switch {
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        height: 68px;
+        margin-right: 10%;
+        }
+        
+        @media only screen and (max-width: 600px) {
+        .switch{
+        width: 40px;
+        height: 24px;
+        }
+        }
+        
+        .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+        
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+        
+        .slider:before {
+        position: absolute;
+        margin: 3px;
+        content: "";
+        /* tamanho da bolinha */
+        height: 55px; 
+        width: 55px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .2s;
+        transition: .2s;
+        }
+        @media only screen and (max-width: 600px) {
+        .slider:before{
+        width: 18px;
+        height: 18px;
+        bottom:3px;
+        left:3px;
+        }
+        }
+        
+        input:checked + .slider {
+        background-color: #F5E969;
+        }
+        
+        input:focus + .slider {
+        box-shadow: 0 0 1px #F5E969;
+        }
+        
+        input:checked + .slider:before {
+        -webkit-transform: translateX(52px);
+        -ms-transform: translateX(52px);
+        transform: translateX(52px);
+        }
+        
+        @media only screen and (max-width: 600px) {
+        input:checked + .slider:before {
+        -webkit-transform: translateX(17px);
+        -ms-transform: translateX(17px);
+        transform: translateX(17px);
+        }
+        }
+        
+        .slider.round {
+        border-radius: 34px;
+        }
+        
+        
+        
+        .slider.round:before {
+        border-radius: 50%;
+        }
+        
+    
+.titulo-pesquisa {
+    color: white;
+    font-family: 'IBM Plex Sans';
+    font-size: 2vw;
+    overflow-y: hidden;
+    padding-top: 3%;
+}
+
+.nomes {
+    width: 70%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
