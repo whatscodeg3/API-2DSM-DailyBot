@@ -13,7 +13,9 @@ const db = new Sequelize(dbName, dbUser, dbPassword, {
   dialect: "mysql",
   port: dbPort,
   define: {
-    freezeTableName: true
+    freezeTableName: true,
+    createdAt: false,
+    updatedAt: false,
   }
 });
 

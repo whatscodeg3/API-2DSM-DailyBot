@@ -1,12 +1,13 @@
 import express from "express";
-import AssociadoController from "./controllers/AssociadoController";
+import associadoController from "./controllers/AssociadoController";
+import { AssociadoRepository } from "./repositories/associadoRepository";
 
 const router = express.Router();
 
-router.post("/associados", AssociadoController.create);
-router.get("/associados", AssociadoController.findAll);
-router.get("/associados/:id", AssociadoController.findOne);
-router.patch("/associados/:id", AssociadoController.update);
-router.delete("/associados/:id", AssociadoController.delete);
+router.post("/associados", associadoController.create);
+router.get("/associados", associadoController.findAll);
+router.get("/associados/:id", associadoController.findOne);
+router.patch("/associados/:id", associadoController.update);
+router.delete("/associados/:id", associadoController.delete);
 
 export { router };
