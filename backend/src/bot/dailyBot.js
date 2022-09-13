@@ -2,6 +2,7 @@
 const puppeteer = require('puppeteer');  //precisa ser instalada > npm install puppeteer
 const readlineSync = require('readline-sync'); //precisa ser instalada > npm install readlin-sync
 const download = require('download-pdf'); 
+const cheerio = require('cheerio');
 
 // coleta do nome a buscar
 const nomeAssociado = readlineSync.question('Informe um nome para procurar:');
@@ -28,35 +29,47 @@ async function robo() {
   //acessando link modificado com as informações para busca
   await page.goto(linkBusca); 
   const linkResultado = page.url();
-  
-  //TODO criar condicional a busca com resultado negativo
+  switch(linkResultado.includes('ResultadoNegativo')){
+    case true:
+      break;
+    case false: 
+      const html = await page.content()
+      const $ = cheerio.load(html);
 
-  // http://www.diariooficial.sp.gov.br/DO/BuscaDO2001 - 49>ResultadoNegativ 65>o_11_3a.aspx
+      const seletor = '#form > div.container > div > div.col > div.card.shadow-sm.resultadoBuscaItem > div.card-body > p > a.bg-light.text-dark';
+      let linksPdfs = [];
+          $(seletor).each(function () {
+              let link = this.attribs.href;
+              link =  link.replace(/ /g, '%20')
+              link = 'http://www.diariooficial.sp.gov.br'+ link
+              const pdf = link.replace('BuscaDO2001Documento_11_4.aspx', 'GatewayPDF.aspx')
+              linksPdfs.push(pdf)              
+          });
+
+          console.log(linksPdfs)
+      
+      //relizando download
+      var pagina = 1;
+      for (const pdf of linksPdfs){
+        let options = {
+        directory: `./backend/src/bot/pdf/${nomeAssociado}`,//caminho onde será salvo
+        filename: `${nomeAssociado}.${dataPonto}.num${pagina}.pdf` //nome do arquivo com nome do associado e data
+      }      
+        download(pdf, options, function(err){
+        if(err) throw err
+        console.log('baixado')
+      })
+        pagina++
+      }
 
 
-  // //coleta do link do resultado da busca 
-  // //TODO criar o for para buscar todos os links que resultarem da busca.
-  // const linkDownload = await page.evaluate(() => {
-  // return document.querySelector("#form > div.container > div > div.col > div:nth-child(4) > div.card-body > p > a").href;
-  // });
 
-  // //modificando link para download
-  // const pdf = linkDownload.replace('BuscaDO2001Documento_11_4.aspx', 'GatewayPDF.aspx') 
-  
-  // //relizando download
-  // const options = {
-  //   directory: `./backend/src/bot/pdf/${nomeAssociado}`,//caminho onde será salvo
-  //   filename: `${nomeAssociado}.${dataPonto}.pdf` //nome do arquivo com nome do associado e data
-  // }
-  // download(pdf, options, function(err){
-  //   if(err) throw err
-  //   console.log('baixado')
-  // })
+   }
 
-  // //fechando navegador
+  //fechando navegador
   // await browser.close();
 
 } // fim da função robo()
 
 //chamando a função robo()
-robo();  
+robo();
