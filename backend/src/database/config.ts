@@ -1,5 +1,5 @@
 import path from 'path';
-import { Sequelize } from 'sequelize';
+import {Sequelize} from 'sequelize'
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 const dbName = process.env.DB_NAME;
@@ -8,10 +8,10 @@ const dbHost = process.env.DB_HOST;
 const dbPassword = process.env.DB_PASS;
 const dbPort = +process.env.DB_PORT;
 
-const db = new Sequelize(dbName, dbUser, dbPassword, {
-  host: dbHost,
+const db = new Sequelize('midall', 'root', 'thiago123', {
+  host: '127.0.0.1',
   dialect: "mysql",
-  port: dbPort,
+  port: 3306,
   define: {
     freezeTableName: true,
     createdAt: false,

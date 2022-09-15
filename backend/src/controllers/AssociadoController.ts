@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { userNameAndSurname } from "../database/interface";
 import { AssociadoModel } from "../database/models/associados";
 import { AssociadoRepository } from "../repositories/associadoRepository";
 
@@ -28,8 +29,27 @@ export class AssociadoController implements IAssociadoController {
     try {
       const associadoRepository = new AssociadoRepository();
       const associados = await associadoRepository.findAll();
+      const lista_aux = associados.rows
+      let associadosModel = ''
+      for (let i = 0; i <= lista_aux.length; i++){
+        const testeInterface: userNameAndSurname = {
+          nome: (lista_aux[i]['nome']),
+          sobrenome: (lista_aux[i]['sobrenome']),
+          id: (lista_aux[i]['id'])
+          
+        }
+        
+      //  const associadosModel_id  = (lista_aux[i]['id']);
+      //   const associadosModel_nome  = (lista_aux[i]['nome']);
+      //   const associadosModel_sobrenome  = (lista_aux[i]['sobrenome']);
+      //   console.log(associadosModel_id, associadosModel_nome, associadosModel_sobrenome)
+
+      console.log(testeInterface)
+        
+      }
+      // const associadosModel  = JSON.stringify(associados.rows[1]['nome']);
       return associados.rows.length > 0
-        ? res.status(200).json(associados)
+        ? res.status(200).send(associadosModel)
         : res.status(404).send("Nenhum associado encontrado");
     } catch (err) {
       console.log(err);
