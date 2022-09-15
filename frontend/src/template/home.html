@@ -92,7 +92,7 @@
         <section class="search" id="pesquisa">
             <div class="search-option" id="keyframe5">
                 <img src="../static/img/search-icon.svg" class="search-icon" alt="search-icon">
-                <input type="text" class="txt" placeholder="Digite aqui..." id="barra_pesquisa">
+                <input type="text" class="txt" placeholder="Digite aqui..." id="barra_pesquisa" onkeyup="search()">
             </div>
 
             <div class="nomes">
@@ -112,6 +112,12 @@
                     <li><p class="titulo-pesquisa">Rodrigo</p></li>
                     <li><p class="titulo-pesquisa">Léo</p></li>
                     <li><p class="titulo-pesquisa">Gabriel</p></li>
+                    <li><p class="titulo-pesquisa">Rodrigo</p></li>
+                    <li><p class="titulo-pesquisa">Léo Dantas</p></li>
+                    <li><p class="titulo-pesquisa">Gabriel Vieira</p></li>
+                    <li><p class="titulo-pesquisa">Rodrigo Massa</p></li>
+                    <li><p class="titulo-pesquisa">Léo</p></li>
+                    <li><p class="titulo-pesquisa">Gabriel</p></li>
                 </ul>
 
 
@@ -121,27 +127,7 @@
     </div>
 
     
-    <script>
-        pesquisa = document.getElementById('barra_pesquisa');
-        lista = document.getElementById('lista_para_busca');
-        listaItens = lista.getElementsByTagName('li');
-        listaItensNomes = lista.getElementsByTagName('p');
-
-        pesquisa.onkeyup=function(e){
-            t = this.value
-            
-            r = new RegExp(t,"g")
-
-            for(i in listaItens){
-                if (listaItensNomes[i].innerHTML.match(r)){
-                    lista.children[i].removeAttribute('style')
-                } else {
-                    lista.children[i].style.display='none'
-                }
-                
-            }
-        }
-    </script>
+    <script src="../static/js/pesquisar.js"></script>
 
 
 </body>
