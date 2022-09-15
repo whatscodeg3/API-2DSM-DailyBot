@@ -498,7 +498,6 @@ button#botao-remover {
     width: 70%;
     height: 50%;
     overflow-y: scroll;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -517,3 +516,7 @@ button#botao-remover {
     border-radius: 20px;
     padding-right: 5%;
 }
+
+/* li{
+    margin-bottom: -15px;
+} */
