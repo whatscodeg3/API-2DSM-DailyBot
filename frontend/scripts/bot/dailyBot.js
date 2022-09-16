@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-const readlineSync = require('readline-sync');
 const download = require('download-pdf'); 
 const cheerio = require('cheerio');
 
@@ -48,7 +47,7 @@ async function robo(nomeAssociado){
       var pagina = 1;
       for (const pdf of linksPdfs){
         let options = {
-        directory: `./backend/src/bot/pdf/${nomeAssociado}`,//caminho onde será salvo
+        directory: `./frontend/scripts/bot/pdf/${nomeAssociado}`,//caminho onde será salvo
         filename: `${nomeAssociado}.${dataPonto}.num${pagina}.pdf` //nome do arquivo com nome do associado e data
       }      
         download(pdf, options, function(err){
@@ -66,18 +65,3 @@ async function robo(nomeAssociado){
 } 
 
 /*------- fim da função robo()--------*/
-
-//teste com lista
-// const assoc = ['ensino', 'rua', 'joao']
-// let linksPdfs = []
-// for( const nomeAssociado of assoc){
-//   robo(nomeAssociado).then(linksPorUsuario => {
-//     // got value here
-//     linksPdfs.push(linksPorUsuario);
-// }).catch(e => {
-//     // error
-//     console.log(e);
-// });
-// }
-
-// setTimeout(() => {console.log(linksPdfs)}, 30000)
