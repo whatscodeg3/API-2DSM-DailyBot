@@ -1,0 +1,9 @@
+
+| Tarefa | Prioridade | User Stories | Critério de Aceitação | Sprint | Status |
+| :----: | :--------: | :----------: | :-------------------: | :----: | :----: |
+| Busca e Download | Alta🟥 | Eu como backoffice, quero que haja uma busca dos conteúdos relacionados aos associados, baixando posteriormente para tratamento de dados pegando pontos de interesse. | Tem como valor a automatização do processo de busca. | 1 | ✅ |
+| Leitura e Cruzamento de Dados| Alta🟥 | Eu como backoffice, quero que o sistema encontre por si só, os conteúdos relacionados ao associado no PDF do diário baixado, usando como referencia o banco de dados, para facilitar o processo e diminuir o trabalho. | Tem como valor a automatização e ganho de tempo, coletando trecho especifico do Pdf para ser usado. | 1 | ✅ |
+| Armazenamento dos Conteúdo Retirado do PDF | Alta🟥 | Eu como backoffice, quero que os conteúdos relacionados aos associados, sejam armazenados para que possam ser consultados posteriormente. | Tem como valor a possibilidade do uso dessas informações salvas, para o sistema. | 1  | ✅ |
+| Paginas Web (front-end) | Media🟨 | Eu como backoffice, quero ter interfaces web que facilitam o uso do sistema, para que seja preciso apenas acessar o site e ter uso completo das funções. | Tem como valor uma melhor experiência para quem for usar o sistema. | 1 | ✅ |
+| Banco de Dados | Alta🟥 | Eu como backoffice quero um banco de dados, a fim de salvar e ter acesso a informações que forem necessárias. | Tem como valor um lugar para guardar dados, que possam ser usados caso necessarios. | 1 | ✅ |
+| Barra de Pesquisa | Baixo🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 1 | ✅ |
