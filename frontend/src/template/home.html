@@ -9,7 +9,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="../static/js/script.js"></script>
+    <!-- <script src="../static/js/script.js"></script> -->
     <link rel="stylesheet" href="../static/css/home.css">
     <title>Home</title>
 </head>
@@ -92,18 +92,43 @@
         <section class="search" id="pesquisa">
             <div class="search-option" id="keyframe5">
                 <img src="../static/img/search-icon.svg" class="search-icon" alt="search-icon">
-                <input type="search" class="txt" placeholder="Digite aqui...">
+                <input type="text" class="txt" placeholder="Digite aqui..." id="barra_pesquisa" onkeyup="search()">
             </div>
 
             <div class="nomes">
-                <p class="titulo-pesquisa">Exemplo nome</p>
-                <p class="titulo-pesquisa">Exemplo nome</p>
-                <p class="titulo-pesquisa">Exemplo nome</p>
-                <p class="titulo-pesquisa">Exemplo nome</p>
-                <p class="titulo-pesquisa">Exemplo nome</p>
+
+                    <ul id="lista_para_busca" class="ul_class">
+                    <li><p class="titulo-pesquisa">Lucas</p></li>
+                    <li><p class="titulo-pesquisa">Kevin</p></li>
+                    <li><p class="titulo-pesquisa">Matheus</p></li>
+                    <li><p class="titulo-pesquisa">Thiago</p></li>
+                    <li><p class="titulo-pesquisa">Pedro</p></li>
+                    <li><p class="titulo-pesquisa">Jonathas</p></li>
+                    <li><p class="titulo-pesquisa">André</p></li>
+                    <li><p class="titulo-pesquisa">Naiara</p></li>
+                    <li><p class="titulo-pesquisa">Alex</p></li>
+                    <li><p class="titulo-pesquisa">Reinaldo</p></li>
+                    <li><p class="titulo-pesquisa">Rodrigo</p></li>
+                    <li><p class="titulo-pesquisa">Léo</p></li>
+                    <li><p class="titulo-pesquisa">Gabriel</p></li>
+                    <li><p class="titulo-pesquisa">Rodrigo</p></li>
+                    <li><p class="titulo-pesquisa">Léo Dantas</p></li>
+                    <li><p class="titulo-pesquisa">Gabriel Vieira</p></li>
+                    <li><p class="titulo-pesquisa">Rodrigo Massa</p></li>
+                    <li><p class="titulo-pesquisa">Léo</p></li>
+                    <li><p class="titulo-pesquisa">Gabriel</p></li>
+                </ul>
+
+
+
             </div>
         </section>
     </div>
+
+    
+    <script src="../static/js/pesquisar.js"></script>
+
+
 </body>
 
 </html>

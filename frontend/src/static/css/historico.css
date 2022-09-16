@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    width: 100%;
+    height: 100%;
+    background: url(../img/fundo.svg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+p{
+    content: '|Corno';
+
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'IBM Plex Sans';
+}
+
+hr {
+    background-color: #A92364;
+    height: 0.2%;
+    border: none;
+}
+
+.principal {
+    position: absolute;
+    width: 90%;
+    height: 70%;
+    border-radius: 0px 66px;
+    background-color: #fff;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.cabecalho-historico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3%;
+    color: #A92364;
+    font-size: 2rem;
+    font-family: 'IBM Plex Sans';
+    padding-bottom: 0.5%;
+}
+
+@media (max-width: 1300px) {
+    #email {
+        display: none;
+    }
+}
+
+@media (max-width: 860px) {
+    #tel {
+        display: none;
+    }
+    
+    .botao-modal {
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 1442px) {
+    .principal {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        background-color: transparent;
+    }
+    
+    h1 {
+        display: none;
+    }
+
+    section {
+        top: 0%;
+        left: 0%;
+    }
+     
+    .conteudo {
+        align-items: center;
+    }
+
+    .informacoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        width: 700px;
+        margin: 1.5%;
+        padding-bottom: 2%;
+        background-color: #EA7A67;
+        color: #fff;
+        border-radius: 10px;
+        border: 2px solid #fff;
+    }
+
+    #subtitulo {
+        color: #fff; 
+        font-size: 2.5rem;
+    }
+
+    .cabecalho-historico {
+        color: #fff;
+    }
+
+    .subtitulo {
+        color: #A92364;
+    }
+}
+
+.subtitulo {
+    color: rgba(169, 35, 100, 0.7);
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+}
+
+.informacoes {
+    font-size: 2rem;
+    color: rgba(169, 35, 100, 0.7);
+    font-family: 'IBM Plex Sans';
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.html-icon {
+    color: #A92364;
+}
+
+.escolas-associadas {
+    font-family:  'IBM Plex Sans';
+    font-size: 1.3rem;
+    color: rgba(169, 35, 100, 0.7);
+    padding-left: 5%;
+}
+
+.botao-modal {
+    background-color: #A92364;
+    color: #fff;
+    border: none;
+    padding: 0.5%;
+    border-radius: 10px;
+    font-family: 'IBM Plex Sans';
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal {
+    background: #fff;
+    border: 2px solid #A92364;
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    opacity: 0;
+    border-radius: 10px;
+    overflow-y: scroll;
+    animation-duration: 2.5s;
+    animation: animacao-modal 2s;
+}
+
+.container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 1%;
+    padding-right: 10%;
+}
+
+.modal-historico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #A92364;
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Sans';
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+
+.subtitulo-modal {
+    color: rgba(169, 35, 100, 0.7);
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.botao-fechar {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1%;
+}
+
+.fechar {
+    background-color: transparent;
+    color: #A92364;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: right;
+    margin: 1%;
+}
+
+@keyframes animacao-modal {
+    from {
+        height: 00%;
+    }
+
+    to {
+        height: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+}

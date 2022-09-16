@@ -78,13 +78,41 @@ a.diario {
 }
 .principal::-webkit-scrollbar {
     width: 0px;               /* width of the entire scrollbar */
-  }
+}
 
 .subtitulo {
     font-family: 'IBM Plex Sans';
     color: white;
-    font-size: 2rem;
+    font-size: 32px;
     margin-right: 200px;
+}
+
+@media (max-width:1900px){
+    .subtitulo{
+        font-size: 28px;
+        margin-right: 150px;
+    }
+}
+
+@media (max-width:1722px){
+    .subtitulo{
+        font-size: 28px;
+        margin-right: 100px;
+    }
+}
+
+@media (max-width:1410px){
+    .subtitulo{
+        font-size: 28px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width:1300px){
+    .subtitulo{
+        font-size: 28px;
+        margin-right: 20px;
+    }
 }
 
 .icon {
@@ -103,8 +131,14 @@ a.diario {
     align-items: center;
     width: 100%;
     padding-top: 1.5%;
+    text-align: center;
 }
 
+@media (max-width: 1190px){
+    .scroll {
+        display: none;
+    }
+}
 
 .linha1 {
     width: 0.3%;
@@ -457,13 +491,32 @@ button#botao-remover {
     font-family: 'IBM Plex Sans';
     font-size: 2vw;
     overflow-y: hidden;
-    padding-top: 3%;
+    padding-bottom: 5%;
 }
 
 .nomes {
     width: 70%;
-    overflow-y: hidden;
-    display: flex;
+    height: 50%;
+    overflow-y: scroll;
     flex-direction: column;
     align-items: flex-start;
 }
+
+.nomes::-webkit-scrollbar {
+    width: 9px;
+    background-color: #EA7A67;
+}
+
+.nomes::-webkit-scrollbar-track-piece {
+    border-right: 2px solid #fff;
+}
+
+.nomes::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    padding-right: 5%;
+}
+
+/* li{
+    margin-bottom: -15px;
+} */
