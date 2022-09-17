@@ -26,7 +26,7 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 
 - MER:
 
-<img src="/doc/front-end/MER.png" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/MER.png" alt="wireframe sprint 1" width="555" >
 
 - MEC:
 
