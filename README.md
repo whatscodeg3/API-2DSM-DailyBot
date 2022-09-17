@@ -111,13 +111,13 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 
 ## :date: Sprints <a id="sprint"></a>
 
-🔖 SPRINT 1 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint1.md)):  Concluído ✅
+🔖 SPRINT 1 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/doc-github/doc/sprints/Sprint%201)):  Concluído ✅
 
-🔖 SPRINT 2 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint2.md)):  Aguardando 🚧
+🔖 SPRINT 2 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
-🔖 SPRINT 3 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint3.md)):  Aguardando 🚧
+🔖 SPRINT 3 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
-🔖 SPRINT 4 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint4.md)):  Aguardando 🚧
+🔖 SPRINT 4 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
 
 <br>
