@@ -5,13 +5,13 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 # DoR
 
 - Wireframe:
-<img src="doc\front-end\Wireframe1.jpeg" alt="wireframe sprint 1" width="855" >
-<img src="doc\front-end\Wireframe2.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/Wireframe1.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/Wireframe2.jpeg" alt="wireframe sprint 1" width="855" >
 
 - Mockup:
-<img src="doc\front-end\mockup.jpeg" alt="wireframe sprint 1" width="855" >
-<img src="doc\front-end\mockup-pg1.jpeg" alt="wireframe sprint 1" width="855" >
-<img src="doc\front-end\mockup-pg2.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/mockup.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/mockup-pg1.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/mockup-pg2.jpeg" alt="wireframe sprint 1" width="855" >
 
 - Backlog da Sprint 1
 
@@ -26,11 +26,11 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 
 - MER:
 
-<img src="doc\front-end\MER.png" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/MER.png" alt="wireframe sprint 1" width="855" >
 
 - MEC:
 
-<img src="doc\front-end\MEC.jpg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/MEC.jpg" alt="wireframe sprint 1" width="855" >
 
 - Diagrama de classe:
 
