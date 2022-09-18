@@ -23,18 +23,32 @@ app.get("/", function (req, res) {
 app.get("/dailybot", async function (req, res) {
     try {
         const response = await api.get('/associados');
-        const users = response.data;
-        users.forEach((user) => {
-            robo(user.nome, Number(user.id)).then(async objetoUsuario => {
-                objetoUsuario.processos.forEach(async (processoUsuario) => {
-                    await api.post('/processos', {
-                        idUsuario: Number(objetoUsuario.idUsuario),
-                        conteudo: processoUsuario
-                    });
-                })
+        const associados = response.data
+        for(const associado of associados){
+            const objetoAssociado = await robo(associado.nome, Number(associado.id));
+            for(const processoAssociado of objetoAssociado.processos){
+                 await api.post('/processos', {
+                     idUsuario: Number(objetoAssociado.idAssociado),
+                     conteudo: processoAssociado
+                 });
+            }
+        }
 
-            })
-        })
+       //*****************TODO analizar e apagar para sprint 2
+        // const users = response.data;
+        // users.forEach((user) => {
+        //     robo(user.nome, Number(user.id)).then(async objetoUsuario => {
+        //         objetoUsuario.processos.forEach(async (processoUsuario) => {
+        //             await api.post('/processos', {
+        //                 idUsuario: Number(objetoUsuario.idUsuario),
+        //                 conteudo: processoUsuario
+        //             });
+        //         })
+
+        //     })
+        // })
+
+        //*******************************************
 
         res.redirect("/")
 

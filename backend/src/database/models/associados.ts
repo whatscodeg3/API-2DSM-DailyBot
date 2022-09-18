@@ -83,7 +83,7 @@ export const ProcessoModel = db.define("processos", {
     primaryKey: true,
   },
   conteudo: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(2000),
     allowNull: false,
   },
 });
