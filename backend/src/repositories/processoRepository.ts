@@ -32,9 +32,10 @@ export class ProcessoRepository {
 
   async create(data: IProcessoAtributes) {
     const { conteudo, idUsuario } = data;
+
     const processo = await ProcessoModel.create({
       conteudo,
-      idUsuario
+      associadoId: idUsuario
     });
     return processo
   }

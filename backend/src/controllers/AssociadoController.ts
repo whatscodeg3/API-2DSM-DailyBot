@@ -28,7 +28,7 @@ export class AssociadoController implements IAssociadoController {
     try {
       const associadoRepository = new AssociadoRepository();
       const associados = await associadoRepository.findAll();
-      return associados.rows.length > 0
+      return associados.length > 0
         ? res.status(200).json(associados)
         : res.status(200).send(JSON.parse("Nenhum associado encontrado"));
     } catch (err) {

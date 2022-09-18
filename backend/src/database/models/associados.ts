@@ -88,3 +88,4 @@ export const ProcessoModel = db.define("processos", {
   },
 });
 ProcessoModel.belongsTo(AssociadoModel);
+AssociadoModel.hasMany(ProcessoModel);

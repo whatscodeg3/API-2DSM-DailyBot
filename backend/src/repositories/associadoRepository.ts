@@ -17,7 +17,7 @@ export interface IAssociadoUpdate {
 
 export class AssociadoRepository {
   async findAll() {
-    const associados = await AssociadoModel.findAndCountAll({});
+    const associados = await AssociadoModel.findAll({});
     return associados;
   }
 
