@@ -29,10 +29,9 @@
                     <div class="botao-fechar">
                         <button class="fechar" onclick="fechar()">&times;</button>
                     </div>
-                    <p class="modal-historico">Nome:ㅤ<span class="subtitulo-modal"> Teste Teste Teste</span></p>
-                    <p class="modal-historico">E-mail:ㅤ<span class="subtitulo"> xxxx@gmail.com</span></p>
-                    <p class="modal-historico">CPF:ㅤ<span class="subtitulo"> xxx-xxx-xxx-xx</span></p>
-                    <p class="modal-historico">Data de Nascimento:ㅤ<span class="subtitulo"> xx/xx/xxxx</span></p>
+                    <p class="modal-historico" id="modal-nome"></p>
+                    <p class="modal-historico" id="modal-email"></p>
+                    <p class="modal-historico" id="modal-cpf"></p>
                 </div>
             </div>
 
@@ -60,7 +59,7 @@
             const url = document.URL;
             var res = window.location.pathname.match(/^\/historico\/(\d+)/);
             if (res.length == 2) {
-                var id = 1
+                var id = res[1];
             }
             const user = await fetch(`http://localhost:7071/associados/${id}`);
             const associado = await user.json();
@@ -73,14 +72,24 @@
 
             let output = ''
             let outputNome = `Nome: <span class="subtitulo">${associado.nome} </span>`;
+            let outputNomeModal = `Nome:<span class="subtitulo"> ${associado.nome}</span>`
+            let outputEmailModal = `E-mail:<span class="subtitulo"> ${associado.email}</span>`
+            let outputCPFModal = `CPF:<span class="subtitulo"> ${associado.cpf} </span>`
             let outputEmail = `E-mail: <span class="subtitulo">${associado.email}</span>`;
-            for (let processo of processos) {
-                output += `<a href="${processo.conteudo}"><p class="informacoes" id="subtitulo">link ${processo.id}</p> </a>`
+            for (let i = 0; i < processos.length; i++) {
+                output += `<a href="${processos[i].conteudo}"><p class="informacoes" id="subtitulo">link ${i + 1}</p> </a>`
             }
+            // for (let [processo, index] of processos.entries()) {
+            //     output += `<a href="${processo.conteudo}"><p class="informacoes" id="subtitulo">link ${index}</p> </a>`
+            // }
 
             document.getElementById('conteudoProcessos').innerHTML = output;
             document.getElementById('nome').innerHTML = outputNome;
             document.getElementById('email').innerHTML = outputEmail;
+
+            document.getElementById('modal-nome').innerHTML = outputNomeModal;
+            document.getElementById('modal-email').innerHTML = outputEmailModal;
+            document.getElementById('modal-cpf').innerHTML = outputCPFModal;
         }
 
 
