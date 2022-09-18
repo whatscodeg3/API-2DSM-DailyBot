@@ -52,18 +52,18 @@ async function robo(nomeAssociado, idUsuario) {
       });
 
       //relizando download
-      var pagina = 1;
-      for (const pdf of linksPdfs[1]) {
-        let options = {
-          directory: `assets/pdf/${nomeAssociado}`,//caminho onde será salvo
-          filename: `${nomeAssociado}.${dataPonto}.num${pagina}.pdf` //nome do arquivo com nome do associado e data
-        }
-        download(pdf, options, function (err) {
-          if (err) throw err
-          console.log('baixado');
-        });
-        pagina++
-      }
+      // var pagina = 1;
+      // for (const pdf of linksPdfs[1]) {
+      //   let options = {
+      //     directory: `assets/pdf/${nomeAssociado}`,//caminho onde será salvo
+      //     filename: `${nomeAssociado}.${dataPonto}.num${pagina}.pdf` //nome do arquivo com nome do associado e data
+      //   }
+      //   download(pdf, options, function (err) {
+      //     if (err) throw err
+      //     console.log('baixado');
+      //   });
+      //   pagina++
+      // }
   }
 
   //fechando navegador
