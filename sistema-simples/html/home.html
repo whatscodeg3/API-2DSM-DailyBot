@@ -150,7 +150,7 @@
 
             let output = ''
             for (let associado of associados) {
-                output += `<a href = "/historico/${associado.id}"><li>${associado.nome}</li></a>`
+                output += `<a href = "/historico/${associado.id}"><li class="titulo-pesquisa">${associado.nome}</li></a>`
             }
 
             document.getElementById('ulNomes').innerHTML = output;
