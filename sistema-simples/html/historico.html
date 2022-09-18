@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/historico.css">
+    <link rel="stylesheet" type="text/css" href="/css/historico.css">
+
     <title>Histórico</title>
 </head>
+
 <body>
     <section>
-        <h1>Histórico:</h1> 
+        <h1>Histórico:</h1>
         <div class="principal">
 
             <!-- Cabeçalho -->
             <div class="cabecalho-historico">
-                <p id="nome">Nome: <span class="subtitulo">Teste Teste Teste</span></p>
-                <p id="tel">Tel: <span class="subtitulo">(xx) xxxxx-xxxx</span></p>
-                <p id="email">E-mail: <span class="subtitulo">xxxx@gmail.com</span></p>
+                <p id="nome"></p>
+                <p id="email"></p>
                 <input type="button" value="Ver mais" class="botao-modal" onclick="abrir()">
             </div>
-
-            
             <hr>
 
             <!-- Modal -->
@@ -30,43 +30,15 @@
                         <button class="fechar" onclick="fechar()">&times;</button>
                     </div>
                     <p class="modal-historico">Nome:ㅤ<span class="subtitulo-modal"> Teste Teste Teste</span></p>
-                    <p class="modal-historico">Tel:ㅤ<span class="subtitulo"> (xx) xxxxx-xxxx</span></p>
                     <p class="modal-historico">E-mail:ㅤ<span class="subtitulo"> xxxx@gmail.com</span></p>
                     <p class="modal-historico">CPF:ㅤ<span class="subtitulo"> xxx-xxx-xxx-xx</span></p>
                     <p class="modal-historico">Data de Nascimento:ㅤ<span class="subtitulo"> xx/xx/xxxx</span></p>
-                    <p class="modal-historico">Escolas vinculadas:ㅤ<span class="subtitulo">
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 1</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 2</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 3</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                        <p class="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                    </span></p>
                 </div>
             </div>
-            
+
             <!-- Data e link -->
-            <div class="conteudo">
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
-                <p class="informacoes" id="subtitulo"> &#9900; Dia xx/xx/xxx | <a href="#">Clique aqui!</a></p>
+            <div class="conteudo" id="conteudoProcessos">
+
             </div>
         </div>
     </section>
@@ -82,6 +54,103 @@
         }
 
     </script>
+    <script>
+        (async function getContent() {
+            var id;
+            const url = document.URL;
+            var res = window.location.pathname.match(/^\/historico\/(\d+)/);
+            if (res.length == 2) {
+                var id = 1
+            }
+            const user = await fetch(`http://localhost:7071/associados/${id}`);
+            const associado = await user.json();
+            const userProcessos = await fetch(`http://localhost:7071/processos/users/${id}`);
+            const processoAssociados = await userProcessos.json();
+            console.log(processoAssociados);
+            listagemProcessos(processoAssociados, associado);
+        })();
+        function listagemProcessos(processos, associado) {
+
+            let output = ''
+            let outputNome = `Nome: <span class="subtitulo">${associado.nome} </span>`;
+            let outputEmail = `E-mail: <span class="subtitulo">${associado.email}</span>`;
+            for (let processo of processos) {
+                output += `<a href="${processo.conteudo}"><p class="informacoes" id="subtitulo">link ${processo.id}</p> </a>`
+            }
+
+            document.getElementById('conteudoProcessos').innerHTML = output;
+            document.getElementById('nome').innerHTML = outputNome;
+            document.getElementById('email').innerHTML = outputEmail;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let url = "http://localhost:3000/historico/:id"
+        // async function getUser(link) {
+        //     const user = await fetch(link);
+        //     console.log(user.data)
+        // }
+        // console.log(getUser(url));
+        // const search = new URL(document.currentScript.src).search.substring(1)
+        // const stringPreparation = decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"')
+        // const qs = JSON.parse('{"' + stringPreparation + '"}')
+
+
+
+
+        // (async function getContent() {
+        //     try {
+        //         const response = await fetch('http://localhost:7071/associados');
+        //         const associados = await response.json();
+        //         console.log(associados);
+
+        //         listagemUsuarios(associados);
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // })();
+
+
+        // function listagemUsuarios(associados) {
+        //     // var divNova = document.createElement("div");
+
+        //     let output = ''
+        //     for (let associado of associados) {
+        //         output += `<a href = "/historico/${associado.id}"><li class="titulo-pesquisa">${associado.nome}</li></a>`
+        //     }
+
+        //     document.getElementById('ulNomes').innerHTML = output;
+
+            // associados.forEach((associado) => {
+            //     var ulNova = document.createElement("ul");
+            // })
+            // var liNova = document.createElement("li");
+            // divNova.appendChild(ulNova);
+
+            // associados.forEach((associado) => {
+            //     ulNova.appendChild(liNova);
+            //     li.innerHTML = associado.nome;
+            // })
+            // divAtual = document.getElementById("divNomes");
+            // document.body.insertAfter(divNova, divAtual.nextSibling);
+        // }
+    </script>
 
 </body>
+
 </html>

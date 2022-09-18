@@ -22,7 +22,7 @@ export class AssociadoRepository {
   }
 
   async findOne(id: number | string) {
-    const associado = await AssociadoModel.findOne({ where: { id } });
+    const associado = await AssociadoModel.findOne({ where: { id } })
     return associado;
   }
 

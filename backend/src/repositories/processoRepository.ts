@@ -16,7 +16,7 @@ export interface IProcessoUpdate {
 export class ProcessoRepository {
   async findAllOfAUser(idUsuario: string | number) {
     const processos = await ProcessoModel.findAll({
-      where: { idUsuario }
+      where: { associadoId: idUsuario }
     });
     return processos;
   }

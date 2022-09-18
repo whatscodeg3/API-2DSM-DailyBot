@@ -67,7 +67,7 @@
                     <br> aqui!
                 </p>
 
-                <form class="form-button" id="button" action="http://localhost:3000/dailybot">
+                <form class="form-button" action="/dailybot">
                     <input class="botaoAtivarRobo" type="submit" value="Ativar" />
                 </form>
 
@@ -150,7 +150,7 @@
 
             let output = ''
             for (let associado of associados) {
-                output += `<a href = "/historico/${associado.id}"><li class="titulo-pesquisa">${associado.nome}</li></a>`
+                output += `<a href = "/historico/${associado.id}" ><li class="titulo-pesquisa">${associado.nome}</li></a>`
             }
 
             document.getElementById('ulNomes').innerHTML = output;
