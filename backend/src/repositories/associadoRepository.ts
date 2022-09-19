@@ -17,12 +17,12 @@ export interface IAssociadoUpdate {
 
 export class AssociadoRepository {
   async findAll() {
-    const associados = await AssociadoModel.findAndCountAll({});
+    const associados = await AssociadoModel.findAll({});
     return associados;
   }
 
   async findOne(id: number | string) {
-    const associado = await AssociadoModel.findOne({});
+    const associado = await AssociadoModel.findOne({ where: { id } })
     return associado;
   }
 

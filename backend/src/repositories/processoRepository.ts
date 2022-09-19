@@ -16,7 +16,7 @@ export interface IProcessoUpdate {
 export class ProcessoRepository {
   async findAllOfAUser(idUsuario: string | number) {
     const processos = await ProcessoModel.findAll({
-      where: { idUsuario }
+      where: { associadoId: idUsuario }
     });
     return processos;
   }
@@ -32,9 +32,10 @@ export class ProcessoRepository {
 
   async create(data: IProcessoAtributes) {
     const { conteudo, idUsuario } = data;
+
     const processo = await ProcessoModel.create({
       conteudo,
-      idUsuario
+      associadoId: idUsuario
     });
     return processo
   }

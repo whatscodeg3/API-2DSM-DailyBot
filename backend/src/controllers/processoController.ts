@@ -25,7 +25,7 @@ export class ProcessoController implements IProcessoController {
   };
 
   async findAllOfAUser(req: Request, res: Response) {
-    const idUsuario = Number(req.params)
+    const idUsuario = req.params.id
     try {
       const processoRepository = new ProcessoRepository();
       const processos = await processoRepository.findAllOfAUser(idUsuario);
