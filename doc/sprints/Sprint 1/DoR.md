@@ -39,7 +39,7 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 
 <img src="/doc/front-end/burndown-1sp.jpeg" alt="Burndown 1 sprint" width="855" >
 
-- Lógica do software:
+- Lógica de software:
 
 <img src="/doc/front-end/logica do software.png" alt="Logica do software na 1 sprint" width="855" >
 
