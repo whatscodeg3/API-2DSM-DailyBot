@@ -150,7 +150,7 @@ DB_PORT="" #porta da conexão criada
 
 2. Execute no terminal (cmd) os seguintes comandos um por um:
 
-cd sistema-simples -> npm install -> npm start
+cd frontend -> npm install -> npm start
 
 3. Abra outra aba do terminal e execute os comandos um por um:
 
