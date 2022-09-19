@@ -100,7 +100,7 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 | Automação do Robo para Busca Diaria | Alta🟥 | Eu como backoffice, quero a automatização do robô, para que seja preciso apenas entrar no site e ver as novas menções. | Tem como valor a automatização do processo, assim como uma melhor experiência de uso. | 3 | 🔄 |
 | Descarte dos Arquivos Coleta de Conteúdo | Media🟨 | Eu como backoffice quero que após a extração do conteúdo, haja o descarte do PDF a fim de não sobrecarregar o sistema. | tem como valor o uso mais eficiente do espaço no banco de dados. | 2 | 🔄 |
 | Manual de Instalação e Utilização | Media🟨 | Eu como cliente, quero um manual de instalação do projeto assim como de utilização do software. | Tem como valor, qualquer pessoa poder instalar e usar o software, mesmo vendo pela primeira vez. | Atualização continua | ✅ |
-| Barra de Pesquisa | Baixo🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 1 | ✅ |
+| Barra de Pesquisa | Baixo🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 2 | 🔄 |
 | Login | Baixo🟩 | Eu como cliente, quero um sistema de login para maior segurança, além de posteriormente transformar o software de uso interno, para externo. | Tem como valor a segurança de informações sensiveis, além de facilitar o trabalho posterior ao projeto. | 3 | 🔄 |
 | Paginas Web (front-end) | Media🟨 | Eu como backoffice, quero ter interfaces web que facilitam o uso do sistema, para que seja preciso apenas acessar o site e ter uso completo das funções. | Tem como valor uma melhor experiência para quem for usar o sistema. | 2 | 🔄 |
 
@@ -172,7 +172,7 @@ INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `data
 
 4. Por fim ao clicar no link, a página do PDF onde houve a menção será aberta.
 
-... <br>
+<br>
 
 ## :date: Sprints <a id="sprint"></a>
 
