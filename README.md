@@ -102,22 +102,87 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 | Manual de Instalação e Utilização | Media🟨 | Eu como cliente, quero um manual de instalação do projeto assim como de utilização do software. | Tem como valor, qualquer pessoa poder instalar e usar o software, mesmo vendo pela primeira vez. | Atualização continua | ✅ |
 | Barra de Pesquisa | Baixo🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 1 | ✅ |
 | Login | Baixo🟩 | Eu como cliente, quero um sistema de login para maior segurança, além de posteriormente transformar o software de uso interno, para externo. | Tem como valor a segurança de informações sensiveis, além de facilitar o trabalho posterior ao projeto. | 3 | 🔄 |
-| Paginas Web (front-end) | Media🟨 | Eu como backoffice, quero ter interfaces web que facilitam o uso do sistema, para que seja preciso apenas acessar o site e ter uso completo das funções. | Tem como valor uma melhor experiência para quem for usar o sistema. | 1 | ✅ |
+| Paginas Web (front-end) | Media🟨 | Eu como backoffice, quero ter interfaces web que facilitam o uso do sistema, para que seja preciso apenas acessar o site e ter uso completo das funções. | Tem como valor uma melhor experiência para quem for usar o sistema. | 2 | 🔄 |
 
 
 ## Manual de Instalação e Utilização <a id="manual"></a>
+
+### Banco de Dados:
+
+1. Execute o MySQL Workbench e selecione a conexão padrão 'Local instance MySQL80' ou crie uma nova.
+
+2. Execute o Script SQL abaixo:
+
+```
+create database apimidall;
+
+use apimidall;
+
+CREATE TABLE IF NOT EXISTS `associados` (`id` INTEGER UNSIGNED auto_increment , `nome` VARCHAR(255) NOT NULL, `sobrenome` VARCHAR(255) NOT NULL, `cpf` VARCHAR(255) NOT NULL UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `dataNascimento` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `processos` (`id` INTEGER UNSIGNED auto_increment , `conteudo` VARCHAR(2000) NOT NULL, `associadoId` INTEGER UNSIGNED, PRIMARY KEY (`id`), FOREIGN KEY (`associadoId`) REFERENCES `associados` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('HELENO HELYNE DE SOUZA JUNIOR', 'exemplo', '1234567892', 'heleno@teste.com', '2022-09-17');
+
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('MARIA 
+ISABEL CORREA DE ALMEIDA RUY', 'exemplo', '1234567893', 'maria@teste.com', '2022-09-17');
+
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', 'exemplo', '1234567894', 'fernanda@teste.com', '2022-09-17');
+```
+
+3. Crie um .env na pasta backend
+
+4. Cole o código abaixo e preenche os campos de “” vazios:
+
+```
+DB_HOST="" #hostname da conexão criada
+DB_USER="" #username do usuário do banco
+DB_PASS="" #senha do seu Workbench
+DB_NAME="apimidall"
+DB_PORT="" #porta da conexão criada
+```
+
+<img src="/doc/front-end/banco-exemplo.png" alt="demonstração de onde fica os campos" width="555" >
+
+
+### Rodar a Aplicação:
+
+1. Clone o repositorio na sua IDE de preferencia (a equipe usou Visual Studio Code)
+
+2. Execute no terminal (cmd) os seguintes comandos um por um:
+
+cd sistema-simples -> npm install -> npm start
+
+3. Abra outra aba do terminal e execute os comandos um por um:
+
+cd backend -> npm install -> npm start
+
+4. Após ambos os npm start terem startado, entre no site http://localhost:3000/ 
+
+### Como usar o sistema.
+
+1. Para cadastrar professores e suas informações, preencha os campos vazios a seguir usando os exemplos já no script para se orientar, após preenchido adicionei no mysql e rode a linha para inserir no banco.
+
+```
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('', '', '', '', '');
+```
+2. Agora para ativar o robô, basta clicar no botão e esperar até o site recarregar.
+
+3. Assim que o robo terminar, basta descer a pagina para encontrar a lista de professores, clicar no nome e com isso abrir o historico com o link dos PDFs salvos no banco, incluindo do dia atual que estará em primeiro caso haja.
+
+4. Por fim ao clicar no link, a página do PDF onde houve a menção será aberta.
 
 ... <br>
 
 ## :date: Sprints <a id="sprint"></a>
 
-🔖 SPRINT 1 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint1.md)):  Concluído ✅
+🔖 SPRINT 1 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/doc-github/doc/sprints/Sprint%201)):  Concluído ✅
 
-🔖 SPRINT 2 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint2.md)):  Aguardando 🚧
+🔖 SPRINT 2 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
-🔖 SPRINT 3 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint3.md)):  Aguardando 🚧
+🔖 SPRINT 3 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
-🔖 SPRINT 4 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint4.md)):  Aguardando 🚧
+🔖 SPRINT 4 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
 
 <br>

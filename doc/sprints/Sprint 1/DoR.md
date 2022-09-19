@@ -5,13 +5,13 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 # DoR
 
 - Wireframe:
-<img src="doc\front-end\Wireframe1.jpeg" alt="wireframe sprint 1" width="855" >
-<img src="doc\front-end\Wireframe2.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/Wireframe1.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/Wireframe2.jpeg" alt="wireframe sprint 1" width="855" >
 
 - Mockup:
-<img src="doc\front-end\mockup.jpeg" alt="wireframe sprint 1" width="855" >
-<img src="doc\front-end\mockup-pg1.jpeg" alt="wireframe sprint 1" width="855" >
-<img src="doc\front-end\mockup-pg2.jpeg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/mockup.jpeg" alt="mockup completo" width="855" >
+<img src="/doc/front-end/mockup-pg1.jpeg" alt="mockup 1 página" width="855" >
+<img src="/doc/front-end/mockup-pg2.jpeg" alt="mockup 2 página" width="855" >
 
 - Backlog da Sprint 1
 
@@ -22,23 +22,27 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 | Armazenamento dos Conteúdo Retirado do PDF | Alta🟥 | Eu como backoffice, quero que os conteúdos relacionados aos associados, sejam armazenados para que possam ser consultados posteriormente. | Tem como valor a possibilidade do uso dessas informações salvas, para o sistema. | 1  | ✅ |
 | Paginas Web (front-end) | Media🟨 | Eu como backoffice, quero ter interfaces web que facilitam o uso do sistema, para que seja preciso apenas acessar o site e ter uso completo das funções. | Tem como valor uma melhor experiência para quem for usar o sistema. | 1 | ✅ |
 | Banco de Dados | Alta🟥 | Eu como backoffice quero um banco de dados, a fim de salvar e ter acesso a informações que forem necessárias. | Tem como valor um lugar para guardar dados, que possam ser usados caso necessarios. | 1 | ✅ |
-| Barra de Pesquisa | Baixo🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 1 | ✅ |
-
-- MER:
-
-<img src="doc\front-end\MER.png" alt="wireframe sprint 1" width="855" >
 
 - MEC:
 
-<img src="doc\front-end\MEC.jpg" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/MEC.jpg" alt="Modelo Entidade Conceitual" width="855" >
+
+- MER:
+
+<img src="/doc/front-end/MER.png" alt="Modelo Entidade Relacional" width="555" >
 
 - Diagrama de classe:
 
-<img src="" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/diagrama de classe.jpeg" alt="Diagrama de classe" width="855" >
 
 - Burndown da 1 sprint:
 
-<img src="" alt="wireframe sprint 1" width="855" >
+<img src="/doc/front-end/burndown-1sp.jpeg" alt="Burndown 1 sprint" width="855" >
+
+- Lógica do software:
+
+<img src="/doc/front-end/logica do software.png" alt="Logica do software na 1 sprint" width="855" >
+
 
 
 
