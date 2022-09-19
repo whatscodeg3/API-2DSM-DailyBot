@@ -176,7 +176,7 @@ INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `data
 
 ## :date: Sprints <a id="sprint"></a>
 
-🔖 SPRINT 1 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/doc-github/doc/sprints/Sprint%201)):  Concluído ✅
+🔖 SPRINT 1 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/main/doc/sprints/Sprint%201)):  Concluído ✅
 
 🔖 SPRINT 2 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
