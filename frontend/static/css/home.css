@@ -159,6 +159,7 @@ a.diario {
     justify-content: center;
     align-items: center;
     padding-top: 20%;
+    padding-bottom: 20%;
     width: 100%;
 }
 
@@ -517,6 +518,19 @@ button#botao-remover {
     padding-right: 5%;
 }
 
-/* li{
-    margin-bottom: -15px;
-} */
+.botaoAtivarRobo {
+    position: absolute;
+    background-color: #a9236486;
+    color: #fff;
+    font-family: 'IBM Plex Sans';
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 0.5%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form-button {
+    padding-right: 40%;
+    padding-top: 5%;
+}

@@ -128,6 +128,7 @@ INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `data
 ISABEL CORREA DE ALMEIDA RUY', 'exemplo', '1234567893', 'maria@teste.com', '2022-09-17');
 
 INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', 'exemplo', '1234567894', 'fernanda@teste.com', '2022-09-17');
+
 ```
 
 3. Crie um .env na pasta backend
@@ -143,7 +144,6 @@ DB_PORT="" #porta da conexão criada
 ```
 
 <img src="/doc/front-end/banco-exemplo.png" alt="demonstração de onde fica os campos" width="555" >
-
 
 ### Rodar a Aplicação:
 
