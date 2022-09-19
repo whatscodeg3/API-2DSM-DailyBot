@@ -107,6 +107,68 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 
 ## Manual de Instalação e Utilização <a id="manual"></a>
 
+### Banco de Dados:
+
+1. Execute o MySQL Workbench e selecione a conexão padrão 'Local instance MySQL80' ou crie uma nova.
+
+2. Execute o Script SQL abaixo:
+
+```
+create database apimidall;
+
+use apimidall;
+
+CREATE TABLE IF NOT EXISTS `associados` (`id` INTEGER UNSIGNED auto_increment , `nome` VARCHAR(255) NOT NULL, `sobrenome` VARCHAR(255) NOT NULL, `cpf` VARCHAR(255) NOT NULL UNIQUE, `email` VARCHAR(255) NOT NULL UNIQUE, `dataNascimento` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `processos` (`id` INTEGER UNSIGNED auto_increment , `conteudo` VARCHAR(2000) NOT NULL, `associadoId` INTEGER UNSIGNED, PRIMARY KEY (`id`), FOREIGN KEY (`associadoId`) REFERENCES `associados` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('HELENO HELYNE DE SOUZA JUNIOR', 'teste', '1234567892', 'heleno@teste.com', '2022-09-17');
+
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('MARIA 
+ISABEL CORREA DE ALMEIDA RUY', 'teste', '1234567893', 'maria@teste.com', '2022-09-17');
+
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', 'teste', '1234567894', 'fernanda@teste.com', '2022-09-17');
+```
+
+3. Crie um .env na pasta backend
+
+4. Cole o código abaixo e preenche os campos de “” vazios:
+
+```
+DB_HOST="" #hostname da conexão criada
+DB_USER="" #username do usuário do banco
+DB_PASS="" #senha do seu Workbench
+DB_NAME="apimidall"
+DB_PORT="" #porta da conexão criada
+```
+
+### Rodar a Aplicação:
+
+1. Clone o repositorio na sua IDE de preferencia (a equipe usou Visual Studio Code)
+
+2. Execute no terminal (cmd) os seguintes comandos um por um:
+
+cd sistema-simples -> npm install -> npm start
+
+3. Abra outra aba do terminal e execute os comandos um por um:
+
+cd backend -> npm install -> npm start
+
+4. Após ambos os npm start terem startado, entre no site http://localhost:3000/ 
+
+### Como usar o sistema.
+
+1. Para cadastrar professores e suas informações, preencha os campos vazios a seguir usando os exemplos já no script para se orientar, após preenchido adicionei no mysql e rode a linha para inserir no banco.
+
+```
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('', '', '', '', '');
+```
+2. Agora para ativar o robô, basta clicar no botão e esperar até o site recarregar.
+
+3. Assim que o robo terminar, basta descer a pagina para encontrar a lista de professores, clicar no nome e com isso abrir o historico com o link dos PDFs salvos no banco, incluindo do dia atual que estará em primeiro caso haja.
+
+4. Por fim ao clicar no link, a página do PDF onde houve a menção será aberta.
+
 ... <br>
 
 ## :date: Sprints <a id="sprint"></a>
