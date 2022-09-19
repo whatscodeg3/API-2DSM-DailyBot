@@ -2,7 +2,7 @@
 
 - Video do projeto rodando:
 
- <a href="/doc/front-end/MVC-API-MidAll_Trim.mp4">Clique aqui e baixe o video para assistir ! </a>
+ <a href="https://youtu.be/9hfAkNCbHIY">Clique aqui! </a>
 
 - Explicação do uso das tecnologias no codigo:
 
