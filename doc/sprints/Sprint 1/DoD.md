@@ -1,8 +1,7 @@
 # DoD
 
-- Gif do projeto rodando:
+- Video do projeto rodando:
 
-<img src="" alt="wireframe sprint 1" width="855" >
 
 - Explicação do uso das tecnologias no codigo:
 
