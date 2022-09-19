@@ -124,8 +124,7 @@ CREATE TABLE IF NOT EXISTS `processos` (`id` INTEGER UNSIGNED auto_increment , `
 
 INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('HELENO HELYNE DE SOUZA JUNIOR', 'exemplo', '1234567892', 'heleno@teste.com', '2022-09-17');
 
-INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('MARIA 
-ISABEL CORREA DE ALMEIDA RUY', 'exemplo', '1234567893', 'maria@teste.com', '2022-09-17');
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('MARIA ISABEL CORREA DE ALMEIDA RUY', 'exemplo', '1234567893', 'maria@teste.com', '2022-09-17');
 
 INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', 'exemplo', '1234567894', 'fernanda@teste.com', '2022-09-17');
 
