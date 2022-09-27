@@ -1,29 +1,38 @@
 const robo = require('./self_modules/dailybot')
 const api = require('./self_modules/api')
-const  agenda  =  require ( 'node-schedule' );
+const  agenda  = require ( 'node-schedule' );
 
 async function getPdfs() {
     try {
         const responseAssociados = await api.get('/associados');
         const associados = responseAssociados.data
-        console.log(responseAssociados)
         for(const associado of associados){
-            const objetoAssociado = await robo(associado.nome, Number(associado.id));
-            for(const processoAssociado of objetoAssociado.processos){
-                const responseProcessos = await api.get(`/processos/users/${objetoAssociado.idAssociado}`)
-                const linksPorAssociado = responseProcessos ///*************************** */
-                 await api.post('/processos', {
-                     idUsuario: objetoAssociado.idAssociado,                     
-                     dataProcesso: objetoAssociado.dataProcesso,
-                     conteudo: processoAssociado,
-                 });
+            const responseProcessos = await api.get(`/processos/users/${associado.id}`)
+            const processos = responseProcessos.data
+            let linksBD;
+            if(processos === 'null'){
+                linksBD = []
             }
-        }
+            else{
+                linksBD = (processos.map(item => item.link))
+            }
+            const objetoAssociado = await robo(associado.nome, Number(associado.id), linksBD);
+            if(objetoAssociado.links != []){
+                for(const processoAssociado of objetoAssociado.links){
+                        await api.post('/processos', {
+                            idUsuario: objetoAssociado.idAssociado,
+                            link: processoAssociado,                     
+                            dataProcesso: objetoAssociado.dataProcesso,
+                            conteudo: `trecho pdf de {}`,
+                        });
+                }
+            }
 
-    } catch (error) {
+        }     
+    }
+    catch (error) {
         console.log(error);
     }   
-
 }
 //chamandoa  afunção getPdfs()
 getPdfs();

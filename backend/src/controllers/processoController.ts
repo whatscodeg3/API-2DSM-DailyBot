@@ -31,7 +31,7 @@ export class ProcessoController implements IProcessoController {
       const processos = await processoRepository.findAllOfAUser(idUsuario);
       return processos.length > 0
         ? res.status(200).json(processos)
-        : res.status(200).send(JSON.parse("Nenhum processo encontrado"));
+        : res.status(200).json("null");
     } catch (err) {
       console.log(err);
     }
