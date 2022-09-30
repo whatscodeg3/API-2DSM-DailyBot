@@ -1,4 +1,2 @@
 verificação de links do bd:
-- caso vazio, direcionar para busca, retornando link, baixa e guarda no banco, não retornando nada da busca, encerra. >> concluido
-
 -caso já tenha links no bd, ele manda os links para o robo e testa com os links da busca >> falta inserir mais links no banco de dados para testar

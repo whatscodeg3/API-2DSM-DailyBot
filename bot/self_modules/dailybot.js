@@ -21,7 +21,7 @@ const cheerio = require('cheerio');
   const dataDia = await page.evaluate(() => {
     return document.querySelector("#txtDataFim").value;
   });
-  const dataOntem = '17/09/2022' //data mock *********TODO retirar esse mock e deixar a consulta do diario mesmo e consultar mais lugares no código para remover 
+  const dataOntem = `17/09/2022` //data mock *********TODO retirar esse mock e deixar a consulta do diario mesmo e consultar mais lugares no código para remover 
   const dataPonto = dataOntem.replace(/\//g, '.')
   const dataSeparadaInvertida = dataPonto.split('.').reverse()
 
@@ -32,6 +32,7 @@ const cheerio = require('cheerio');
   const linkResultado = page.url();
   switch (linkResultado.includes('ResultadoNegativo')) {
     case true:
+      console.log('Não há resultado na busca')
       break;
     case false:
       const html = await page.content()
@@ -45,6 +46,7 @@ const cheerio = require('cheerio');
         linkPdf = linkPdf.replace('BuscaDO2001Documento_11_4.aspx', 'GatewayPDF.aspx')
         switch(linksBD.includes(linkPdf)){
           case true:
+            console.log('Já baixei este pdf')
             break;
           case false:
             objetoAssociado.links.push(linkPdf);

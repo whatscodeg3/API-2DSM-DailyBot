@@ -2,6 +2,7 @@ const robo = require('./self_modules/dailybot')
 const api = require('./self_modules/api')
 const  agenda  = require ( 'node-schedule' );
 
+
 async function getPdfs() {
     try {
         const responseAssociados = await api.get('/associados');
@@ -35,19 +36,22 @@ async function getPdfs() {
     }   
 }
 //chamandoa  afunção getPdfs()
-getPdfs();
 
+const rule = new agenda.RecurrenceRule(); //criando regrapara agendamento na hora do start 
+rule.dayOfWeek = [new agenda.Range(1, 6)]; // passando o range de 1 a 6 (segunda a sabado)
+rule.hour = 14; //passando a hora 
+rule.minute = 0; //passando os minutos
 
-// agenda.scheduleJob ( '*/2 * * * * ',  function ( ) {
-//     getPdfs();
-// } ) ;
-
-// const  job  =  agenda.scheduleJob ( '8 10 * * *' ,  function ( ) {
-//     getPdfs();
-// } ) ;
+const job = agenda.scheduleJob(rule, function(){ //agenda recebendo regra e a função do robô(getPdfs)
+ getPdfs();
+});
 
 
 /*
+
+agenda.scheduleJob ( ' * * * * * ',  function ( ) {
+    getPdfs();
+} ) ;
 
 *    *    *    *    *    *
 ┬    ┬    ┬    ┬    ┬    ┬
