@@ -3,6 +3,7 @@ import re
 from os import listdir
 from PyPDF2 import PdfFileReader
 
+
 nomes_pdfs=[]
 def listandoFiles(diretorio):
     for i in listdir(diretorio):
@@ -30,3 +31,6 @@ for nome in nomes_pdfs:
              
 with open("lista.json", "w", encoding="utf-8") as jsonfile: 
     json.dump(lista, jsonfile, ensure_ascii=False) 
+    
+
+
