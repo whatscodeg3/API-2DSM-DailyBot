@@ -1,2 +1,0 @@
-verificação de links do bd:
--caso já tenha links no bd, ele manda os links para o robo e testa com os links da busca >> falta inserir mais links no banco de dados para testar
