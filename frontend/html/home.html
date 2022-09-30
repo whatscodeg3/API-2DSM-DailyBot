@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <!-- Inicio da página -->
+
+    <div class="tudo">
+        <div class="fundo">
+            <img src="img/logo.png" class="img" alt="logo">
+            <h1 class="titulo">Dailybot é um robô<br> programado para estar<br> constantemente de<br> olho no <a
+                    href="http://www.imprensaoficial.com.br/" class="diario"><u>Diário Oficial</u></a>
+                <h1>
+        </div>
+    </div>
+
+    <!-- Rolagem automatica -->
+
+    <div class="principal">
+        <div class="menu">
+            <ul class="scroll">
+                <li>
+                    <ion-icon name="power" class="icon"></ion-icon>
+                    <a href="#ativar" class="subtitulo">Ativar Robô</a>
+                </li>
+
+                <!-- <li>
+                    <ion-icon name="person-add" class="icon"></ion-icon>
+                    <a href="#cad-rem" class="subtitulo">Cadastrar ou remover associado</a>
+                </li> -->
+
+                <li>
+                    <ion-icon name="search" class="icon"></ion-icon>
+                    <a href="#pesquisa" class="subtitulo">Pesquisar associado</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- instruções e ativar/desativar robô -->
+
+        <section class="conteudo-principal" id="ativar">
+            <div class="conteudo-secundario" id='keyframe4'>
+                <p class="conteudo-secundario-titulo">Algumas <span
+                        class="conteudo-secundario-subtitulo">instruções</span> <br> de uso:</p>
+                <p class="titulo-instrucoes">Ao ativa-lo, terá a opção de busca <br> disponível para acessar informações <br> de associado. Sempre que você ligar  <br> o botão do robô, após a busca, as <br> informações serão atualizadas! </p>
+            </div>
+
+            <hr class="linha1">
+
+            <img src="img/robo.svg" class="img-robo" alt="robo">
+            <div class="conteudo-secundario-2" id='keyframe3'>
+                <p class="conteudo-secundario-titulo2">Ative o <span class="conteudo-secundario-subtitulo">robô</span>
+                    <br> aqui!
+                </p>
+
+                <form class="form-button" action="/dailybot">
+                    <input class="botaoAtivarRobo" type="submit" value="Ativar" />
+                </form>
+
+                <!-- <img src="img/on-button-main.svg" class="img-button" alt="img-bottom"> -->
+            </div>
+        </section>
+
+        <!-- Cadastro e Remoção de associados -->
+
+        <!-- <section class="cadastro-remocao" id="cad-rem">
+            <div class="botao1" id='keyframe2'>
+                <p class="titulo-cadastro">Deseja <span class="conteudo-secundario-subtitulo">cadastar</span> um <br> novo associado?</p>
+                <button id="primeiro">Clique Aqui</button>
+            </div>
+            
+            <hr class="linha2">
+            
+            <div class="botao2" id="keyframe1">
+                <p class="titulo-remover">Deseja <span class="conteudo-secundario-subtitulo">remover</span> um <br> associado?</p>
+                <button id="botao-remover">Clique Aqui</button>
+            </div>
+        </section> -->
+
+        <!-- Barra de pesquisa dos associados -->
+
+        <section class="search" id="pesquisa">
+            <div class="search-option" id="keyframe5">
+                <img src="img/search-icon.svg" class="search-icon" alt="search-icon">
+                <input type="text" class="txt" placeholder="Digite aqui..." id="barra_pesquisa" onkeyup="search()">
+            </div>
+
+            <div class="nomes" id="divNomes">
+                <ul id="ulNomes">
+
+                </ul>
+
+                <script>
+
+                    const search = () => {
+                        const searchbox = document.getElementById('barra_pesquisa').value.toUpperCase();
+                        const lista = document.getElementById('lista_para_busca');
+                        const listaItens = lista.getElementsByTagName('li');
+                        const listaItensNomes = lista.getElementsByTagName('p');
+
+                        for (var i = 0; i < listaItensNomes.length; i++) {
+                            let match = listaItens[i].getElementsByTagName('p')[0];
+
+                            if (match) {
+                                let textValue = match.textContent || match.innerHTML
+
+                                if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+                                    listaItens[i].style.display = "";
+                                } else {
+                                    listaItens[i].style.display = "none";
+                                }
+                            }
+                        }
+                    }
+
+                </script>
+            </div>
+        </section>
+    </div>
+    <script>
+        (async function getContent() {
+            try {
+                const response = await fetch('http://localhost:7071/associados');
+                const associados = await response.json();
+                console.log(associados);
+
+                listagemUsuarios(associados);
+            } catch (error) {
+                console.error(error);
+            }
+        })();
+
+
+        function listagemUsuarios(associados) {
+            // var divNova = document.createElement("div");
+
+            let output = ''
+            for (let associado of associados) {
+                output += `<a href = "/historico/${associado.id}" ><li class="titulo-pesquisa">${associado.nome}</li></a>`
+            }
+
+            document.getElementById('ulNomes').innerHTML = output;
+
+            // associados.forEach((associado) => {
+            //     var ulNova = document.createElement("ul");
+            // })
+            // var liNova = document.createElement("li");
+            // divNova.appendChild(ulNova);
+
+            // associados.forEach((associado) => {
+            //     ulNova.appendChild(liNova);
+            //     li.innerHTML = associado.nome;
+            // })
+            // divAtual = document.getElementById("divNomes");
+            // document.body.insertAfter(divNova, divAtual.nextSibling);
+        }
+    </script>
+</body>
+
+</html>
