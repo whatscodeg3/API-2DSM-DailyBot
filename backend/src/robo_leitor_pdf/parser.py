@@ -23,7 +23,11 @@ for associado in lista_processos:
     id_processo = associado['id']
     data_processo = associado['dataProcesso']
     link_processo = associado['link']
-    associado_id = associado['associadoId']    
+    associado_id = associado['associadoId']
+
+    # BAIXAR O PDF PELO LINK DE CIMA 
+    # ANEXAR ELE NA LISTA DE PDFS
+
     for nome in nomes_pdfs:
         pdf_para_leitura = PdfFileReader('PDFs/'+nome)
         page_object = pdf_para_leitura.getPage(0)
@@ -33,5 +37,7 @@ for associado in lista_processos:
             nome=nome.replace('.pdf','')
             if re.search(nome, i, re.IGNORECASE):
                 bloco_relacionado_associado = i
-                ##enviar para o banco
 
+                ##salvar variaveis q precisa
+                ##enviar para o banco
+                ##deletar PDF
