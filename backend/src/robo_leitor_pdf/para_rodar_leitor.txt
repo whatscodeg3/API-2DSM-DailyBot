@@ -1,3 +1,0 @@
-1º py -m venv venv
-2º Ativar o venv
-3º pip install PyPDF2 
