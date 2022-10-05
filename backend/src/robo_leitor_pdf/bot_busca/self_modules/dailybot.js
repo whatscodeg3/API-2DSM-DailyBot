@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-const download = require('download-pdf');
 const cheerio = require('cheerio');
 
 /*------- inicio da função robo --------*/
@@ -47,27 +46,13 @@ const cheerio = require('cheerio');
         linkPdf = linkPdf.slice(0, (linkPdf.search('.pdf'))+4)
         switch(linksBD.includes(linkPdf)){
           case true:
-            console.log('Já baixei este pdf')
+            console.log('Já salvei este link')
             break;
           case false:
             objetoAssociado.links.push(linkPdf);
         }
       });
 
-      if(objetoAssociado.links != []){
-        var pagina = 1;
-        for (const pdf of objetoAssociado.links) {
-          let options = {
-            directory: `assets/pdf/${nomeAssociado}`,//caminho onde será salvo
-            filename: `${idAssociado}.${nomeAssociado}.${dataPonto}.${pagina}.pdf` //nome do arquivo com nome do associado,data e id
-          }
-          download(pdf, options, function (err) {
-            if (err) throw err
-            console.log('baixado');
-          });
-          pagina++
-        }
-      }
   }
   objetoAssociado.dataProcesso = dataOntem
   objetoAssociado.idAssociado = Number(idAssociado);
@@ -80,11 +65,5 @@ const cheerio = require('cheerio');
 
 module.exports = (robo) //exportando modulo
 
-//PARA EDITAR O LINK
-/* link = 'http://www.diariooficial.sp.gov.br/DO/GatewayPDF.aspx?link=%2f2022%2fdiario+oficial+cidade+de+sao+paulo%2fsetembro%2f17%2fpag_0041_1e8242c4ef302d5e5c18fdf4a0c6ea08.pdf&pagina=41&data=17/09/2022&caderno=Diário%20Oficial%20Cidade%20de%20São%20Paulo&paginaordenacao=100041'
-link = link.slice(0, (link.search('.pdf'))+4)
-
-
- console.log(link) */
 
 

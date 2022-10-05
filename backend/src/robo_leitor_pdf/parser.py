@@ -8,7 +8,7 @@ from PyPDF2 import PdfFileReader
 
 import mysql.connector
 
-db_connection = mysql.connector.connect(host="localhost", user="root", passwd="thiago123", database="midall")
+db_connection = mysql.connector.connect(host="127.0.0.1", user="MatheusAJesus", passwd="@Fatec2022", database="apimidall")
 cursor = db_connection.cursor(buffered=True)
 
 
@@ -23,18 +23,7 @@ def update(sql, valor, valor2):
     valor = valor
     valor2 = valor2
     return cursor.execute(sql,(valor,valor2))
-
-  
-
-
-nomes_pdfs=[]
-def listandoFiles(diretorio):
-    for i in listdir(diretorio):
-        nomes_pdfs.append(i)
         
-listandoFiles('C:/Users/thiag/2API_WhatsCode/API-2DSM-DailyBot/backend/src/robo_leitor_pdf/PDFs')
-
-
 consulta = select("select a.id, a.nome, p.id, p.link  from associados a, processos p where a.id = p.associadoId;")
 for consultaPosicao in consulta:
     wget.download(consultaPosicao[3], f'PDFs/{consultaPosicao[1]}.pdf')

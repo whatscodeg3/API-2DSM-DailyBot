@@ -1,6 +1,8 @@
 const robo = require('./self_modules/dailybot')
 const api = require('./self_modules/api')
 const  agenda  = require ( 'node-schedule' );
+const fs = require('fs')
+
 
 
 async function getPdfs() {
@@ -29,7 +31,7 @@ async function getPdfs() {
                 }
             }
 
-        }     
+        }
     }
     catch (error) {
         console.log(error);
