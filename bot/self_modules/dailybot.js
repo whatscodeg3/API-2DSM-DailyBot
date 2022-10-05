@@ -44,6 +44,7 @@ const cheerio = require('cheerio');
         linkPdf = linkPdf.replace(/ /g, '%20')
         linkPdf = 'http://www.diariooficial.sp.gov.br' + linkPdf
         linkPdf = linkPdf.replace('BuscaDO2001Documento_11_4.aspx', 'GatewayPDF.aspx')
+        linkPdf = linkPdf.slice(0, (linkPdf.search('.pdf'))+4)
         switch(linksBD.includes(linkPdf)){
           case true:
             console.log('Já baixei este pdf')
@@ -78,5 +79,12 @@ const cheerio = require('cheerio');
 /*------- fim da função robo()--------*/
 
 module.exports = (robo) //exportando modulo
+
+//PARA EDITAR O LINK
+/* link = 'http://www.diariooficial.sp.gov.br/DO/GatewayPDF.aspx?link=%2f2022%2fdiario+oficial+cidade+de+sao+paulo%2fsetembro%2f17%2fpag_0041_1e8242c4ef302d5e5c18fdf4a0c6ea08.pdf&pagina=41&data=17/09/2022&caderno=Diário%20Oficial%20Cidade%20de%20São%20Paulo&paginaordenacao=100041'
+link = link.slice(0, (link.search('.pdf'))+4)
+
+
+ console.log(link) */
 
 
