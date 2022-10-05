@@ -8,7 +8,7 @@ import { Principal } from "./defaultStylesHistorico";
 
 // Componentes
 import Cabeçalho from "../../components/cabeçalho/cabeçalho";
-import DataELink from "../../components/data-e-link/data_e_link";
+import Conteudo from "../../components/conteudoHistorico/conteudoHistorico";
 import PaginaModal from "../../components/botaoAbrirModal/paginaModal";
 
 function Historico() {
@@ -22,7 +22,7 @@ function Historico() {
                 <Cabeçalho />
                 <hr />
                 <PaginaModal />
-                <DataELink />
+                <Conteudo />
             </Principal>
         </>
     )

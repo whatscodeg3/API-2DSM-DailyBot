@@ -4,8 +4,7 @@ import BotaoAbrirModal from '../botaoAbrirModal/abrir'
 
 import api from '../../services/api'
 
-import { CabecalhoHistorico } from './styles'
-import { SubtituloCabecalho } from './styles'
+import { CabecalhoHistorico, ParagrafoNome, SubtituloCabecalho } from './styles'
 
 function Cabeçalho() {
 
@@ -22,15 +21,11 @@ function Cabeçalho() {
     }, []);
 
     const userName = <p>{usuarios.nome}</p>
-    const userCpf = <p>{usuarios.cpf}</p>
-    const userEmail = <p>{usuarios.email}</p>
 
     return (
             <>
                 <CabecalhoHistorico>
-                    <p id="nome">Nome: <SubtituloCabecalho>{userName}</SubtituloCabecalho></p>
-                    <p id="tel">Cpf: <SubtituloCabecalho>{userCpf}</SubtituloCabecalho></p>
-                    <p id="email">E-mail: <SubtituloCabecalho>{userEmail}</SubtituloCabecalho></p>
+                    <ParagrafoNome id="nome">Nome: <SubtituloCabecalho>{userName}</SubtituloCabecalho></ParagrafoNome>
                     <BotaoAbrirModal />
                 </CabecalhoHistorico>
             </>
