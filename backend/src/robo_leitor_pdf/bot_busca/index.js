@@ -31,7 +31,6 @@ async function getPdfs() {
                         });
                 }
             }
-            
         }
     }
     catch (error) {
