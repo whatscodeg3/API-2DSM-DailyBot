@@ -43,7 +43,7 @@ def leitor():
                 up = update(sql, bloco_relacionado_associado, consultaPosicao[2])
                 os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
 
-
     cursor.close()
     db_connection.commit()
     db_connection.close()
+    os.remove('monitorando/arquivo_monitoramento.txt')
