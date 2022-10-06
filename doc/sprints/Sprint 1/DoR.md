@@ -23,11 +23,11 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 | Paginas Web (front-end) | Media🟨 | Eu como backoffice, quero ter interfaces web que facilitam o uso do sistema, para que seja preciso apenas acessar o site e ter uso completo das funções. | Tem como valor uma melhor experiência para quem for usar o sistema. | 1 | ✅ |
 | Banco de Dados | Alta🟥 | Eu como backoffice quero um banco de dados, a fim de salvar e ter acesso a informações que forem necessárias. | Tem como valor um lugar para guardar dados, que possam ser usados caso necessarios. | 1 | ✅ |
 
-- MEC:
+- MEC (Modelo Entidade Conceitual):
 
 <img src="/doc/front-end/MEC.jpg" alt="Modelo Entidade Conceitual" width="855" >
 
-- MER:
+- MER (Modelo Entidade Relacional):
 
 <img src="/doc/front-end/MER.png" alt="Modelo Entidade Relacional" width="555" >
 
