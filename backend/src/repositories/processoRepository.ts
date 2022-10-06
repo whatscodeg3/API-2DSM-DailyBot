@@ -6,6 +6,8 @@ export interface IProcessoAtributes {
   link: string;
   dataProcesso: string;
   idUsuario: string | number;
+  caderno: string;
+  pagina: number;
 }
 
 export interface IProcessoUpdate {
@@ -14,6 +16,8 @@ export interface IProcessoUpdate {
   link: string;
   dataProcesso: string;
   idUsuario?: string | number;
+  caderno: string;
+  pagina: number;
 }
 
 
@@ -35,13 +39,15 @@ export class ProcessoRepository {
   }
 
   async create(data: IProcessoAtributes) {
-    const { conteudo, idUsuario, dataProcesso, link } = data;
+    const { conteudo, idUsuario, dataProcesso, link, caderno, pagina } = data;
 
     const processo = await ProcessoModel.create({
       conteudo,
       dataProcesso,
       link,
       associadoId: idUsuario,
+      caderno,
+      pagina
     });
     return processo
   }

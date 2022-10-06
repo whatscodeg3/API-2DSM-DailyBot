@@ -94,6 +94,14 @@ export const ProcessoModel = db.define("processos", {
     type: DataTypes.STRING(1000),
     allowNull: false,
   },
+  caderno: {
+    type: DataTypes.STRING(50),
+    allowNull: false,
+  },
+  pagina: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 ProcessoModel.belongsTo(AssociadoModel);
 AssociadoModel.hasMany(ProcessoModel);

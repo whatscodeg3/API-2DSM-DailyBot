@@ -4,7 +4,6 @@ const  agenda  = require ( 'node-schedule' );
 const fs = require('fs')
 
 
-
 async function getPdfs() {
     try {
         const responseAssociados = await api.get('/associados');
@@ -24,13 +23,15 @@ async function getPdfs() {
             if(objetoAssociado.links != []){
                 for(const processoAssociado of objetoAssociado.links){
                         await api.post('/processos', {
-                            idUsuario: objetoAssociado.idAssociado,
-                            link: processoAssociado,                     
+                            idUsuario: objetoAssociado.idAssociado,                  
                             dataProcesso: objetoAssociado.dataProcesso,
+                            link: processoAssociado,   
+                            caderno: objetoAssociado.caderno,
+                            pagina: objetoAssociado.pagina
                         });
                 }
             }
-
+            
         }
     }
     catch (error) {
