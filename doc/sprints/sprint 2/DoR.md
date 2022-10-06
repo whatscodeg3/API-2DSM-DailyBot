@@ -5,7 +5,7 @@
 
 - Mockup:
 <img src="/doc/front-end/mockup-2-sprint.jpeg" alt="mockup completo" width="855" >
-<img src="/doc/front-end/mockup-pg1-2-sprint" alt="mockup 1 página" width="855" >
+<img src="/doc/front-end/mockup-pg1-2-sprint.jpeg" alt="mockup 1 página" width="855" >
 <img src="/doc/front-end/mockup-pg2-2-sprint.jpeg" alt="mockup 2 página" width="855" >
 
 - Backlog da Sprint 2
