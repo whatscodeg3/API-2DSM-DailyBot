@@ -20,7 +20,7 @@
 
 - MEC (Modelo Entidade Conceitual):
 
-<img src="/doc/front-end/MEC-2-SPRINT.jpeg" alt="Modelo Entidade Conceitual" width="855" >
+<img src="/doc/front-end/MEC-2-SPRINT.png" alt="Modelo Entidade Conceitual" width="855" >
 
 - MER (Modelo Entidade Relacional):
 
