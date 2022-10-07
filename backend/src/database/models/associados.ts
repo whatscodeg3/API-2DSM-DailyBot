@@ -83,7 +83,23 @@ export const ProcessoModel = db.define("processos", {
     primaryKey: true,
   },
   conteudo: {
-    type: DataTypes.STRING(2000),
+    type: DataTypes.STRING(14000),
+    allowNull: true,
+  },
+  dataProcesso: {
+    type: DataTypes.STRING(10),
+    allowNull: false,
+  },
+  link: {
+    type: DataTypes.STRING(1000),
+    allowNull: false,
+  },
+  caderno: {
+    type: DataTypes.STRING(50),
+    allowNull: false,
+  },
+  pagina: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
 });
