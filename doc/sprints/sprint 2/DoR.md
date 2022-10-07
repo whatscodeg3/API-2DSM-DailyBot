@@ -1,5 +1,7 @@
 # 2ª Sprint
- Preencher !
+ Durante a apresentação da primeira sprint ao cliente, foi levantado que a automação do robô era interessante para a segunda sprint, por tanto um dos valores entregues foi a remoção do botão de ativação manual, e a implementação da ativação automática da busca, que ativa o robô as 20h da noite de acordo com o pedido do cliente. Também houve uma atualização no Crawler, que agora trás e exibe o texto do Pdf que menciona o associado, diferente da sprint passada que trazia o link da página do pdf, sendo que esse link virou um botão para caso ocorra algum bug na coleta automática do texto. E por fim, um sistema de descarte que automaticamente exclui os arquivos baixados que não são necessários mais.
+ Também foi criado um botão de relatório, que gera e baixa um Pdf contendo algumas informações do associado, assim como do texto e conteúdo referente ao texto de menção, do qual está sendo gerado um relatório, servindo ao proposito de facilitar a comunicação para os associados, tendo apenas que baixar o relatório e enviar aos associados, valendo ressaltar que anteriormente os relatórios tinham que ser feitos manualmente, após terem o texto de menção do Diário Oficial em mãos. Por ultimo criamos a página de cadastro, para que não seja preciso mais cadastrar os dados dos associados pelo banco, tendo agora a opção via web.
+ O MPV dessa sprint então foi a automatização do robô, a exibição do texto do Pdf ao invés do link, o descarte de arquivos desnecessários, a geração de relatório e a página de cadastro.
 
 # DoR
 
