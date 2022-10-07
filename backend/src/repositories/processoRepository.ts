@@ -3,13 +3,21 @@ import { ProcessoModel } from "../database/models/associados";
 export interface IProcessoAtributes {
   id?: string | number
   conteudo: string;
+  link: string;
+  dataProcesso: string;
   idUsuario: string | number;
+  caderno: string;
+  pagina: number;
 }
 
 export interface IProcessoUpdate {
   id?: string | number
   conteudo?: string;
+  link: string;
+  dataProcesso: string;
   idUsuario?: string | number;
+  caderno: string;
+  pagina: number;
 }
 
 
@@ -31,11 +39,15 @@ export class ProcessoRepository {
   }
 
   async create(data: IProcessoAtributes) {
-    const { conteudo, idUsuario } = data;
+    const { conteudo, idUsuario, dataProcesso, link, caderno, pagina } = data;
 
     const processo = await ProcessoModel.create({
       conteudo,
-      associadoId: idUsuario
+      dataProcesso,
+      link,
+      associadoId: idUsuario,
+      caderno,
+      pagina
     });
     return processo
   }
