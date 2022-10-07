@@ -14,13 +14,13 @@ function UlNomes() {
         async function loadUsuarios() {
             const response = await api.get("/associados");
             console.log(response.data);
-            setUsuarios(response.data.rows);
+            setUsuarios(response.data);
         }
         loadUsuarios();
     }, []);
 
     const listUsers = usuarios.map((usuario) => <li className="titulo-pesquisa" key={usuario.nome}>
-        <Link to={`/historico/${usuario.id}`}>{usuario.nome}</Link>
+        <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
     </li>)
 
     return (

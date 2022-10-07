@@ -6,12 +6,15 @@ import GlobalStyleHistorico from './globalStylesHistorico'
 //Style Default
 import { Principal } from "./defaultStylesHistorico";
 
+import { useParams } from "react-router-dom";
+
 // Componentes
 import Cabeçalho from "../../components/cabeçalho/cabeçalho";
 import Conteudo from "../../components/conteudoHistorico/conteudoHistorico";
 import PaginaModal from "../../components/botaoAbrirModal/paginaModal";
 
 function Historico() {
+
 
     return (
         <>
