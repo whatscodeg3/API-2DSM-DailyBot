@@ -9,6 +9,7 @@ function Conteudo() {
 
     // Trazendo informações do banco
 
+    // Puxando Informações de Exibição
     const FindId = useParams();
     const idUsuario = new Number(FindId.userId)
 
@@ -31,7 +32,7 @@ function Conteudo() {
           <Summary>
             <p>{processo.dataProcesso}</p>
             <DivInput>
-              <InputButton type="button" value="Relatório" onClick={gerarpdf()} />
+              <InputButton type="button" value="Relatório" onClick={gerarpdf} />
               <InputButton type="button" value="Link" />
             </DivInput>
           </Summary>
@@ -43,7 +44,7 @@ function Conteudo() {
     ));
 
 
-
+    // Puxando Informações do Relatório
 
     const [usuarios, setUsuarios] = useState([]);
 
@@ -61,21 +62,34 @@ function Conteudo() {
 
     // Opção Relatório
 
-    dataMencao = '25/04/2021'
-    nomeCaderno = 'executivo 1'
-    nomeProfessor = 'Daniel Machado de Carvalho'
-    emailProfessor = 'danielmachado@gmail.com'
+    const dataProcesso = processos.map((elemento) => (
+        elemento.dataProcesso
+    ));
 
+    const caderno = processos.map((elemento) => (
+        elemento.caderno
+    ));
 
-    textoPdf = '8529183/1 EDSON MASANORI TAKEDA NIVEL III 4 ANSM14 18/07/2022'
+    const conteudo = processos.map((elemento) => (
+        elemento.conteudo
+    ));
+    
+    var dataMencao = dataProcesso[0]
+    var nomeCaderno = caderno[0]
+    var textoPdf = conteudo[0]
+    var dataRelatorio = dataProcesso[0]
+
+    var nomeProfessor = usuarios.nome
+    var emailProfessor = usuarios.email
+
 
     function gerarpdf(){
         var doc = new jsPDF()
-               
-        doc.text('Sindicato dos professores', 10, 15)
-        doc.text(`Relatório do dia ${nomeProfessor}`, 120, 15)
 
-        var strArr = doc.splitTextToSize(`No dia ${nomeProfessor} houve uma menção no caderno ${nomeProfessor} ao professor ${nomeProfessor}, que foi enviado para o e-mail de contato ${nomeProfessor} pela equipe do sindicato atráves desse relatório, segue adiante o trecho encontrado de menção.`, 190)
+        doc.text('Sindicato dos professores', 10, 15)
+        doc.text(`Relatório do dia ${dataRelatorio}`, 120, 15)
+
+		var strArr = doc.splitTextToSize(`No dia ${dataMencao} houve uma menção no caderno ${nomeCaderno} ao professor ${nomeProfessor}, que foi enviado para o e-mail de contato ${emailProfessor} pela equipe do sindicato atráves desse relatório, segue adiante o trecho encontrado de menção.`, 190)
         doc.text(strArr, 10, 30);
 
         var strArr = doc.splitTextToSize(textoPdf, 190)
@@ -84,12 +98,12 @@ function Conteudo() {
         doc.save('relatorio.pdf')
     }
 
-    // Listando dados do banco
+    // Retornando valores na tela
 
     return (
         <>
             <ConteudoPrincipal>
-                    {listProcess}                    
+                {listProcess}                    
             </ConteudoPrincipal>
         </>
     )
