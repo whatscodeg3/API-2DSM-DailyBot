@@ -27,21 +27,7 @@ function Conteudo() {
         loadProcessos();
     }, []);
 
-    const listProcess = processos.map((processo) => (
-        <Details key={processo}>
-          <Summary>
-            <p>{processo.dataProcesso}</p>
-            <DivInput>
-              <InputButton type="button" value="Relatório" onClick={() => gerarpdf(Number(processo.id))} />
-              <InputButton type="button" value="Link" onClick={() => {return location.href=processo.link}} />
-            </DivInput>
-          </Summary>
-          <ConteudoDatails>
-            <Linha />
-            <Trecho>{processo.conteudo}</Trecho>
-          </ConteudoDatails>
-        </Details>
-    ));
+
 
 
     // Puxando Informações do Relatório
@@ -87,13 +73,38 @@ function Conteudo() {
 
     // Retornando valores na tela
 
-    return (
-        <>
-            <ConteudoPrincipal>
-                {listProcess}                    
-            </ConteudoPrincipal>
-        </>
-    )
+    if(processos == 'null') {
+        return (
+            <>
+                <ConteudoPrincipal>
+                    <p>Não foi encontrado nenhum processo!</p>
+                </ConteudoPrincipal>
+            </>
+        )
+    } else {
+        const listProcess = processos.map((processo) => (
+            <Details key={processo}>
+              <Summary>
+                <p>{processo.dataProcesso}</p>
+                <DivInput>
+                  <InputButton type="button" value="Relatório" onClick={() => gerarpdf(Number(processo.id))} />
+                  <InputButton type="button" value="Link" onClick={() => {return location.href=processo.link}} />
+                </DivInput>
+              </Summary>
+              <ConteudoDatails>
+                <Linha />
+                <Trecho>{processo.conteudo}</Trecho>
+              </ConteudoDatails>
+            </Details>
+        ));
+        return (
+            <>
+                <ConteudoPrincipal>
+                      {listProcess}
+                </ConteudoPrincipal>
+            </>
+        )
+    }
 }
 
 export default Conteudo;

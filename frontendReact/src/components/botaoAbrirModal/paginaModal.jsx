@@ -27,8 +27,6 @@ function PaginaModal() {
             loadUsuarios();
         }, []);
 
-        console.log(usuarios)
-
 
         // fechar
         function fechar() {
