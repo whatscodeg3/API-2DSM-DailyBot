@@ -48,17 +48,9 @@ function PaginaModal() {
                             <p className="modal-historico">E-mail:ㅤ<span className="subtitulo">{usuarios.email}</span></p>
                             <p className="modal-historico">CPF:ㅤ<span className="subtitulo">{usuarios.cpf}</span></p>
                             <p className="modal-historico">Data de Nascimento:ㅤ<span className="subtitulo">{usuarios.dataNascimento}</span></p>
-                            <p className="modal-historico">Escolas vinculadas:ㅤ</p>
+                            {/* <p className="modal-historico">Escolas vinculadas:ㅤ</p>
                                 <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 1</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 2</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 3</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 4</p>
+                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 2</p> */}
                     </div>
                 </div>
             </>

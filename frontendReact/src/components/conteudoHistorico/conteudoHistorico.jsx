@@ -32,8 +32,8 @@ function Conteudo() {
           <Summary>
             <p>{processo.dataProcesso}</p>
             <DivInput>
-              <InputButton type="button" value="Relatório" onClick={gerarpdf} />
-              <InputButton type="button" value="Link" />
+              <InputButton type="button" value="Relatório" onClick={() => gerarpdf(Number(processo.id))} />
+              <InputButton type="button" value="Link" onClick={() => {return location.href=processo.link}} />
             </DivInput>
           </Summary>
           <ConteudoDatails>
@@ -59,40 +59,27 @@ function Conteudo() {
         loadUsuarios();
     }, []);
 
+    
 
     // Opção Relatório
-
-    const dataProcesso = processos.map((elemento) => (
-        elemento.dataProcesso
-    ));
-
-    const caderno = processos.map((elemento) => (
-        elemento.caderno
-    ));
-
-    const conteudo = processos.map((elemento) => (
-        elemento.conteudo
-    ));
-    
-    var dataMencao = dataProcesso[0]
-    var nomeCaderno = caderno[0]
-    var textoPdf = conteudo[0]
-    var dataRelatorio = dataProcesso[0]
 
     var nomeProfessor = usuarios.nome
     var emailProfessor = usuarios.email
 
-
-    function gerarpdf(){
+     function gerarpdf(id){
         var doc = new jsPDF()
+        const processoUnico = processos.find(processoId => processoId.id === id)
+
+        var date = new Date()
+        var dataDia = date.toLocaleDateString()
 
         doc.text('Sindicato dos professores', 10, 15)
-        doc.text(`Relatório do dia ${dataRelatorio}`, 120, 15)
+        doc.text(`Relatório do dia ${dataDia}`, 120, 15)
 
-		var strArr = doc.splitTextToSize(`No dia ${dataMencao} houve uma menção no caderno ${nomeCaderno} ao professor ${nomeProfessor}, que foi enviado para o e-mail de contato ${emailProfessor} pela equipe do sindicato atráves desse relatório, segue adiante o trecho encontrado de menção.`, 190)
+		var strArr = doc.splitTextToSize(`No dia ${processoUnico.dataProcesso} houve uma menção no caderno ${processoUnico.caderno} ao professor ${nomeProfessor}, que foi enviado para o e-mail de contato ${emailProfessor} pela equipe do sindicato atráves desse relatório, segue adiante o trecho encontrado de menção.`, 190)
         doc.text(strArr, 10, 30);
 
-        var strArr = doc.splitTextToSize(textoPdf, 190)
+        var strArr = doc.splitTextToSize(processoUnico.conteudo, 190)
         doc.text(strArr, 10, 60);
 
         doc.save('relatorio.pdf')
