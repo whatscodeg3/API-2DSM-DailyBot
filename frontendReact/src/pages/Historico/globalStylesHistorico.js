@@ -28,6 +28,7 @@ const GlobalStyleHistorico = createGlobalStyle`
         overflow-x: hidden;
         padding: 0;
         margin: 0;
+        font-family: 'IBM Plex Sans';
     }
 
     p{
@@ -53,6 +54,7 @@ const GlobalStyleHistorico = createGlobalStyle`
     hr {
         background-color: #A92364;
         height: 0.2%;
+        padding: 0.1%;
         border: none;
     }
 
