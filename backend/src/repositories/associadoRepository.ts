@@ -15,6 +15,8 @@ export interface IAssociadoUpdate {
 }
 
 
+
+
 export class AssociadoRepository {
   async findAll() {
     const associados = await AssociadoModel.findAll({});

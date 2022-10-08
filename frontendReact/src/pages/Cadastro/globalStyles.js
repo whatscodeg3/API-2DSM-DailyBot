@@ -9,7 +9,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    overflow-x: hidden
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+
   }
   
   html {
