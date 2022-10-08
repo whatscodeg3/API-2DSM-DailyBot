@@ -14,13 +14,13 @@ create database apimidall;
 use apimidall;
 ```
 
-<img src="/doc/front-end/manual/mysql-script.png" alt="wireframe sprint 1" width="855">
+<img src="/doc/front-end/manual/mysql-script.png" alt="wireframe sprint 1" width="555" height="500">
 
 Etapa 3:
 - Clone o projeto no Visual Studio Code 
 - Crie um arquivo na pasta "backend" chamado ".env"
 
-<img src="/doc/front-end/manual/.env1.png" alt="wireframe sprint 1" width="855">
+<img src="/doc/front-end/manual/.env1.png" alt="wireframe sprint 1" width="455" height="400">
 
 - Cole o seguinte texto e preencha com as informações do seu banco:
 
@@ -31,16 +31,16 @@ DB_PASS="" #senha do seu Workbench
 DB_NAME="apimidall"
 DB_PORT="" #porta da conexão criada
 ```
-<img src="/doc/front-end/manual/.env2.png" alt="wireframe sprint 1" width="855">
-<img src="/doc/front-end/manual/banco-exemplo.png" alt="wireframe sprint 1" width="855">
+<img src="/doc/front-end/manual/.env2.png" alt="wireframe sprint 1" width="655" height="300">
+<img src="/doc/front-end/manual/banco-exemplo.png" alt="wireframe sprint 1" width="455" height="400">
 
 - Após preenchido abra a pasta "backend", depois "src", depois "robo_leitor_pdf" e abra o arquivo "leitor.pdf
 
-<img src="/doc/front-end/manual/leitor.py1.png" alt="wireframe sprint 1" width="855">
+<img src="/doc/front-end/manual/leitor.py1.png" alt="wireframe sprint 1" width="405" height="650">
 
 - Preencha os campos apontados na imagem abaixo, com as informações do seu banco:
 
-<img src="/doc/front-end/manual/leitor.py2.png" alt="wireframe sprint 1" width="855">
+<img src="/doc/front-end/manual/leitor.py2.png" alt="wireframe sprint 1" width="755" height="400">
 
 Etapa 4:
 
@@ -51,7 +51,7 @@ Etapa 4:
 
 - Após baixado, use o comando "pip install -r requirements.txt"
 
-<img src="/doc/front-end/manual/backend-pip-install.png" alt="wireframe sprint 1" width="855">
+<img src="/doc/front-end/manual/backend-pip-install.png" alt="wireframe sprint 1" width="655" height="400">
 
 - Terminando de baixar as dependencias do projeto, de o comando "npm start" para rodar o backend
 
