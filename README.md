@@ -110,9 +110,9 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 
 ## :clipboard: Manual de Instalação e Utilização <a id="manual"></a>
 
-Manual de instalação ([Link da Pasta](https://github.com/Jonatas-Dallo/DOC2-API-2DSM-DailyBot/blob/main/doc/sprints/Sprint%203/DoR.md))
+Manual de instalação ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/Manuais/Instala%C3%A7%C3%A3o.md))
 
-Manual de Utilização ([Link da Pasta](https://github.com/Jonatas-Dallo/DOC2-API-2DSM-DailyBot/blob/main/doc/sprints/Sprint%203/DoD.md))
+Manual de Utilização ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/Manuais/Utiliza%C3%A7%C3%A3o.md))
 
 <br>
 
