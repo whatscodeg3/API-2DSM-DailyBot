@@ -30,7 +30,7 @@ doc\front-end\MEC-2-SPRINT.png
 
 - Burndown da 2 sprint:
 
-<img src="" alt="Burndown 1 sprint" width="855" >
+<img src="/doc/front-end/burndown-2sp.jpeg" alt="Burndown 1 sprint" width="855" >
 
 - Arquitetura simplificada de software:
 
