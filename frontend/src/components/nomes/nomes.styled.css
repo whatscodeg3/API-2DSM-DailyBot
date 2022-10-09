@@ -1,0 +1,37 @@
+.titulo-pesquisa {
+    color: white;
+    font-family: 'IBM Plex Sans';
+    font-size: 2vw;
+    padding-bottom: 2%;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+
+.ul_class {
+    width: 100%;
+    height: 60vh;
+}
+
+.ul_class a {
+    color: white;
+    font-family: 'IBM Plex Sans';
+    font-size: 2vw;
+    padding-bottom: 2%;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+
+.ul_class::-webkit-scrollbar {
+    width: 9px;
+    background-color: #EA7A67;
+}
+
+.ul_class::-webkit-scrollbar-track-piece {
+    border-right: 2px solid #fff;
+}
+
+.ul_class::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    padding-right: 5%;
+}
