@@ -1,11 +1,11 @@
 .botao-modal{
-    background-color: #A92364;
+    background-color: #EA7A67;
     color: #fff;
     border: none;
     padding: 0.5%;
     border-radius: 10px;
     font-family: 'IBM Plex Sans';
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
 }
 
@@ -20,10 +20,12 @@
     overflow-y: scroll;
     animation-duration: 2.5s;
     animation: animacao-modal 2s;
+    display: none;
 }
 
 .modal.show {
     opacity: 1;
+    display: block;
 }
 
 .botao-fechar{

@@ -11,15 +11,14 @@ import { Nomes } from './styles'
 
 function SearchBar() {
 
-
-    const search = () => {
+    const teste = () => {
         const searchbox = document.getElementById('barra_pesquisa').value.toUpperCase();
         const lista = document.getElementById('lista_para_busca');
         const listaItens = lista.getElementsByTagName('li');
-        const listaItensNomes = lista.getElementsByTagName('p');
+        const listaItensNomes = lista.getElementsByTagName('a');
 
         for (var i = 0; i < listaItensNomes.length; i++) {
-            let match = listaItens[i].getElementsByTagName('p')[0];
+            let match = listaItens[i].getElementsByTagName('a')[0];
 
             if (match) {
                 let textValue = match.textContent || match.innerHTML
@@ -38,7 +37,7 @@ function SearchBar() {
             <Search id="pesquisa">
                 <SearchOption id="keyframe5">
                     <Imagem src={SearchIcon} alt="search-icon" />
-                    <Txt type="search" className="txt" placeholder="Digite aqui..." id="barra_pesquisa" onKeyUp={search} />
+                    <Txt type="search" className="txt" placeholder="Digite aqui..." id="barra_pesquisa" onKeyUp={teste} />
                 </SearchOption>
 
                 <Nomes>

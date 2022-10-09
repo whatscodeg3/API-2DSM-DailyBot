@@ -12,7 +12,7 @@ function Header() {
             <DivFundo>
                 <img src={logo} alt="logo" />
                 <Titulo className="titulo">Dailybot é um robô<br /> programado para estar<br /> constantemente de<br /> olho no <Diario
-                    href="http://www.imprensaoficial.com.br/" className="diario"><u>Diário Oficial</u></Diario>
+                    href="http://www.imprensaoficial.com.br/" className="diario"><u style={{ fontFamily: 'Roboto' }}>Diário Oficial</u></Diario>
                 </Titulo>
             </DivFundo>
         </>

@@ -4,6 +4,8 @@ import {
   Routes
 } from 'react-router-dom'
 
+import Conteudo from "./components/conteudoHistorico/conteudoHistorico";
+
 import Home from './pages/Home'
 import Historico from './pages/Historico/historico'
 import Login from './pages/Login'
@@ -18,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/historico" element={<Historico />} />
-        <Route path=":userId" element={<Historico />} />
+        <Route path=":userId" element={<Historico />} component={Historico} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
       </Routes>

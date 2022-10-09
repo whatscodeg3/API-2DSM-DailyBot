@@ -41,7 +41,6 @@ export const Txt = styled.input`
 
 export const Nomes = styled.div`
     width: 70%;
-    height: 40vh;
     overflow-y: hidden;
     flex-direction: column;
     align-items: flex-start;

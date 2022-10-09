@@ -22,6 +22,7 @@ export const ConteudoSecundarioTitulo = styled.p`
     font-family: 'IBM Plex Sans';
     font-size: 2.5vw;
     text-align: right;
+    font-family: 'Roboto', sans-serif;
 `;
 
 export const ConteudoSecundarioSubtitulo = styled.span`
@@ -29,6 +30,7 @@ export const ConteudoSecundarioSubtitulo = styled.span`
     font-family: 'IBM Plex Sans';
     font-size: 2.5vw;
     text-align: right;
+    font-family: 'Roboto', sans-serif;
 `;
 
 export const TituloInstrucoes = styled.p`
@@ -36,6 +38,7 @@ export const TituloInstrucoes = styled.p`
     font-family: 'IBM Plex Sans';
     font-size: 1.2vw;
     text-align: right;
+    font-family: 'Roboto', sans-serif;
 `;
 
 export const Linha = styled.hr`

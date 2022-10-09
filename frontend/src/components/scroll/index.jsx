@@ -11,11 +11,8 @@ function Scroll() {
         <>
             <Menu>
                 <ScrollStyle>
-                    <li><Icon><ion-icon name="power"></ion-icon></Icon>
-                        <Subtitulo href="#ativar" className="subtitulo">Ativar Robô</Subtitulo></li>
-
                     <li><Icon><ion-icon name="person-add"></ion-icon></Icon>
-                        <Subtitulo href="#cad-rem" className="subtitulo">Cadastrar ou remover associado</Subtitulo></li>
+                        <Subtitulo href="#cad-rem" className="subtitulo">Cadastrar associado</Subtitulo></li>
 
                     <li><Icon><ion-icon name="search" className="icon"></ion-icon></Icon>
                         <Subtitulo href="#pesquisa" className="subtitulo">Pesquisar associado</Subtitulo></li>

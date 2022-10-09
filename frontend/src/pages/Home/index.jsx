@@ -22,7 +22,7 @@ function Home() {
             <Principal>
                 <Scroll />
                 <OnOff />
-                {/* <CadRem />     // codigo para cadastro para segunda sprint */}
+                <CadRem />
                 <SearchBar />
             </Principal>
         </>

@@ -24,4 +24,5 @@ export const Subtitulo = styled.a`
     color: white;
     font-size: 32px;
     margin-right: 200px;
+    font-family: 'Roboto', sans-serif;
 `;

@@ -15,6 +15,7 @@ export const Titulo = styled.h1`
     color: #EA7A67;
     text-align: right;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 `;
 
 export const Diario = styled.a`

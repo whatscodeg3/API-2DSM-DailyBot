@@ -20,9 +20,6 @@ function Cadastro() {
   };
 
 
-
-
-
   return (
     <>
       < GlobalStyle />

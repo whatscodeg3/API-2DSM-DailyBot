@@ -12,6 +12,15 @@
     height: 60vh;
 }
 
+.ul_class a {
+    color: white;
+    font-family: 'IBM Plex Sans';
+    font-size: 2vw;
+    padding-bottom: 2%;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+
 .ul_class::-webkit-scrollbar {
     width: 9px;
     background-color: #EA7A67;

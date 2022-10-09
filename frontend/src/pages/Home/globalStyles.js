@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         width: 100%;
         height: 100%;
+        font-family: 'Roboto', sans-serif;
     }
 
     a {
@@ -35,11 +36,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button#primeiro {
-        width: 50%;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        margin-top: 20px;
+        padding: 20px;
         font-size: 2rem;
-        font-family: 'IBM Plex Sans';
+        font-family: 'Roboto';
         color: white;
         background: #EA7A67;
         border: 3px solid #A92364;

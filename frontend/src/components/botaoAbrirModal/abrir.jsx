@@ -12,7 +12,7 @@ function BotaoAbrirModal() {
 
     return (
         <>
-            <input type="button" value="Ver mais" className="botao-modal" onClick={abrir}></input>
+            <input type="button" value="Ver mais" className="botao-modal" onClick={abrir} style={{ fontFamily: 'Roboto' }}></input>
         </>
     )
 

@@ -28,6 +28,7 @@ const GlobalStyleHistorico = createGlobalStyle`
         overflow-x: hidden;
         padding: 0;
         margin: 0;
+        font-family: 'Roboto', sans-serif;
     }
 
     p{
@@ -45,7 +46,7 @@ const GlobalStyleHistorico = createGlobalStyle`
     h1 {
         font-size: 3rem;
         color: #fff;
-        font-family: 'IBM Plex Sans';
+        font-family: 'Roboto';
         padding-top: 2%;
         padding-left: 5%;
     }
@@ -53,6 +54,7 @@ const GlobalStyleHistorico = createGlobalStyle`
     hr {
         background-color: #A92364;
         height: 0.2%;
+        padding: 0.1%;
         border: none;
     }
 
