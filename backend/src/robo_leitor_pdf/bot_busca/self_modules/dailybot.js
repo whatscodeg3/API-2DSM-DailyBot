@@ -20,7 +20,6 @@ const cheerio = require('cheerio');
   const dataDia = await page.evaluate(() => {
     return document.querySelector("#txtDataFim").value;
   });
-  // const dataOntem = `17/09/2022` //data mock *********TODO retirar esse mock e deixar a consulta do diario mesmo e consultar mais lugares no código para remover 
   const dataPonto = dataDia.replace(/\//g, '.')
   const dataSeparadaInvertida = dataPonto.split('.').reverse()
 
