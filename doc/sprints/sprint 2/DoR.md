@@ -6,9 +6,9 @@
 # DoR
 
 - Mockup:
-<img src="/doc/front-end/mockup-2-sprint.jpeg" alt="mockup completo" width="855" >
-<img src="/doc/front-end/mockup-pg1-2-sprint.jpeg" alt="mockup 1 página" width="855" >
-<img src="/doc/front-end/mockup-pg2-2-sprint.jpeg" alt="mockup 2 página" width="855" >
+<img src="/doc/front-end/mockup-2-sprint.jpeg" alt="mockup completo" width="555" height="500" >
+<img src="/doc/front-end/mockup-pg1-2-sprint.jpeg" alt="mockup 1 página" width="555" height="500" >
+<img src="/doc/front-end/mockup-pg2-2-sprint.jpeg" alt="mockup 2 página" width="555" height="500" >
 
 - Backlog da Sprint 2
 
@@ -26,15 +26,15 @@ doc\front-end\MEC-2-SPRINT.png
 
 - MER (Modelo Entidade Relacional):
 
-<img src="/doc/front-end/MER-2-SPRINT.png" alt="Modelo Entidade Relacional" width="555" >
+<img src="/doc/front-end/MER-2-SPRINT.png" alt="Modelo Entidade Relacional" width="555" height="500" >
 
 - Burndown da 2 sprint:
 
-<img src="/doc/front-end/burndown-2sp.jpeg" alt="Burndown 1 sprint" width="855" >
+<img src="/doc/front-end/burndown-2sp.jpeg" alt="Burndown 1 sprint" width="655" height="500" >
 
 - Arquitetura simplificada de software:
 
-<img src="/doc/front-end/ARQUITETURA-2-SPRINT.png" alt="Logica do software na 1 sprint" width="855" >
+<img src="/doc/front-end/ARQUITETURA-2-SPRINT.png" alt="Logica do software na 1 sprint" width="555" height="500" >
 
 
 
