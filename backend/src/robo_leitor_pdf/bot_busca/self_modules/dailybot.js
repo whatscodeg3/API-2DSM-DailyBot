@@ -20,7 +20,7 @@ const cheerio = require('cheerio');
   const dataDia = await page.evaluate(() => {
     return document.querySelector("#txtDataFim").value;
   });
-  //const dataOntem = `17/09/2022` //data mock *********TODO retirar esse mock e deixar a consulta do diario mesmo e consultar mais lugares no código para remover 
+  // const dataOntem = `17/09/2022` //data mock *********TODO retirar esse mock e deixar a consulta do diario mesmo e consultar mais lugares no código para remover 
   const dataPonto = dataDia.replace(/\//g, '.')
   const dataSeparadaInvertida = dataPonto.split('.').reverse()
 
@@ -54,6 +54,9 @@ const cheerio = require('cheerio');
 
         linkPdf = linkPdf.slice(0, (linkPdf.search('.pdf'))+4)
 
+        objetoAssociado.caderno = caderno
+        objetoAssociado.pagina = pagina
+
         switch(linksBD.includes(linkPdf)){
           case true:
             console.log('Já salvei este link')
@@ -66,8 +69,6 @@ const cheerio = require('cheerio');
   }
   objetoAssociado.dataProcesso = dataDia
   objetoAssociado.idAssociado = Number(idAssociado);
-  objetoAssociado.caderno = caderno
-  objetoAssociado.pagina = pagina
 
   //fechando navegador
   await browser.close()
