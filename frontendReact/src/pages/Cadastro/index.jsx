@@ -8,15 +8,13 @@ import { DivContainer, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEs
 
 function Cadastro() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => {
-    api.post('/associados', {
-      nome: data.nome,
+  const onSubmit = async data => {
+    await api.post('/associados', {
+      nome: data.name,
       cpf: data.cpf,
       email: data.email,
       dataNascimento: new Date(data.dataNascimento),
-    })
-    console.log(data)
-
+    });
   };
 
 

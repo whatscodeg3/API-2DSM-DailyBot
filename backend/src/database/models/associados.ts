@@ -56,10 +56,6 @@ export const AssociadoModel = db.define("associados", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  sobrenome: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
   cpf: {
     type: DataTypes.STRING,
     allowNull: false,
