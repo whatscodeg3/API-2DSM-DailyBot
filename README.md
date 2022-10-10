@@ -103,7 +103,7 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 | Paginas Web (front-end) | Media 🟨 | Eu como backoffice, quero ter interfaces web que facilitam o uso do sistema, para que seja preciso apenas acessar o site e ter uso completo das funções. | Tem como valor uma melhor experiência para quem for usar o sistema. | 1 | ✅ |
 | Envio para o e-mail | Media 🟨 | Eu como backoffice, quero uma opção de enviar as informações pegos pelo robô para o cliente, de maneira mais fácil e integrada ao sistema. | Tem como valor a automatização do processo, para o backoffice comunicar o associado. | 3 | 🔄 |
 | Automatização do envio para o e-mail | Media 🟨 |Eu como backoffice, quero que o sistema envie automaticamente as informações pegos pelo robô para o cliente. | Tem como valor a automatização do processo de comunicar o associado. | 4 | 🔄 |
-| Barra de Pesquisa | Baixo 🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 3 | 🔄 |
+| Barra de Pesquisa | Baixo 🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 2 | ✅ |
 | Login | Baixo 🟩 | Eu como cliente, quero um sistema de login para maior segurança, além de posteriormente transformar o software de uso interno, para externo. | Tem como valor a segurança de informações sensiveis, além de facilitar o trabalho posterior ao projeto. | 3 | 🔄 |
 
 <br>
