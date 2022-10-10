@@ -19,9 +19,14 @@ export class AssociadoController implements IAssociadoController {
   }
 
   async create(req: Request, res: Response) {
-    const associadoRepository = new AssociadoRepository();
-    const associado = await associadoRepository.create(req.body);
-    return res.status(201).json(associado);
+    try {
+      const associadoRepository = new AssociadoRepository();
+      const associado = await associadoRepository.create(req.body);
+      return res.status(201).json(associado);
+    }
+    catch (error) {
+      console.log(error);
+    }
   };
 
   async findAll(req: Request, res: Response) {

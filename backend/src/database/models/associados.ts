@@ -56,10 +56,6 @@ export const AssociadoModel = db.define("associados", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  sobrenome: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
   cpf: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -71,7 +67,7 @@ export const AssociadoModel = db.define("associados", {
     unique: true,
   },
   dataNascimento: {
-    type: DataTypes.DATE,
+    type: DataTypes.DATEONLY,
     allowNull: false,
   }
 });
