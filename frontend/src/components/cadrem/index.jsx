@@ -2,13 +2,15 @@ import React from "react"
 
 import { Cadastrar, Titulo } from "./style"
 
+import { Link } from 'react-router-dom'
+
 function CadRem() {
     return (
         <>
             {/* <section className="cadastro-remocao" id="cad-rem"> */}
-                <Cadastrar className="botao1" id='keyframe2'>
+                <Cadastrar className="botao1" id='cad-rem'>
                     <Titulo className="titulo-cadastro">Deseja <span>cadastar</span> um <br /> novo associado?</Titulo>
-                    <button id="primeiro">Clique Aqui</button>
+                    <Link to={`/cadastro`}><button id="primeiro">Clique Aqui</button></Link>
                 </Cadastrar>
 
                 {/* <div className="hr"></div>

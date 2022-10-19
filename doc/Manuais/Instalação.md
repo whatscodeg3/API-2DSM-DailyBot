@@ -91,7 +91,7 @@ INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `data
 
 INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('MARIA ISABEL CORREA DE ALMEIDA RUY', '', '0987654321', 'maria@gmail.com', '2016-05-24');
 
-INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', 'teste', '1230984576', 'fernanda@gmail.com', '1974-11-02');
+INSERT INTO `apimidall`.`associados` (`nome`, `sobrenome`, `cpf`, `email`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', '', '1230984576', 'fernanda@gmail.com', '1974-11-02');
 ```
 
 
