@@ -5,7 +5,7 @@ export const Tudo = styled.section`
     height: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 15%;
+    padding-top:8%;
 `;
 
 export const ConteudoSecundario = styled.div`
@@ -20,7 +20,7 @@ export const ConteudoSecundario = styled.div`
 export const ConteudoSecundarioTitulo = styled.p`
     color: white;
     font-family: 'IBM Plex Sans';
-    font-size: 2.5vw;
+    font-size: max(2.5vw , min(22px));
     text-align: right;
     font-family: 'Roboto', sans-serif;
 `;
@@ -28,7 +28,7 @@ export const ConteudoSecundarioTitulo = styled.p`
 export const ConteudoSecundarioSubtitulo = styled.span`
     color: #A92364;
     font-family: 'IBM Plex Sans';
-    font-size: 2.5vw;
+    font-size: max(2.5vw , min(22px));
     text-align: right;
     font-family: 'Roboto', sans-serif;
 `;
@@ -36,9 +36,12 @@ export const ConteudoSecundarioSubtitulo = styled.span`
 export const TituloInstrucoes = styled.p`
     color: white;
     font-family: 'IBM Plex Sans';
-    font-size: 1.2vw;
+    font-size: max(2vw , min(18px));
     text-align: right;
     font-family: 'Roboto', sans-serif;
+    span{
+        color: #A92364;
+    }
 `;
 
 export const Linha = styled.hr`

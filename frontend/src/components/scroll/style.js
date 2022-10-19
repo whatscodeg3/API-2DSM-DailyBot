@@ -6,7 +6,7 @@ export const Menu = styled.div`
 
 export const ScrollStyle = styled.ul`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     padding-top: 1.5%;
@@ -15,14 +15,13 @@ export const ScrollStyle = styled.ul`
 
 export const Icon = styled.span`
     color: white;
-    font-size: 20px;
-    margin-right: 15px;
+    font-size: 2vw;
+    margin-right: 0.5vw;
 `;
 
 export const Subtitulo = styled.a`
     font-family: 'IBM Plex Sans';
     color: white;
-    font-size: 32px;
-    margin-right: 200px;
+    font-size: max(2vw , min(18px));
     font-family: 'Roboto', sans-serif;
 `;
