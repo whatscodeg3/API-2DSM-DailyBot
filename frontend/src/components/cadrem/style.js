@@ -6,14 +6,15 @@ export const Cadastrar = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 20%;
+    margin-top: 30%;
+    padding-top: 10%;
     text-align: center;
 `;
 
 export const Titulo = styled.div`
     color: white;
     font-family: 'Roboto';
-    font-size: 2.5rem;
+    font-size:max(2.7vw , min(25px)); ;
     span {
         color: #A92364;
     }

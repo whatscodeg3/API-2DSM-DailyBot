@@ -2,7 +2,7 @@
     color: white;
     font-family: 'IBM Plex Sans';
     font-size: 2vw;
-    padding-bottom: 2%;
+    padding-bottom: 5px;
     cursor: pointer;
     overflow-y: hidden;
 }
@@ -15,9 +15,8 @@
 .ul_class a {
     color: white;
     font-family: 'IBM Plex Sans';
-    font-size: 2vw;
-    padding-bottom: 2%;
-    cursor: pointer;
+    font-size: max(2vw , min(20px));
+    cursor: pointer; 
     overflow-y: hidden;
 }
 
@@ -33,5 +32,5 @@
 .ul_class::-webkit-scrollbar-thumb {
     background-color: #fff;
     border-radius: 20px;
-    padding-right: 5%;
+
 }

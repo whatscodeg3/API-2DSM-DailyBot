@@ -36,9 +36,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button#primeiro {
-        margin-top: 20px;
-        padding: 20px;
-        font-size: 2rem;
+        margin: max(20px, min(10px));
+        padding: max(15px, min(10px));
+        font-size: max(2.5vw , min(25px));
         font-family: 'Roboto';
         color: white;
         background: #EA7A67;
@@ -47,6 +47,10 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 20px;
         cursor: pointer;
         overflow-y: hidden;
+    }
+
+    button#primeiro:hover{
+        transform: scale(1.1);
     }
 
     button#botao-remover {

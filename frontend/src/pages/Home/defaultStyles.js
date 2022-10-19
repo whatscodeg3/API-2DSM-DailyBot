@@ -5,10 +5,10 @@ export const Principal = styled.div`
     display: flex;
     flex-wrap: wrap;
     background: #EA7A67;
-    border-radius: 100px 0px 0px 0px;
+    border-radius: 10vw 0px 0px 0px;
     width: 100%;
     height: 100%;
-    margin-top: 350px;
+    margin-top: 12%;
 `;
 
 // export const conteudoPrincipal = styled.div`
