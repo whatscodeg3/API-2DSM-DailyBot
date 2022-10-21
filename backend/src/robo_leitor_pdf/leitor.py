@@ -2,8 +2,24 @@ import re
 import wget
 import os
 from PyPDF2 import PdfFileReader
+import smtplib, ssl
+from email.message import EmailMessage
 
 import mysql.connector
+
+def email(nome, conteudo):
+    msg = EmailMessage()
+    msg['From'] = "whatscode.g3@outlook.com"
+    msg['To'] = "romribkevin@gmail.com"
+    msg['Subject'] = "Assunto"
+    msg.set_content("")
+    context=ssl.create_default_context()
+
+    with smtplib.SMTP('SMTP.office365.com', port=587) as smtp:
+        smtp.starttls(context=context)
+        smtp.login(msg['From'], "whatscode2022")
+        smtp.send_message(msg)
+
 
 def leitor():
     db_connection = mysql.connector.connect(host="localhost", user="root", passwd="root", database="apimidall")
@@ -39,6 +55,9 @@ def leitor():
                     sql = ("update processos set conteudo = %s"
                             "where id= %s")
                     update(sql, bloco_relacionado_associado, consultaPosicao[2])
+
+                    email(nome=consultaPosicao[1], conteudo=consultaPosicao[3])
+
                     os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
 
     cursor.close()
