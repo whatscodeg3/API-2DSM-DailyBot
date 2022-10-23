@@ -4,6 +4,7 @@ export interface IAssociadoAtributes {
   nome?: string;
   cpf?: string;
   email?: string;
+  senha?: string
   dataNascimento?: Date;
 }
 
@@ -28,12 +29,18 @@ export class AssociadoRepository {
     return associado;
   }
 
+  async findByEmail(email: string) {
+    const associado = await AssociadoModel.findOne({ where: { email } });
+    return associado;
+  }
+
   async create(data: IAssociadoAtributes) {
-    const { nome, cpf, email, dataNascimento } = data;
+    const { nome, cpf, email, dataNascimento, senha } = data;
     const associado = await AssociadoModel.create({
       nome,
       cpf,
       email,
+      senha,
       dataNascimento
     });
     return associado

@@ -6,27 +6,31 @@ import styled from "styled-components"
 
 
 
+export const DivGeral = styled.form`
+display: flex;
+border: 1px solid black;
+flex-direction: row;
+justify-content:space-between;
+height: 100vh;
+width: 100vw;
+padding: 5em;
 
-export const RootStyles = styled.body`
-background: #A92364;
-height: 100%;
-width: 100%;
 `
 
 export const DivLogin = styled.div`
   display: flex;
+  height: 50vh;
+  width: 50vw;
   border: 1px solid red;
   flex-direction: column;
-  margin-right: 12.5%;
-  margin-top: 12.5%;
   padding: 5em;
-  gap: 2em;
   font: white;
   input {
     padding: 1.2em;
     border-radius: 16px;
     border: 1px;
     background-color: #FFCCC3;
+    width: 20vw;
   }
   button {
     appearance: button;
@@ -67,12 +71,12 @@ export const DivLogin = styled.div`
 
 export const DivImage = styled.div`
   display: flex;
-  border: 1px solid blue;
+
   flex-direction: column;
-  margin-left: 5%;
-  margin-top: 5.5%;
-  padding: 5em;
-  gap: 2em;
+  padding: 0em;
+  gap: 0em;
+  width: 50%;
+  height: 50%;
  
 `
 

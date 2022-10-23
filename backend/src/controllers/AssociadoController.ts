@@ -47,7 +47,18 @@ export class AssociadoController implements IAssociadoController {
     return associado
       ? res.status(200).json(associado)
       : res.status(404).send("Associado Não encontrado")
+
   };
+
+  async findByEmail(req: Request, res: Response) {
+    const { email } = req.body;
+    const associadoRepository = new AssociadoRepository();
+    const associado = await associadoRepository.findByEmail(email);
+    return associado
+      ? res.status(200).json(associado)
+      : res.status(404).send("Associado Não encontrado")
+  }
+
   async update(req: Request, res: Response) {
     const { id } = req.params;
     const associadoRepository = new AssociadoRepository();
