@@ -1,20 +1,25 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
+
 
 import api from "../../services/api"
 import { GlobalStyle } from "./globalStyles"
-import { DivContainer, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivRg, DivDataNasc, DivEstadoCivil, DivEscolas, DivEndereco, DivEmail, DivTel, DivRegras } from "./styles"
+import { DivContainer, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivRg, DivDataNasc, DivEstadoCivil, DivEscolas, DivEndereco, DivEmail, DivTel, DivRegras, DivSenha } from "./styles"
 
 
 function Cadastro() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const navigate = useNavigate();
   const onSubmit = async data => {
     await api.post('/associados', {
       nome: data.name,
       cpf: data.cpf,
       email: data.email,
+      senha: data.senha,
       dataNascimento: new Date(data.dataNascimento),
     });
+    navigate('/');
   };
 
 
@@ -80,6 +85,10 @@ function Cadastro() {
           </DivTel> */}
 
         </DivEmailTelefone>
+        <DivSenha>
+          <label htmlFor="password"><b style={{ color: 'white' }}>Senha: </b></label>
+          <input type="password" name="password" placeholder="Digite sua senha" {...register("senha", { required: true })} />
+        </DivSenha>
         <DivRegras>
           <input type="checkbox" id="regra" name="regra" value="regra" />
           <label htmlFor="regra" required> Eu autorizo o armazenamento destes dados no sistema *</label>

@@ -8,6 +8,7 @@ const router = express.Router();
 // Associados
 router.post("/associados", associadoController.create);
 router.get("/associados", associadoController.findAll);
+router.get("/associados", associadoController.findByEmail);
 router.get("/associados/:id", associadoController.findOne);
 router.patch("/associados/:id", associadoController.update);
 router.delete("/associados/:id", associadoController.delete);
