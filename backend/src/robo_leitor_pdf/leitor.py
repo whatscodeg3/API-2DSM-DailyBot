@@ -2,19 +2,42 @@ import re
 import wget
 import os
 from PyPDF2 import PdfFileReader
+import smtplib, ssl
+from email.message import EmailMessage
 
 import mysql.connector
 
+def email(nome,link,trecho, email):
+    msg = EmailMessage()
+    msg['From'] = "whatscode.g3@outlook.com"
+    msg['To'] = str(email)
+    msg['Subject'] = "DailyBot - Há uma nova menção no Diário Oficial "
+    msg.set_content(f"""
+    NOME: {nome}
+
+    LINK: {link}
+
+    TRECHO: {trecho}
+
+    """)
+    context=ssl.create_default_context()
+
+    with smtplib.SMTP('SMTP.office365.com', port=587) as smtp:
+        smtp.starttls(context=context)
+        smtp.login(msg['From'], "whatscode2022")
+        smtp.send_message(msg)
+
+
 def leitor():
-    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="root", database="apimidall")
+    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="root", database="testandoprojeto")
     cursor = db_connection.cursor(buffered=True)
 
 
     def select(sql):
         cursor.execute(sql)
         listaDaConsultaDosProcessos = []
-        for (idAssociado, nome, id_processo, conteudo, link ) in cursor:
-            listaDaConsultaDosProcessos.append([idAssociado, nome, id_processo, conteudo, link])
+        for (idAssociado, nome, email, id_processo, conteudo, link ) in cursor:
+            listaDaConsultaDosProcessos.append([idAssociado, nome, email, id_processo, conteudo, link])
         return listaDaConsultaDosProcessos
 
     def update(sql, valor, valor2):
@@ -22,10 +45,10 @@ def leitor():
         valor2 = valor2
         return cursor.execute(sql,(valor,valor2))
             
-    consulta = select("select a.id, a.nome, p.id, p.conteudo, p.link  from associados a, processos p where a.id = p.associadoId;")
+    consulta = select("select a.id, a.nome, a.email, p.id, p.conteudo, p.link  from associados a, processos p where a.id = p.associadoId;")
     for consultaPosicao in consulta:
-        if consultaPosicao[3] == None:
-            wget.download(consultaPosicao[4], f'PDFs/{consultaPosicao[1]}.pdf')
+        if consultaPosicao[4] == None:
+            wget.download(consultaPosicao[5], f'PDFs/{consultaPosicao[1]}.pdf')
             pdf_para_leitura = PdfFileReader(f'PDFs/{consultaPosicao[1]}.pdf')
             page_object = pdf_para_leitura.getPage(0)
             texto_do_pdf = page_object.extract_text()
@@ -38,10 +61,20 @@ def leitor():
                     bloco_relacionado_associado = '...'+bloco_relacionado_associado+'...'
                     sql = ("update processos set conteudo = %s"
                             "where id= %s")
-                    update(sql, bloco_relacionado_associado, consultaPosicao[2])
+                    update(sql, bloco_relacionado_associado, consultaPosicao[3])
+
+                    email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=bloco_relacionado_associado, email=consultaPosicao[2])
                     os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
 
     cursor.close()
     db_connection.commit()
     db_connection.close()
     os.remove('monitorando/arquivo_monitoramento.txt')
+
+
+
+
+
+
+    # TEM Q VER COMO VAI PEGAR O EMAIL DO CARA PRA ENVIAR CERTINHO
+    # E TRATAR O TAMANHO DO TRECHO (TASK LUCAS E THIAGO)
