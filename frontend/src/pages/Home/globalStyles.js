@@ -52,21 +52,6 @@ const GlobalStyle = createGlobalStyle`
     button#primeiro:hover{
         transform: scale(1.1);
     }
-
-    button#botao-remover {
-        width: 50%;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        font-size: 2rem;
-        font-family: 'IBM Plex Sans';
-        color: white;
-        background: #EA7A67;
-        border: 3px solid #A92364;
-        box-shadow: -3px 4px 3px 3px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
-        cursor: pointer;
-        overflow-y: hidden;
-    }
     
     #keyframe1 {
         animation-duration: 3s;
