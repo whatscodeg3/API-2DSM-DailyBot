@@ -66,6 +66,11 @@ export const AssociadoModel = db.define("associados", {
     allowNull: false,
     unique: true,
   },
+  senha: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: false
+  },
   dataNascimento: {
     type: DataTypes.DATEONLY,
     allowNull: false,

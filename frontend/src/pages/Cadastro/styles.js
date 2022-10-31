@@ -192,6 +192,16 @@ input {
   border: 2px solid #F3F3F3;
 }`
 
+export const DivSenha = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+width: 100%;
+input {
+  width: 100%;
+  border: 2px solid #F3F3F3;
+}`
+
 
 export const DivTel = styled.div`
 display: flex;
