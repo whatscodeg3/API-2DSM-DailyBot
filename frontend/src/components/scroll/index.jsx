@@ -17,6 +17,7 @@ function Scroll() {
                     <li><Icon><ion-icon name="search" className="icon"></ion-icon></Icon>
                         <Subtitulo href="#pesquisa" className="subtitulo">Pesquisar associado</Subtitulo></li>
                 </ScrollStyle>
+                
             </Menu>
         </>
     )
