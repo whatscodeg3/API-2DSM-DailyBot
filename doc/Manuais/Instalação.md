@@ -87,11 +87,11 @@ Observação:
 - Caso queira inserir alguns professores para teste, segue um script de inserção:
 
 ```
-INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `dataNascimento`) VALUES ('HELENO HELYNE DE SOUZA JUNIOR', '1234567892', 'heleno@gmail.com', '2022-09-17');
+INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `senha`, `dataNascimento`) VALUES ('HELENO HELYNE DE SOUZA JUNIOR', '1234567892', 'heleno@gmail.com', '1', '2022-09-17');
 
-INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `dataNascimento`) VALUES ('MARIA ISABEL CORREA DE ALMEIDA RUY', '0987654321', 'maria@gmail.com', '2016-05-24');
+INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `senha`, `dataNascimento`) VALUES ('MARIA ISABEL CORREA DE ALMEIDA RUY', '0987654321', 'maria@gmail.com', '2', '2016-05-24');
 
-INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', '1230984576', 'fernanda@gmail.com', '1974-11-02');
+INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `senha`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', '1230984576', 'fernanda@gmail.com', '3', '1974-11-02');
 ```
 
 
