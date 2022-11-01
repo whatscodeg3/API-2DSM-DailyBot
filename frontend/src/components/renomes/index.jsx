@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import './nomes.styled.css'
 import api from '../../services/api';
 import { Link } from "react-router-dom"
-import { Search } from "../searchbar/styles";
+import BotaoAbrirModal from "../ModalRemover/abrir"
+import PaginaModal from "../ModalRemover/paginaModal"
 
 
 // class UlNomes extends Component
 
-function UlNomes() {
+function RENomes() {
     const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
@@ -19,11 +20,11 @@ function UlNomes() {
         }
         loadUsuarios();
     }, []);
-
-    const listUsers = usuarios.map((usuario) => <li style={{ fontFamily: 'Roboto' }} className="titulo-pesquisa" key={usuario.nome}>
-        <Link to={`/${usuario.id}`}>{usuario.nome}</Link> 
+    
+    
+    const listUsers = usuarios.map((usuario) => <li className="titulo-pesquisa" key={usuario.nome}>
+        <BotaoAbrirModal/> <Link to={`/${usuario.id}`}>{usuario.nome}</Link> <PaginaModal />
     </li>)
-
 
     return (
         <>
@@ -35,4 +36,4 @@ function UlNomes() {
 }
 
 
-export default UlNomes;
+export default RENomes;
