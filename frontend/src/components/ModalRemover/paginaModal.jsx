@@ -1,23 +1,41 @@
 import React, { useState, useEffect } from "react";
-
-import './removestyleAbrirFecharModal.css'
 import api from '../../services/api';
 
-function PaginaModal() {
+import './removestyleAbrirFecharModal.css'
 
+
+function PaginaModal() {
 
         // fechar
         function fechar() {
             document.querySelector('.modal').classList.remove('show')
-            
-        }    
+                
+        }   
+
+        const [usuarios, setUsuarios] = useState([]);
+
+        useEffect(() => {
+
+            async function loadUsuarios() {
+                const response = await api.get(`/associados/`);
+                console.log(response.data);
+                setUsuarios(response.data);
+            }
+            loadUsuarios();
+        }, []);
+        
+
+        const lista = usuarios.map((usuario) => usuario.id)
+        console.log(listUsers) 
+
+        
+
 
         async function remover() {
             document.querySelector('.modal').classList.remove('show')
 
-        const response = await api.delete(`/associados/1`);
-        console.log(response.data);
-        setUsuarios(response.data);
+        const resposta = await api.delete(`/associados/${lista}`);
+        console.log(resposta.data);
             
         }
 
