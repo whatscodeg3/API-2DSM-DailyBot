@@ -3,7 +3,8 @@ import { useParams, Link } from 'react-router-dom'
 
 import api from '../../services/api'
 
-import { ConteudoPrincipal, Details, Summary, DivInput, InputButton, Trecho, Linha, ConteudoDatails, BackButton, Icon, DivButton } from './styles'
+import { ConteudoPrincipal, Details, Summary, DivInput, InputButton, Trecho, Linha, ConteudoDatails } from './styles'
+import { ParagrafoNome } from "../cabeçalho/styles"
 
 function Conteudo() {
 
@@ -77,7 +78,7 @@ function Conteudo() {
         return (
             <>
                 <ConteudoPrincipal>
-                    <p>Não foi encontrado nenhum processo!</p>
+                    <ParagrafoNome>Não foi encontrado nenhum processo!</ParagrafoNome>
                 </ConteudoPrincipal>
             </>
         )
@@ -95,21 +96,12 @@ function Conteudo() {
                 <Linha />
                 <Trecho>{processo.conteudo}</Trecho>
               </ConteudoDatails>
-
-                {/* VER ISSO */}
-              <DivButton href="#menu">
-                    <BackButton><Icon><ion-icon name="arrow-up"></ion-icon></Icon></BackButton>
-              </DivButton>
-
             </Details>
         ));
         return (
             <>
                 <ConteudoPrincipal>
                     {listProcess}
-                    <DivButton>
-                        <Link to={`/`}><BackButton><Icon><ion-icon name="arrow-back"></ion-icon></Icon></BackButton></Link>
-                    </DivButton>
                 </ConteudoPrincipal>
             </>
         )

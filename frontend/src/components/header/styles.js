@@ -1,16 +1,19 @@
 import styled from 'styled-components'
 
-export const DivFundo = styled.div`
+export const DivFundo = styled.header`
     margin-top: 1%;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
+    padding-right:65px;
     img{
-        width:20vw;
+        min-width: 120px;
+        max-width:20vw;
         margin-left: 3%;
     }
+
 `;
 
 export const Titulo = styled.h1`

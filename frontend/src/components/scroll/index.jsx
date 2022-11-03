@@ -11,7 +11,7 @@ function Scroll() {
         <>
             <Menu>
                 <ScrollStyle>
-                    <li><Icon><ion-icon name="person-add"></ion-icon></Icon>
+                    <li><Icon><ion-icon name="person"></ion-icon></Icon>
                         <Subtitulo href="#cad-rem" className="subtitulo">Cadastrar ou remover</Subtitulo></li>
 
                     <li><Icon><ion-icon name="search" className="icon"></ion-icon></Icon>

@@ -8,7 +8,7 @@ export const CabecalhoHistorico = styled.div`
     justify-content: space-between;
     gap: 3%;
     color: #A92364;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'IBM Plex Sans';
     padding-bottom: 0.5%;
 `;
@@ -20,6 +20,7 @@ export const SubtituloCabecalho = styled.span`
 `;
 
 export const ParagrafoNome = styled.span`
-    font-family: 'IBM Plex Sans';
+    fontFamily: 'Roboto';
     font-weight: 600;
+    color: #A92364;
 `;

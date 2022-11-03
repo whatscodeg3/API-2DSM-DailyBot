@@ -9,8 +9,8 @@ export const Principal = styled.div`
     width: 100%;
     height: 100%;
     margin-top: 12%;
-    
-    @media (max-width: 600px) {
+    padding:2%;
+    @media (max-width: 800px) {
         margin-top:88px
     }
 `;
@@ -23,27 +23,3 @@ export const Principal = styled.div`
 //     width: 100%;
 // `;
 
-export const BackButton = styled.button`
-    overflow-y: hidden;
-    width: 50px;
-    height: 50px;
-    background: #A92364;
-    cursor: pointer;
-    border: none;
-    border-radius: 20px;
-    display: flex;
-    `;
-
-export const Icon = styled.span`
-    padding-top:10px;
-    padding-left: 10px;
-    color: #fff;
-    font-size: 30px;
-`;
-
-export const DivButton = styled.a`
-    overflow-y: hidden;
-    position:fixed;
-    bottom: 8px;
-    right: 8px;
-`;
