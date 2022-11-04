@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         padding-right:50px;
         font-family: 'Roboto', sans-serif;
+        @media (max-width:768px) {
+            padding-right: 0px;
+        }  
     }
 
     a {

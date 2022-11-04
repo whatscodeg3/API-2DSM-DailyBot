@@ -14,9 +14,6 @@ function NavBarHome(){
                     <DivButton href="#cad-rem">
                         <Icon><ion-icon name="person"></ion-icon></Icon>
                     </DivButton>
-                    <DivButton>
-                        <Icon><ion-icon name="notifications"></ion-icon></Icon>
-                    </DivButton>
                     <DivButton href="#pesquisa">
                         <Icon><ion-icon name="search"></ion-icon></Icon>
                     </DivButton>

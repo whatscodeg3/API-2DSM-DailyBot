@@ -9,7 +9,7 @@ export const Principal = styled.div`
     width: 100%;
     height: 100%;
     margin-top: 12%;
-    padding:2%;
+    padding: 0 2%;
     @media (max-width: 800px) {
         margin-top:88px
     }

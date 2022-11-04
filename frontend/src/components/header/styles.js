@@ -13,7 +13,12 @@ export const DivFundo = styled.header`
         max-width:20vw;
         margin-left: 3%;
     }
-
+    @media (max-width:768px) {
+        padding-right: 15px;
+    }
+    @media (max-width:360px) {
+        margin-top: 10px;
+    }
 `;
 
 export const Titulo = styled.h1`
@@ -23,6 +28,9 @@ export const Titulo = styled.h1`
     text-align: right;
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    @media (max-width:360px) {
+        font-size: 14px;
+    }
 `;
 
 export const Diario = styled.a`
