@@ -7,13 +7,17 @@ from email.message import EmailMessage
 
 import mysql.connector
 
-def email(nome,link,trecho, email):
+def email(nome,link,trecho, email, data, caderno):
     msg = EmailMessage()
     msg['From'] = "whatscode.g3@outlook.com"
     msg['To'] = str(email)
     msg['Subject'] = "DailyBot - Há uma nova menção no Diário Oficial "
     msg.set_content(f"""
     NOME: {nome}
+
+    DATA: {data}
+
+    CADERNO: {caderno}
 
     LINK: {link}
 
@@ -29,15 +33,15 @@ def email(nome,link,trecho, email):
 
 
 def leitor():
-    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="root", database="testandoprojeto")
+    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="admin", database="apimidall")
     cursor = db_connection.cursor(buffered=True)
 
 
     def select(sql):
         cursor.execute(sql)
         listaDaConsultaDosProcessos = []
-        for (idAssociado, nome, email, id_processo, conteudo, link ) in cursor:
-            listaDaConsultaDosProcessos.append([idAssociado, nome, email, id_processo, conteudo, link])
+        for (idAssociado, nome, email, id_processo, conteudo, link, dataProcesso, caderno ) in cursor:
+            listaDaConsultaDosProcessos.append([idAssociado, nome, email, id_processo, conteudo, link, dataProcesso, caderno])
         return listaDaConsultaDosProcessos
 
     def update(sql, valor, valor2):
@@ -45,7 +49,7 @@ def leitor():
         valor2 = valor2
         return cursor.execute(sql,(valor,valor2))
             
-    consulta = select("select a.id, a.nome, a.email, p.id, p.conteudo, p.link  from associados a, processos p where a.id = p.associadoId;")
+    consulta = select("select a.id, a.nome, a.email, p.id, p.conteudo, p.link, p.dataProcesso, p.caderno  from associados a, processos p where a.id = p.associadoId;")
     for consultaPosicao in consulta:
         if consultaPosicao[4] == None:
             wget.download(consultaPosicao[5], f'PDFs/{consultaPosicao[1]}.pdf')
@@ -63,7 +67,7 @@ def leitor():
                             "where id= %s")
                     update(sql, bloco_relacionado_associado, consultaPosicao[3])
 
-                    email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=bloco_relacionado_associado, email=consultaPosicao[2])
+                    email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=bloco_relacionado_associado, email=consultaPosicao[2], data=consultaPosicao[6], caderno=consultaPosicao[7])
                     os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
 
     cursor.close()
@@ -76,5 +80,3 @@ def leitor():
 
 
 
-    # TEM Q VER COMO VAI PEGAR O EMAIL DO CARA PRA ENVIAR CERTINHO
-    # E TRATAR O TAMANHO DO TRECHO (TASK LUCAS E THIAGO)
