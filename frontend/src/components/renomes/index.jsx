@@ -4,32 +4,41 @@ import api from '../../services/api';
 import { Link } from "react-router-dom"
 import BotaoAbrirModal from "../ModalRemover/abrir"
 import PaginaModal from "../ModalRemover/paginaModal"
+import '../ModalRemover/removestyleAbrirFecharModal.css'
 
 
 // class UlNomes extends Component
 
 function RENomes() {
     const [usuarios, setUsuarios] = useState([]);
+    const [id, setId] = useState(0);
 
     useEffect(() => {
-
         async function loadUsuarios() {
             const response = await api.get("/associados");
-            console.log(response.data);
             setUsuarios(response.data);
         }
         loadUsuarios();
+        console.log(usuarios)
     }, []);
-    
-    
-    const listUsers = usuarios.map((usuario) => <li className="titulo-pesquisa" key={usuario.nome}>
-        <BotaoAbrirModal/> <Link to={`/${usuario.id}`}>{usuario.nome}</Link> <PaginaModal />
-    </li>)
+
+    function abrir(id) {
+        setId(id)
+        document.querySelector('.modal').classList.add('show')
+    }
+
+
 
     return (
         <>
             <ul id="lista_para_busca" className="ul_class">
-                {listUsers}
+                {usuarios.map((usuario) => (
+                    <li className="titulo-pesquisa" key={usuario.id} >
+                        <input type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}></input>
+                        <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
+                        <PaginaModal id={id} />
+                    </li>
+                ))}
             </ul>
         </>
     )

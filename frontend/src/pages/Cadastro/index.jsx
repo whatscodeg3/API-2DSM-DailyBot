@@ -12,14 +12,17 @@ function Cadastro() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const onSubmit = async data => {
+    console.log(data);
     await api.post('/associados', {
       nome: data.name,
       cpf: data.cpf,
       email: data.email,
       senha: data.senha,
       dataNascimento: new Date(data.dataNascimento),
+
     });
-    navigate('/');
+
+    //navigate('/');
   };
 
 
@@ -47,7 +50,7 @@ function Cadastro() {
         <DivDataNascEstadoCivil>
           < DivDataNasc>
             <label htmlFor="dataNascimento"><b style={{ color: 'white' }}>Data de Nascimento: </b></label>
-            <input type="text" name="dataNascimento" placeholder="aaaa-mm-dd" {...register("dataNascimento", { required: true })} />
+            <input type="date" name="dataNascimento" placeholder="aaaa-mm-dd" {...register("dataNascimento", { required: true })} />
           </DivDataNasc>
           {/* <DivEstadoCivil>
             <label htmlFor="estadoCivil"><b style={{ color: '#F3F3F3' }}>Estado Civil: </b></label>

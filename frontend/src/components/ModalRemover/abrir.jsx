@@ -6,7 +6,7 @@ function BotaoAbrirModal() {
 
 
     // abrir
-    function abrir() {
+    function abrir(id) {
         document.querySelector('.modal').classList.add('show')
     }
 
