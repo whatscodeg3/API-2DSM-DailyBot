@@ -18,15 +18,15 @@ export const SearchOption = styled.div`
     background-color: #fff;
     border-radius: 50px;
     box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.25);
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     overflow-y: hidden;
     padding-left: 1%;
 `;
 
 export const Imagem = styled.img`
-    min-width: 30px;
-    max-width: 3vw;
-    margin-right: 15px;
+    min-width: 25px;
+    max-width: 2vw;
+    margin-right: 10px;
     margin-left: 1.5%;
 `;
 

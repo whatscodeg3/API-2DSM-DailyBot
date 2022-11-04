@@ -13,7 +13,7 @@
 }
 
 .ul_class a {
-    color: rgb(0, 0, 0);
+    color: white;
     font-family: 'IBM Plex Sans';
     font-size: max(2vw , min(20px));
     cursor: pointer; 

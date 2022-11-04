@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import './styleAbrirFecharModal.css'
+import { BotaoModal } from './style.js'
 
 function BotaoAbrirModal() {
 
@@ -12,7 +13,7 @@ function BotaoAbrirModal() {
 
     return (
         <>
-            <input type="button" value="Ver mais" className="botao-modal" onClick={abrir} style={{ fontFamily: 'Roboto' }}></input>
+            <BotaoModal type="button" value="Ver mais" onClick={abrir} style={{ fontFamily: 'Roboto' }}></BotaoModal>
         </>
     )
 

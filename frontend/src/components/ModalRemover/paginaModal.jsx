@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
 import api from '../../services/api';
 
 import './removestyleAbrirFecharModal.css'
-
+import { Modal, BotaoCancelar, BotaoExcluir, Container, ModalTexto } from './styles'
 
 function PaginaModal({ id }) {
     console.log(id)
@@ -20,15 +19,13 @@ function PaginaModal({ id }) {
 
     return (
         <>
-            <div className="container">
-                <div className="modal">
-                    <div>
-                        <p className="modal-texto">Tem certeza que deseja <br /> excluir este associado?</p>
-                        <button className="botao-cancelar" onClick={fechar}>Cancelar</button>
-                        <button className="botao-excluir" onClick={() => remover()}>Excluir</button>
-                    </div>
-                </div>
-            </div>
+            <Container>
+                <Modal className="modal">
+                        <ModalTexto>Tem certeza que deseja <br /> excluir este associado?</ModalTexto>
+                        <BotaoCancelar onClick={fechar}>Cancelar</BotaoCancelar>
+                        <BotaoExcluir onClick={() => remover()}>Excluir</BotaoExcluir>
+                </Modal>
+            </Container>
         </>
     )
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import './nomes.styled.css'
 import api from '../../services/api';
 import { Link } from "react-router-dom"
-import BotaoAbrirModal from "../ModalRemover/abrir"
 import PaginaModal from "../ModalRemover/paginaModal"
-import '../ModalRemover/removestyleAbrirFecharModal.css'
+import { Ul_class, TituloPesquisa, BotaoModal } from './styles'
+
+
 
 
 // class UlNomes extends Component
@@ -31,15 +31,15 @@ function RENomes() {
 
     return (
         <>
-            <ul id="lista_para_busca" className="ul_class">
+            <Ul_class id="lista_para_busca">
                 {usuarios.map((usuario) => (
-                    <li className="titulo-pesquisa" key={usuario.id} >
-                        <input type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}></input>
+                    <TituloPesquisa key={usuario.id} >
+                        <BotaoModal type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}></BotaoModal>
                         <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
                         <PaginaModal id={id} />
-                    </li>
+                    </TituloPesquisa>
                 ))}
-            </ul>
+            </Ul_class>
         </>
     )
 }
