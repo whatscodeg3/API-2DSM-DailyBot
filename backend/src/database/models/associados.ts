@@ -104,5 +104,35 @@ export const ProcessoModel = db.define("processos", {
     allowNull: false,
   },
 });
-ProcessoModel.belongsTo(AssociadoModel);
+
+export const EscolaModel = db.define("escolas", {
+  id: {
+    type: DataTypes.INTEGER.UNSIGNED,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  nome: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+
+});
+
+
+
+// Relacionamento entre usuarios e processos - One to Many
 AssociadoModel.hasMany(ProcessoModel);
+ProcessoModel.belongsTo(AssociadoModel);
+
+
+// Relacionamento entre usuarios e escolas - Many to Many
+
+AssociadoModel.belongsToMany(EscolaModel, {
+  through: 'Associado_Escola',
+  foreignKey: 'Associado_associadoId',
+});
+EscolaModel.belongsToMany(AssociadoModel, {
+  through: 'Associado_Escola',
+
+  foreignKey: 'Escola_escolaId'
+});

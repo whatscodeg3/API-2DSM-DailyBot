@@ -8,18 +8,15 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         overflow-x: hidden;
     }
-    
+
     body {
         overflow-x: hidden;
-        display: flex;
         align-items: center;
         justify-content: center;
-        
         font-family: 'Roboto', sans-serif;
     }
 
     html {
         background-color: #A92364;
-
     }
     `
