@@ -9,7 +9,7 @@ import mysql.connector
 
 def email(nome,link,trecho, email, data, caderno):
     msg = EmailMessage()
-    msg['From'] = "whatscode.g3@outlook.com"
+    msg['From'] = "exempleEmail@outlook.com"
     msg['To'] = str(email)
     msg['Subject'] = "DailyBot - Há uma nova menção no Diário Oficial "
     msg.set_content(f"""
@@ -28,7 +28,7 @@ def email(nome,link,trecho, email, data, caderno):
 
     with smtplib.SMTP('SMTP.office365.com', port=587) as smtp:
         smtp.starttls(context=context)
-        smtp.login(msg['From'], "whatscode2022")
+        smtp.login(msg['From'], "exemplePassword")
         smtp.send_message(msg)
 
 
