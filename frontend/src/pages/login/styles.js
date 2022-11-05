@@ -8,22 +8,24 @@ import styled from "styled-components"
 
 export const DivGeral = styled.form`
 display: flex;
-border: 1px solid black;
+
 flex-direction: row;
-justify-content:space-between;
+justify-content: space-between;
 height: 100vh;
 width: 100vw;
 padding: 5em;
-
 `
 
 export const DivLogin = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   height: 50vh;
   width: 50vw;
-  border: 1px solid red;
+  gap: 1.5em;
+
   flex-direction: column;
-  padding: 5em;
   font: white;
   input {
     padding: 1.2em;
@@ -72,11 +74,27 @@ export const DivLogin = styled.div`
 export const DivImage = styled.div`
   display: flex;
 
+  margin-right: 20em; 
   flex-direction: column;
-  padding: 0em;
-  gap: 0em;
-  width: 50%;
-  height: 50%;
- 
+  width: 40vw;
+  height: 75vh;
+  gap: 3em;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  h1 {
+    font-size: 3.5em;
+  }
+  img {
+    height: 50%;
+    margin-top: 2em;
+    margin-bottom: 5em;
+  }
+`
+
+export const DivLoginText = styled.div`
+  display: flex;
+  color: white;
+
 `
 

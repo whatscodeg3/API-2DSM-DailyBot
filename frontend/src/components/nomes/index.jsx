@@ -21,7 +21,7 @@ function UlNomes() {
     }, []);
 
     const listUsers = usuarios.map((usuario) => <li style={{ fontFamily: 'Roboto' }} className="titulo-pesquisa" key={usuario.nome}>
-        <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
+        <Link to={`/${usuario.id}`}>{usuario.nome}</Link> 
     </li>)
 
 
