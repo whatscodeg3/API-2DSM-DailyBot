@@ -17,7 +17,7 @@ function CadRem() {
 
                 <Cadastrar className="botao2" id="keyframe1">
                     <Titulo className="titulo-remover">Deseja <span className="conteudo-secundario-subtitulo">remover</span> um <br /> associado?</Titulo>
-                    <Link to={`/remover`}><button id="primeiro">Clique Aqui</button></Link>
+                    <Link to={`/remocao`}><button id="primeiro">Clique Aqui</button></Link>
                 </Cadastrar>
             </Section>
         </>
