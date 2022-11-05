@@ -5,22 +5,28 @@ import robo from '../../assets/img/robo.svg';
 import api from "../../services/api"
 import { DivLogin, DivImage, DivGeral, DivLoginText } from './styles'
 import { GlobalStyle } from './globalStyles'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 function Login() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const navigate = useNavigate();
   const onSubmit = async data => {
-    const userDatabaseData = await api.get('/associados', {
-      email: data.email,
-    });
+    console.log(data.email);
+    const userDatabaseData = await api.get(`/associados/${data.email}`);
+    console.log(userDatabaseData.data);
+    if (data.email !== userDatabaseData.data.email || data.senha !== userDatabaseData.data.senha || !userDatabaseData) {
+      alert('Email ou senha não válidos');
+    } else {
+      navigate('/home');
+    };
 
-    if (data.email !== userDatabaseData.data[0].email || data.senha !== userDatabaseData.data[0].senha) console.log('Email ou senha não válidos');
-    else { console.log('bem-vindo') };
 
-    console.log(userDatabaseData);
   }
+
+
 
     ;
   return (

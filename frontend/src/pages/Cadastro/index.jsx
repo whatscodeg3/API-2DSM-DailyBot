@@ -22,7 +22,7 @@ function Cadastro() {
 
     });
 
-    //navigate('/');
+    navigate('/home');
   };
 
 
