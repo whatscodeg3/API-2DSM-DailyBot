@@ -19,10 +19,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/historico" element={<Historico />} />
         <Route path=":userId" element={<Historico />} component={Historico} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/remocao" element={<Remocao />} />
       </Routes>

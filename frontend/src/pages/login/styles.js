@@ -8,7 +8,7 @@ import styled from "styled-components"
 
 export const DivGeral = styled.form`
 display: flex;
-border: 1px solid black;
+
 flex-direction: row;
 justify-content: space-between;
 height: 100vh;
@@ -24,7 +24,7 @@ export const DivLogin = styled.div`
   height: 50vh;
   width: 50vw;
   gap: 1.5em;
-  border: 1px solid red;
+
   flex-direction: column;
   font: white;
   input {
@@ -73,7 +73,7 @@ export const DivLogin = styled.div`
 
 export const DivImage = styled.div`
   display: flex;
-  border: 1px solid black;
+
   margin-right: 20em; 
   flex-direction: column;
   width: 40vw;
