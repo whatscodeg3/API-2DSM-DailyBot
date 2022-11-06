@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 import api from '../../services/api'
 
 import { ConteudoPrincipal, Details, Summary, DivInput, InputButton, Trecho, Linha, ConteudoDatails } from './styles'
+import { ParagrafoNome } from "../cabeçalho/styles"
 
 function Conteudo() {
 
@@ -77,7 +78,7 @@ function Conteudo() {
         return (
             <>
                 <ConteudoPrincipal>
-                    <p>Não foi encontrado nenhum processo!</p>
+                    <ParagrafoNome>Não foi encontrado nenhum processo!</ParagrafoNome>
                 </ConteudoPrincipal>
             </>
         )
@@ -100,7 +101,7 @@ function Conteudo() {
         return (
             <>
                 <ConteudoPrincipal>
-                      {listProcess}
+                    {listProcess}
                 </ConteudoPrincipal>
             </>
         )

@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import SearchIcon from '../../assets/img/search-icon.svg'
 
 import RENomes from "../renomes"
-import PaginaModal from "../ModalRemover/paginaModal"
 
 import { Search } from './styles'
 import { SearchOption } from './styles'

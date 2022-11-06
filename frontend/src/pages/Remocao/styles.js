@@ -10,7 +10,6 @@ export const DivLista = styled.form`
     margin-top: 7%;
     margin-left: 12%;
 `
-    /*overflow-y: hidden; */
     
 export const Titulo = styled.form`
     margin-left: 12%;

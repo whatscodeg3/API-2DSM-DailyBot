@@ -6,8 +6,7 @@ export const Cadastrar = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 30%;
-    padding-top: 10%;
+    padding-top: 12%;
     text-align: center;
 `;
 
@@ -18,4 +17,17 @@ export const Titulo = styled.div`
     span {
         color: #A92364;
     }
+`;
+
+export const Section = styled.section`
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+`;
+
+export const Hr = styled.div`
+    display:flex;
+    width:7px;
+    margin-top: 12%;
+    background-color:#F5E969;
 `;
