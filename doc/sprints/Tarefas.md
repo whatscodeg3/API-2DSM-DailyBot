@@ -1,4 +1,4 @@
-| User Stories | Tarefa |
+| User Stories | Tarefa 1 | Tarefa 2 | Tarefa 3 |
 | :----------: | :----: | 
 | Eu como backoffice, quero que haja uma busca dos conteúdos relacionados aos associados, baixando posteriormente para tratamento de dados pegando pontos de interesse. | Busca e Download |
 | Eu como backoffice, quero que o sistema encontre por si só, os conteúdos relacionados ao associado no PDF do diário baixado, usando como referencia o banco de dados, para facilitar o processo e diminuir o trabalho. | Leitura e Cruzamento de Dados | Polimento da coleta e exibiçã | 
