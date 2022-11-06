@@ -106,6 +106,8 @@ INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `senha`, `dataNasc
 INSERT INTO `apimidall`.`associados` (`nome`, `cpf`, `email`, `senha`, `dataNascimento`) VALUES ('FERNANDA CRISTINA GOMES GARCIA DE MELO', '1230984576', 'fernanda@gmail.com', '3', '1974-11-02');
 ```
 
+Obs: O e-mail do associado deve ser válido ou nada será enviado, caso queira, insira um associado teste com um e-mail que tenha acesso, para poder entrar nele e testar o sistema de envio de e-mail automatico, vendo o que será recebido associado.
+
 
 
 
