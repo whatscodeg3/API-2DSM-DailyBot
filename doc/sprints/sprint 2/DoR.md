@@ -21,7 +21,7 @@
 | Media🟨 | Eu como backoffice quero que as informações pegas pelo Crawler, relacionadas aos associados, sejam exibidas num histórico individual. | Tem como valor o acesso mais fácil as informações armazenadas no banco. | 2 | ✅ |
 | Media 🟨 | Eu como cliente, quero um manual de instalação do projeto assim como de utilização do software. | Tem como valor, qualquer pessoa poder instalar e usar o software, mesmo vendo pela primeira vez. | Atualização continua | ✅ |
 
-- Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint%202/Tarefas))
+- Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/sprint%202/Tarefas.md))
 
 - MEC (Modelo Entidade Conceitual):
 
