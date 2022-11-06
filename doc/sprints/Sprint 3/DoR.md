@@ -9,6 +9,7 @@
 <img src="/doc/front-end/mockup-3-sprint.jpeg" alt="mockup completo" width="555" height="500" >
 <img src="/doc/front-end/mockup-pg1-3-sprint.jpeg" alt="mockup 1 página" width="555" height="500" >
 <img src="/doc/front-end/mockup-pg2-3-sprint.jpeg" alt="mockup 2 página" width="555" height="500" >
+<img src="/doc/front-end/mockup-pg3-3-sprint.jpeg" alt="mockup 2 página" width="555" height="500" >
 
 - Backlog da Sprint 2
 
