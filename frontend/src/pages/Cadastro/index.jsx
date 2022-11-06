@@ -2,11 +2,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 
-
 import api from "../../services/api"
 import { GlobalStyle } from "./globalStyles"
-import { DivContainer, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivRg, DivDataNasc, DivEstadoCivil, DivEscolas, DivEndereco, DivEmail, DivTel, DivRegras, DivSenha } from "./styles"
-
+import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha } from "./styles"
 
 function Cadastro() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -16,6 +14,7 @@ function Cadastro() {
     await api.post('/associados', {
       nome: data.name,
       cpf: data.cpf,
+      escola: data.escola,
       email: data.email,
       senha: data.senha,
       dataNascimento: new Date(data.dataNascimento),
@@ -25,6 +24,17 @@ function Cadastro() {
     navigate('/home');
   };
 
+
+  // // Função escolas
+
+  // const arrayEscolas = []
+
+  // const escola = document.getElementById('escolaTxt')
+
+  // function submit() {
+  //   arrayEscolas.add(0, escola.value)
+  //   console.log(arrayEscolas)
+  // }
 
   return (
     <>
@@ -66,10 +76,25 @@ function Cadastro() {
         </DivDataNascEstadoCivil>
 
         <DivEscolaEndereco>
-          {/* <DivEscolas>
+          <DivEscolas>
             <label htmlFor="escola"><b style={{ color: 'white' }}>Instituição de Ensino: </b></label>
-            <input type="text" name="escola" placeholder="Digite sua instituição de ensino" {...register("escola", { required: true })} />
-          </DivEscolas> */}
+          </DivEscolas>
+
+          <CamposEscola>
+            <input type="text" name="escola" id="escolaTxt" placeholder="Digite aqui..." {...register("escola", { required: true })} />
+    
+            {/* <BotaoSubmit className="botaoSubmit" onClick={submit}><ion-icon name="arrow-forward-outline"></ion-icon></BotaoSubmit>
+
+            <DivListaEscolas>
+                <ul>
+                    <li>
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </li>
+                </ul>
+            </DivListaEscolas> */}
+          </CamposEscola>
+          
+
           {/* <DivEndereco>
             <label htmlFor="endereco"><b style={{ color: 'white' }}>Endereço: </b></label>
             <input type="text" name="endereco" placeholder="Digite seu endereco" {...register("endereco", { required: true })} />
@@ -88,15 +113,19 @@ function Cadastro() {
           </DivTel> */}
 
         </DivEmailTelefone>
+
         <DivSenha>
           <label htmlFor="password"><b style={{ color: 'white' }}>Senha: </b></label>
           <input type="password" name="password" placeholder="Digite sua senha" {...register("senha", { required: true })} />
         </DivSenha>
+
         <DivRegras>
-          <input type="checkbox" id="regra" name="regra" value="regra" />
+          <InputButton type="checkbox" id="regra" name="regra" value="regra" />
           <label htmlFor="regra" required> Eu autorizo o armazenamento destes dados no sistema *</label>
         </DivRegras>
-        <button type="submit" id="botaoCadastro">Cadastrar</button>
+
+        <BotaoCadastrar type="submit" id="botaoCadastro">Cadastrar</BotaoCadastrar>
+
       </DivContainer>
 
     </>

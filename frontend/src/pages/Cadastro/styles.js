@@ -1,67 +1,51 @@
 import styled from "styled-components"
 
-
-
 export const DivContainer = styled.form`
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
-
-  button {
-    appearance: button;
-    backface-visibility: hidden;
-    background-color: #EA7A67;
-    border-radius: 6px;
-    border-width: 0.5px;
-    border-color: #F3F3F3;
-    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
-    font-size: 100%;
-    height: 44px;
-    line-height: 1.15;
-    margin: 12px 8em 0;
-    outline: none;
-    overflow: hidden;
-    padding: 0 25px;
-    text-transform: none;
-    transform: translateZ(0);
-    transition: all .2s,box-shadow .08s ease-in;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 15vw;
-    box-shadow: rgba(50, 50, 93, .1);
-    
-    
-    
-  }
-  button:hover {
-    cursor: pointer;
-  
-  }
-  
-
- 
-  margin-right: 20.5%;
-  margin-top: 1.5%;
-  padding: 5em;
-  gap: 2em;
+  justify-content: center; 
+  gap: 10px;
   font: white;
   input {
-    padding: 1.2em;
+    padding: 1em;
     border-radius: 16px;
-    border: 1px ;
+    border: 1px;
+    width: 5vw;
     background-color: #FFCCC3;
-
   } 
+  overflow-y: hidden;
 `
+
+export const BotaoCadastrar = styled.button`
+  margin: auto;
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #EA7A67;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 100%;
+  height: 44px;
+  width: 15vw;
+  border: 2px solid white;
+  cursor: pointer;
+`;
+
+export const BotaoSubmit = styled.button`
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #EA7A67;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 100%;
+  height: 44px;
+  width: 5vw;
+  border: 2px solid white;
+`;
 
 
 export const DivNomeAssociado = styled.div`
@@ -91,18 +75,17 @@ width: 100%;
 `
 
 export const DivEscolaEndereco = styled.div`
-
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width: 100%;`
+  display: flex;
+  flex-direction: column;
+  width: 100%;`
 
 export const DivEmailTelefone = styled.div`
 
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-width: 100%;;`
+width: 100%;
+`;
 
 
 
@@ -162,13 +145,9 @@ select {
 export const DivEscolas = styled.div`
 display: flex;
 flex-direction: column;
-
 align-items: flex-start;
 width: 15em;
-input {
-  width: 100%;
-  border: 2px solid #F3F3F3;
-}`
+`
 
 export const DivEndereco = styled.div`
 display: flex;
@@ -204,28 +183,46 @@ input {
 
 
 export const DivTel = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-width: 15em;
-input {
-  width: 100%;
-  border: 2px solid #F3F3F3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 15em;
+  input {
+    width: 100%;
+    border: 2px solid #F3F3F3;
 }`
 
 export const DivRegras = styled.div`
-align-items: center;
-justify-content: center;
-text-align: center;
-width: 100%;
-label {
-  color: #F3F3F3;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  label {
+    color: #F3F3F3;
+  }
 `
+export const InputButton = styled.input`
+  padding: 0px;
+  margin: 0px;
+`;
 
+export const DivListaEscolas = styled.div`
+    width: 45%;
+    height: 100%;
+    background-color: #FFCCC3;
+`;
 
-
-
-
-
-
+export const CamposEscola = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  input{
+    width: 100%;
+    border: 2px solid #F3F3F3;
+  }
+  button{
+    width: 10%;
+  }
+`;
