@@ -34,10 +34,6 @@ Dessa forma, entregamos como MVP uma versão simplificada da final do Crawler, q
 
 <img src="/doc/front-end/MER.png" alt="Modelo Entidade Relacional" width="555" >
 
-- Diagrama de classe:
-
-<img src="/doc/front-end/diagrama de classe.jpeg" alt="Diagrama de classe" width="855" >
-
 - Burndown da 1 sprint:
 
 <img src="/doc/front-end/burndown-1sp.jpeg" alt="Burndown 1 sprint" width="855" >
