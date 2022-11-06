@@ -1,6 +1,6 @@
 import React from "react";
 import whiteLogo from "../../../assets/img/whiteLogo.svg"
-import { Bar, Icon, DivButton } from "../styles.navBar"
+import { Bar, Icon } from "../styles.navBar"
 import { Link } from 'react-router-dom'
 
 function NavBarHistorico(){
@@ -9,9 +9,9 @@ function NavBarHistorico(){
             <Bar>
                 <header>
                     <Link to={"/home"}>
-                    <DivButton>
+                    <div style={{display: "flex"}}>
                         <Icon><ion-icon name="home"></ion-icon></Icon>
-                    </DivButton>
+                    </div>
                     </Link>
                 </header>
                 <footer>

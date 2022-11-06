@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 import robo from '../../assets/img/robo.svg';
 import api from "../../services/api"
-import { DivLogin, DivImage, DivGeral, DivLoginText } from './styles'
+import { DivLogin, DivImage, DivGeral } from './styles'
 import { GlobalStyle } from './globalStyles'
 import { useNavigate } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function Login() {
   const navigate = useNavigate();
   const onSubmit = async data => {
     console.log(data.email);
-    const userDatabaseData = await api.get(`/associados/${data.email}`);
+    const userDatabaseData = await api.get(`/associados/findByEmail/${data.email}`);
     console.log(userDatabaseData.data);
     if (data.email !== userDatabaseData.data.email || data.senha !== userDatabaseData.data.senha || !userDatabaseData) {
       alert('Email ou senha não válidos');
@@ -31,9 +31,7 @@ function Login() {
           <h1>Olá, eu sou Dailybot...</h1>
         </DivImage>
         <DivLogin>
-          <DivLoginText>
-            <h1>Login</h1>
-          </DivLoginText>
+          <h1>Login</h1>
           <label htmlFor="email" ><b style={{ color: 'white' }}>E-mail: </b></label>
           <input type="text" name="email" placeholder="Digite seu email" {...register("email", { required: true })} />
           <label htmlFor="password"><b style={{ color: 'white' }}>Senha: </b></label>
