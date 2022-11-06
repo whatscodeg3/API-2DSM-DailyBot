@@ -11,7 +11,7 @@ Obs: Caso queira que a busca seja feita assim que rodar a aplicação, basta des
 - Para definir o e-mail que será usado, no arquivo leitor.py coloque no lugar do "exampleEmail@outlook.com" indicado pela seta verde, o e-mail de preferencia e a senha desse e-mail no "examplePassword" indicado pela seta vermelha.
 Obs: Só funciona com outlook, o gmail na data de 30 de maio de 2022, não autorizará mais o uso de apps ou dispositivos de terceiros que exigem apenas nome de usuário e senha para fazer login na Conta do Google, mas caso volte a autorizar posteriormente então poderá ser usado conta gmail também.
 
-<img src="/doc/front-end/manual/email.png" alt="wireframe sprint 1" width="855">
+<img src="/doc/front-end/email.png" alt="email.png" width="855">
 
 Usando o site:
 
