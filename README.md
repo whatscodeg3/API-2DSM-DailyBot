@@ -107,7 +107,7 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 | Baixo 🟩 | Eu como backoffice, quero um sistema uma maneira de poder registrar prazos, para poder ter o controle dos mesmos e notificar os associados. | Tem como valor a a facilitação de uma das obrigações do backoffice, tornando seu trabalho mais eficiente e agradável | 4 | 🔄 |
 
 
-- Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprint/Tarefas.md))
+- Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/Tarefas.md))
 
 
 <br>
@@ -126,7 +126,7 @@ Manual de Utilização ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-
 
 🔖 SPRINT 2 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/main/doc/sprints/sprint%202)):  Concluído ✅
 
-🔖 SPRINT 3 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/main/doc/sprints/sprint%203)):  Concluído ✅
+🔖 SPRINT 3 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/main/doc/sprints/Sprint%203)):  Concluído ✅
 
 🔖 SPRINT 4 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
 
