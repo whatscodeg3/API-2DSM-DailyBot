@@ -30,11 +30,11 @@ doc\front-end\MEC-2-SPRINT.png
 
 - Burndown da 2 sprint:
 
-<img src="/doc/front-end/burndown-2sp.jpeg" alt="Burndown 1 sprint" width="655" height="500" >
+<img src="/doc/front-end/burndown-2sp.jpeg" alt="Burndown 2 sprint" width="655" height="500" >
 
 - Arquitetura simplificada de software:
 
-<img src="/doc/front-end/ARQUITETURA-2-SPRINT.png" alt="Logica do software na 1 sprint" width="555" height="500" >
+<img src="/doc/front-end/ARQUITETURA-2-SPRINT.png" alt="Logica do software na 2 sprint" width="555" height="500" >
 
 
 
