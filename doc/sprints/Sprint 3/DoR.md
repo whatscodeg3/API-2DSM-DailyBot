@@ -22,7 +22,7 @@
 | Media 🟨 | Eu como cliente, quero um manual de instalação do projeto assim como de utilização do software. | Tem como valor, qualquer pessoa poder instalar e usar o software, mesmo vendo pela primeira vez. | Atualização continua | ✅ |
 | Baixo 🟩 | Eu como cliente, quero um sistema de login para maior segurança, além de posteriormente transformar o software de uso interno, para externo. | Tem como valor a segurança de informações sensiveis, além de facilitar o trabalho posterior ao projeto. | 3 | ✅ |
 
-- Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/Sprint%203/Tarefas))
+- Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/Sprint%203/Tarefas.md))
 
 - MEC (Modelo Entidade Conceitual):
 
