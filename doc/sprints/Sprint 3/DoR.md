@@ -1,7 +1,7 @@
 # 3ª Sprint
-Na terceira sprint, foi combinado com o cliente de entregar uma página de login com usuário único para dar uma maior segurança as informações sigilosas dos clientes, uma página de remoção web assim como a de cadastro da sprint anterior, adicionando mais uma função realizável através da web.
-Também fizemos um sistema de envio de e-mail automático para os associados, contendo o nome, data, caderno do diário, link da página e o texto de menção que é enviado sempre que uma nova menção é encontrada e coletada.
-Por fim foi feito melhorias na interface do sistema relacionadas a UX e UI, além de na coleta do texto de menção e exibição deixando mais claro a visualização.
+ Na terceira sprint, foi combinado com o cliente de entregar uma página de login com usuário único para dar uma maior segurança as informações sigilosas dos clientes, uma página de remoção web assim como a de cadastro da sprint anterior, adicionando mais uma função realizável através da web.
+ Também fizemos um sistema de envio de e-mail automático para os associados, contendo o nome, data, caderno do diário, link da página e o texto de menção que é enviado sempre que uma nova menção é encontrada e coletada.
+ Por fim foi feito melhorias na interface do sistema relacionadas a UX e UI, além de na coleta do texto de menção e exibição deixando mais claro a visualização.
 
 # DoR
 
@@ -22,7 +22,7 @@ Por fim foi feito melhorias na interface do sistema relacionadas a UX e UI, alé
 | Media 🟨 | Eu como cliente, quero um manual de instalação do projeto assim como de utilização do software. | Tem como valor, qualquer pessoa poder instalar e usar o software, mesmo vendo pela primeira vez. | Atualização continua | ✅ |
 | Baixo 🟩 | Eu como cliente, quero um sistema de login para maior segurança, além de posteriormente transformar o software de uso interno, para externo. | Tem como valor a segurança de informações sensiveis, além de facilitar o trabalho posterior ao projeto. | 3 | ✅ |
 
-- Tarefas geradas pelas User Stories ([Link da Pasta]())
+- Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/Sprint%203/Tarefas))
 
 - MEC (Modelo Entidade Conceitual):
 
