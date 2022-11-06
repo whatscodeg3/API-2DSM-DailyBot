@@ -59,6 +59,18 @@ Etapa 4:
 
 Etapa 5:
 
+- Após a etapa anterior que criará as tabelas, execute o script abaixo:
+
+```
+INSERT INTO associados(nome, senha, cpf, email, dataNascimento)
+ VALUES ('adm', 'adm123', '12345', 'adm@gmail.com', '2000-09-17');
+
+```
+
+Obs: o E-mail e senha do Login será definidos, pelo INTO no script acima substituindo o "adm@gmail.com" e "12345", pelos que escolher.
+
+Etapa 6:
+
 - Abra um segundo terminal e vá até a pasta frontendReact da mesma forma que feito anteriormente.
 - Chegando nela, use o comando "npm install"
 
@@ -68,14 +80,14 @@ Etapa 5:
 
 <img src="/doc/front-end/manual/front-npm-run-dev.png" alt="wireframe sprint 1" width="855">
 
-Etapa 6:
+Etapa 7:
 
 - Abra um terceiro terminal e vá até a pasta "robo_leitor_pdf" 
 - Após chegar na pasta pelo terminal, use o comando "py gatilho.py"
 
 <img src="/doc/front-end/manual/gatilho.png" alt="wireframe sprint 1" width="855">
 
-Etapa 7:
+Etapa 8:
 
 - Por ultimo, abra um quarto terminal e vá até a pasta "backend"
 - Use o comando "npm run bot"
