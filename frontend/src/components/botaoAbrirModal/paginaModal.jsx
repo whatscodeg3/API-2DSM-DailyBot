@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import { useParams } from 'react-router-dom'
 
+import './styleAbrirFecharModal.css'
+import { Modal, BotaoFecharModal, Container, Paragrafo, Escola } from './style.js'
+
 import api from '../../services/api'
 
-import './styleAbrirFecharModal.css'
 
 function PaginaModal() {
 
@@ -37,20 +39,20 @@ function PaginaModal() {
         
         return (
             <>
-                <div className="container">
-                    <div className="modal">
+                <Container>
+                    <Modal className="modal">
                         <div className="botao-fechar">
-                            <button className="botao-fechar" onClick={fechar}>&times;</button>
+                            <BotaoFecharModal onClick={fechar}>&times;</BotaoFecharModal>
                         </div>
-                        <p style={{ fontFamily: 'Roboto' }} className="modal-historico">Nome:ㅤㅤ<span className="subtitulo-modal">{usuarios.nome}</span></p>
-                            <p style={{ fontFamily: 'Roboto' }} className="modal-historico">E-mail:ㅤ<span className="subtitulo">{usuarios.email}</span></p>
-                            <p style={{ fontFamily: 'Roboto' }} className="modal-historico">CPF:ㅤ<span className="subtitulo">{usuarios.cpf}</span></p>
-                            <p style={{ fontFamily: 'Roboto' }} className="modal-historico">Data de Nascimento:ㅤ<span className="subtitulo">{usuarios.dataNascimento}</span></p>
-                            {/* <p className="modal-historico">Escolas vinculadas:ㅤ</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 1</p>
-                                <p className="escolas-associadas" id="subtitulo"> &#9900; Escola 2</p> */}
-                    </div>
-                </div>
+                        <Paragrafo style={{ fontFamily: 'Roboto' }}>Nome:ㅤㅤ<span className="subtitulo-modal">{usuarios.nome}</span></Paragrafo>
+                            <Paragrafo style={{ fontFamily: 'Roboto' }}>E-mail:ㅤ<span className="subtitulo">{usuarios.email}</span></Paragrafo>
+                            <Paragrafo style={{ fontFamily: 'Roboto' }}>CPF:ㅤ<span className="subtitulo">{usuarios.cpf}</span></Paragrafo>
+                            <Paragrafo style={{ fontFamily: 'Roboto' }}>Data de Nascimento:ㅤ<span className="subtitulo">{usuarios.dataNascimento}</span></Paragrafo>
+                            {/* <Escola className="modal-historico">Escolas vinculadas:ㅤ</Escola>
+                                <Escola className="escolas-associadas" id="subtitulo"> &#9900; Escola 1</Escola>
+                                <Escola className="escolas-associadas" id="subtitulo"> &#9900; Escola 2</Escola> */}
+                    </Modal>
+                </Container>
             </>
         )
     }

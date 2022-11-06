@@ -18,6 +18,7 @@ const GlobalStyleHistorico = createGlobalStyle`
         background-size: cover; */
         padding: 0;
         margin: 0;
+        padding-right:50px;
     }
 
     body {
@@ -44,11 +45,12 @@ const GlobalStyleHistorico = createGlobalStyle`
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: max(2.2vw , min(20px));;
         color: #fff;
         font-family: 'Roboto';
         padding-top: 2%;
         padding-left: 5%;
+        
     }
 
     hr {

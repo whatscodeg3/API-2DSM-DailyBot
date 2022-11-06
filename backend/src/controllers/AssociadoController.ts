@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { AssociadoModel } from "../database/models/associados";
 import { AssociadoRepository } from "../repositories/associadoRepository";
 
 interface IAssociadoController {
@@ -51,12 +50,12 @@ export class AssociadoController implements IAssociadoController {
   };
 
   async findByEmail(req: Request, res: Response) {
-    const { email } = req.body;
+    const { email } = req.params;
     const associadoRepository = new AssociadoRepository();
     const associado = await associadoRepository.findByEmail(email);
     return associado
       ? res.status(200).json(associado)
-      : res.status(404).send("Associado Não encontrado")
+      : res.status(200).send("Associado Não encontrado")
   }
 
   async update(req: Request, res: Response) {

@@ -1,9 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
 
-import { Menu } from './style'
-import { ScrollStyle } from './style'
-import { Icon } from './style'
-import { Subtitulo } from './style'
+import { Menu, ScrollStyle, Icon, Subtitulo, Li } from './style'
 
 function Scroll() {
 
@@ -11,12 +8,13 @@ function Scroll() {
         <>
             <Menu>
                 <ScrollStyle>
-                    <li><Icon><ion-icon name="person-add"></ion-icon></Icon>
-                        <Subtitulo href="#cad-rem" className="subtitulo">Cadastrar associado</Subtitulo></li>
+                    <Li><Icon><ion-icon name="person"></ion-icon></Icon>
+                        <Subtitulo href="#cad-rem">Cadastrar ou remover</Subtitulo></Li>
 
-                    <li><Icon><ion-icon name="search" className="icon"></ion-icon></Icon>
-                        <Subtitulo href="#pesquisa" className="subtitulo">Pesquisar associado</Subtitulo></li>
+                    <Li><Icon><ion-icon name="search"></ion-icon></Icon>
+                        <Subtitulo href="#pesquisa">Pesquisar associado</Subtitulo></Li>
                 </ScrollStyle>
+                
             </Menu>
         </>
     )

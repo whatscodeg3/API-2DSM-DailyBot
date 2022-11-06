@@ -1,11 +1,14 @@
 import { AssociadoModel } from "../database/models/associados";
+import { IEscolaAtributes } from "./escolaRepository";
 
 export interface IAssociadoAtributes {
   nome?: string;
   cpf?: string;
   email?: string;
-  senha?: string
+  escola?: IEscolaAtributes[];
+  // senha?: string
   dataNascimento?: Date;
+
 }
 
 export interface IAssociadoUpdate {
@@ -35,13 +38,12 @@ export class AssociadoRepository {
   }
 
   async create(data: IAssociadoAtributes) {
-    const { nome, cpf, email, dataNascimento, senha } = data;
+    const { nome, cpf, email, dataNascimento } = data;
     const associado = await AssociadoModel.create({
       nome,
       cpf,
       email,
-      senha,
-      dataNascimento
+      dataNascimento,
     });
     return associado
   }

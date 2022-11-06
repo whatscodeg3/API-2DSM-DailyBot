@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 
-import './styleAbrirFecharModal.css'
-import { BotaoModal } from './style.js'
+import './removestyleAbrirFecharModal.css'
+import { BotaoModal } from './styles'
 
 function BotaoAbrirModal() {
 
 
     // abrir
-    function abrir() {
+    function abrir(id) {
         document.querySelector('.modal').classList.add('show')
     }
 
     return (
         <>
-            <BotaoModal type="button" value="Ver mais" onClick={abrir} style={{ fontFamily: 'Roboto' }}></BotaoModal>
+            <BotaoModal type="button" value="Excluir" onClick={abrir} style={{ fontFamily: 'Roboto' }}></BotaoModal>
         </>
     )
 
