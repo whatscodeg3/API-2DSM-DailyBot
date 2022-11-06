@@ -71,12 +71,12 @@ Obs: o E-mail e senha do Login será definidos, pelo INTO no script acima substi
 
 Etapa 6:
 
-- Abra um segundo terminal e vá até a pasta frontendReact da mesma forma que feito anteriormente.
+- Abra um segundo terminal e vá até a pasta frontend da mesma forma que feito anteriormente.
 - Chegando nela, use o comando "npm install"
 
 <img src="/doc/front-end/manual/front-npm-install.png" width="855">
 
-- Assim que terminar, use o comando "npm run dev" para rodar o fronend
+- Assim que terminar, use o comando "npm run dev" para rodar o frontend
 
 <img src="/doc/front-end/manual/front-npm-run-dev.png" width="855">
 
