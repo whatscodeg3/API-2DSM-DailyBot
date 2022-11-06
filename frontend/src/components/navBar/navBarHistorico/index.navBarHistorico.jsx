@@ -8,7 +8,7 @@ function NavBarHistorico(){
         <>
             <Bar>
                 <header>
-                    <Link to={"/"}>
+                    <Link to={"/home"}>
                     <DivButton>
                         <Icon><ion-icon name="home"></ion-icon></Icon>
                     </DivButton>
