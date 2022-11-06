@@ -37,7 +37,7 @@ Por fim foi feito melhorias na interface do sistema relacionadas a UX e UI, alé
 
 - Arquitetura simplificada de software:
 
-<img src="/doc/front-end/ARQUITETURA-3-SPRINT.png" alt="Logica do software na 3 sprint" width="555" height="500" >
+<img src="/doc/front-end/ARQUITETURA-3-SPRINT.png" alt="Logica do software na 3 sprint" width="555" height="550" >
 
 
 
