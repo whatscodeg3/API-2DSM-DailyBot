@@ -26,9 +26,9 @@ async function getPdfs() {
                         await api.post('/processos', {
                             idUsuario: objetoAssociado.idAssociado,                  
                             dataProcesso: objetoAssociado.dataProcesso,
-                            link: processoAssociado,   
-                            caderno: objetoAssociado.caderno,
-                            pagina: objetoAssociado.pagina
+                            link: processoAssociado.link,   
+                            caderno: processoAssociado.caderno,
+                            pagina: processoAssociado.pagina
                         });
                 }
                 gatilho = true

@@ -55,15 +55,19 @@ const cheerio = require('cheerio');
 
         linkPdf = linkPdf.slice(0, (linkPdf.search('.pdf'))+4)
 
-        objetoAssociado.caderno = caderno
-        objetoAssociado.pagina = pagina
+        // objetoAssociado.caderno = caderno
+        // objetoAssociado.pagina = pagina
 
         switch(linksBD.includes(linkPdf)){
           case true:
             console.log('Já salvei este link')
             break;
           case false:
-            objetoAssociado.links.push(linkPdf);
+            objetoAssociado.links.push({
+              link: linkPdf,
+              caderno: caderno,
+              pagina: pagina
+            });
         }
       });
 
