@@ -11,7 +11,7 @@ import { Nomes } from './styles'
 
 function SearchBar() {
 
-    const teste = () => {
+    const pesquisa = () => {
         const searchbox = document.getElementById('barra_pesquisa').value.toUpperCase();
         const lista = document.getElementById('lista_para_busca');
         const listaItens = lista.getElementsByTagName('li');
@@ -37,7 +37,7 @@ function SearchBar() {
             <Search id="pesquisa">
                 <SearchOption id="keyframe5">
                     <Imagem src={SearchIcon} alt="search-icon" />
-                    <Txt type="search" className="txt" placeholder="Digite aqui..." id="barra_pesquisa" onKeyUp={teste} />
+                    <Txt type="search" className="txt" placeholder="Digite aqui..." id="barra_pesquisa" onKeyUp={pesquisa} />
                 </SearchOption>
 
                 <Nomes>

@@ -21,6 +21,9 @@ export const ConteudoSecundario = styled.div`
     align-items: flex-end;
     padding-right: 2%;
     overflow-y: hidden;
+    @media (max-width:600px) {
+        align-items: center;
+    }
 `;
 
 export const ConteudoSecundarioTitulo = styled.p`
@@ -29,6 +32,10 @@ export const ConteudoSecundarioTitulo = styled.p`
     font-size: max(2.5vw , min(22px));
     text-align: right;
     font-family: 'Roboto', sans-serif;
+    @media (max-width:600px) {
+        padding-top: 40px;
+        text-align: center;
+    }
 `;
 
 export const ConteudoSecundarioSubtitulo = styled.span`
@@ -42,11 +49,15 @@ export const ConteudoSecundarioSubtitulo = styled.span`
 export const TituloInstrucoes = styled.p`
     color: white;
     font-family: 'IBM Plex Sans';
-    font-size: max(2vw , min(18px));
+    font-size: max(2vw , min(15px));
     text-align: right;
     font-family: 'Roboto', sans-serif;
     span{
         color: #A92364;
+    }
+    @media (max-width:600px) {
+        text-align: center;
+        padding-top: 20px;
     }
 `;
 
@@ -65,6 +76,8 @@ export const ImagemRes = styled.img`
     margin-left: 5%;
     @media (max-width:600px) {
         display: flex;
+        width: 25%;
+        margin-left: 0%;
     }
 `;
 

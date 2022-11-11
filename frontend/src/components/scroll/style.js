@@ -11,7 +11,7 @@ export const ScrollStyle = styled.ul`
     width: 100%;
     padding-top: 1.5%;
     text-align: center;
-    @media (max-width:500px) {
+    @media (max-width:768px) {
         display: none;
     }
 `;
