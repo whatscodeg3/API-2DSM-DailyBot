@@ -1,17 +1,20 @@
 import styled from "styled-components"
 
-export const DivGeral = styled.form`
-display: flex;
-h1{
-  color: white;
-  text-align:center;
-}
-`
-
-export const DivLogin = styled.div`
+export const DivGeral = styled.main`
+  width: 100vw;
+  height: 100vh;
+  gap: 3%;
   display: flex;
   justify-content: center;
-  padding-left:10%;
+  align-items: center;
+`
+
+export const DivLogin = styled.form`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40vw;
   gap: 1.0em;
   flex-direction: column;
@@ -24,50 +27,81 @@ export const DivLogin = styled.div`
     color: #A92364;
     font-size:2.5vh;
     font-weight: bold;
-    width: 30vw;
+    width: 90%;
+    outline: 0;
   }
   button {
     appearance: button;
     backface-visibility: hidden;
     background-color: #A92364;
     border-radius: 6px;
-    border-width: 0.5px;
-    border-color: white;
-    box-shadow: black;
     box-sizing: border-box;
     color: #FFCCC3;
     font-weight: bold;
-    
+    border: 3px solid #FF74B7;
+    box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.25);
     font-size: 100%;
     height: 45px;
-    
-  
-    text-transform: none;
-    transform: translateZ(0);
-    transition: all .2s,box-shadow .08s ease-in;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 10vw;
-    box-shadow: rgba(50, 50, 93, .1);
+    width: 15vw;
+    cursor: pointer;
   }
-
 `
 
+export const DivLabel = styled.div`
+  display: flex;
+  width: 90%;
+`;
+
 export const DivImage = styled.div`
+  height: 100%;
   display: flex; 
   flex-direction: column;
-  width: 40vw;
-  height: 75vh;
-  gap: 3em;
   align-items: center;
+  gap: 4vh;
   justify-content: center;
-  margin: 0px;
   h1 {
-    font-size: 2.4em;
+    font-size: 55px;
     color:white
   }
   img {
-    height: 50%;
+    height: 400px;
   }
 `
+
+export const DivSubmit = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+`;
+
+export const DivParagrafoLogin = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  h1{
+    color: white;
+  }
+`;
+
+export const DivGeralLogin = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+`;
+
+export const Hr = styled.hr`
+  width: 3px;
+  height: 570px;
+  border: none;
+  background-color: white;
+`;
+
+export const DivHr = styled.div`
+  display: flex;
+`;

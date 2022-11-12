@@ -10,16 +10,18 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     body {
+        width: 100%;
+        height: 100%;
         overflow-x: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        
         font-family: 'Roboto', sans-serif;
     }
 
     html {
+        width: 100%;
+        height: 100%;
         background-color: #A92364;
-
     }
     `
