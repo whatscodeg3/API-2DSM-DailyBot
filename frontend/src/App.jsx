@@ -8,7 +8,7 @@ import Conteudo from "./components/conteudoHistorico/conteudoHistorico";
 
 import Home from './pages/Home'
 import Historico from './pages/Historico/historico'
-import Login from './pages/Login'
+import Login from './pages/login'
 import Cadastro from './pages/Cadastro'
 import Remocao from "./pages/Remocao";
 //import Routes from "./routes"
