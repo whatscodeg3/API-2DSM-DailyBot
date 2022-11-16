@@ -10,7 +10,6 @@ export const DivGeral = styled.main`
 `
 
 export const DivLogin = styled.form`
-  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -45,6 +44,14 @@ export const DivLogin = styled.form`
     width: 15vw;
     cursor: pointer;
   }
+
+  @media (max-width:800px) {
+    width: 80vw;
+    button {
+      width: 25vw;
+      height: 55px;
+    }
+  }
 `
 
 export const DivLabel = styled.div`
@@ -65,6 +72,9 @@ export const DivImage = styled.div`
   }
   img {
     height: 400px;
+  }
+  @media (max-width:800px) {
+    display: none;
   }
 `
 
@@ -104,4 +114,7 @@ export const Hr = styled.hr`
 
 export const DivHr = styled.div`
   display: flex;
+  @media (max-width:800px) {
+    display: none;
+  }
 `;
