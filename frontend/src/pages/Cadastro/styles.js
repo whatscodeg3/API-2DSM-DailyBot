@@ -208,21 +208,34 @@ export const InputButton = styled.input`
 `;
 
 export const DivListaEscolas = styled.div`
-    width: 45%;
+    width: 100%;
     height: 100%;
+    border-radius: 16px;
+    padding: 1em;
     background-color: #FFCCC3;
 `;
 
 export const CamposEscola = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   justify-content: space-between;
   width: 100%;
   height: 100%;
   input{
-    width: 100%;
+    width: 85%;
     border: 2px solid #F3F3F3;
   }
   button{
     width: 10%;
   }
+`;
+
+export const DivInputButton = styled.div`
+  display: flex;
+  gap: 5%;
+`;
+
+export const Trash = styled.div`
+  color: red;
 `;
