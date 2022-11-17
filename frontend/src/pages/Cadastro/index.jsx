@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import api from "../../services/api"
 import { GlobalStyle } from "./globalStyles"
 import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha, DivInputButton, Trash } from "./styles"
+import NavBarHome from "../../components/navBar/navBarHome/index.navBarHome";
 
 function Cadastro() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -54,7 +55,9 @@ function Cadastro() {
 
   return (
     <>
+      <NavBarHome/>
       < GlobalStyle />
+
       <DivContainer onSubmit={handleSubmit(onSubmit)}>
         <DivNomeAssociado>
           <label htmlFor="name" ><b style={{ color: 'white' }}>Nome do associado(a): </b></label>
