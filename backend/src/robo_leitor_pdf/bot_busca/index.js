@@ -10,6 +10,7 @@ async function getPdfs() {
         const responseAssociados = await api.get('/associados');
         const associados = responseAssociados.data
         for(const associado of associados){
+            if(associado.nome != 'adm'){
             const responseProcessos = await api.get(`/processos/users/${associado.id}`)
             const processos = responseProcessos.data
             let linksBD;
@@ -33,6 +34,7 @@ async function getPdfs() {
                 }
                 gatilho = true
             }
+        }    
         }
         if(gatilho){
             fs.writeFile('./src/robo_leitor_pdf/monitorando/arquivo_monitoramento.txt', 'Terminei minha busca!', (err) => {
