@@ -10,12 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100%;
   }
   
   html {

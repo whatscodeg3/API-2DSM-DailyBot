@@ -1,7 +1,10 @@
 import styled from "styled-components"
 
 export const DivContainer = styled.form`
-  width: 100%;
+  padding-top:3%;
+  margin:auto;
+  min-width:300px;
+  max-width:500px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -17,6 +20,9 @@ export const DivContainer = styled.form`
     background-color: #FFCCC3;
   } 
   overflow-y: hidden;
+  @media (max-width:520px) {
+    margin: 0 15px;
+  }
 `
 
 export const BotaoCadastrar = styled.button`
