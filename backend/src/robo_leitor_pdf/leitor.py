@@ -9,7 +9,7 @@ import mysql.connector
 
 def email(nome,link,trecho, email, data, caderno):
     msg = EmailMessage()
-    msg['From'] = "exempleEmail@outlook.com"
+    msg['From'] = "ExampleEmail@outlook.com"
     msg['To'] = str(email)
     msg['Subject'] = "DailyBot - Há uma nova menção no Diário Oficial "
     msg.set_content(f"""
@@ -28,12 +28,12 @@ def email(nome,link,trecho, email, data, caderno):
 
     with smtplib.SMTP('SMTP.office365.com', port=587) as smtp:
         smtp.starttls(context=context)
-        smtp.login(msg['From'], "exemplePassword")
+        smtp.login(msg['From'], "ExamplePassword")
         smtp.send_message(msg)
 
 
 def leitor():
-    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="root", database="testandoprojeto")
+    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="admin", database="apimidall")
     cursor = db_connection.cursor(buffered=True)
 
 
@@ -60,16 +60,33 @@ def leitor():
             blocos_de_texto = texto_do_pdf.split('\n')
             for i in blocos_de_texto:
                 nome= consultaPosicao[1]
-                if re.search(nome, i, re.IGNORECASE):
-                    bloco_relacionado_associado = i
-                    bloco_relacionado_associado = '...'+bloco_relacionado_associado+'...'
-                    sql = ("update processos set conteudo = %s"
-                            "where id= %s")
-                    update(sql, bloco_relacionado_associado, consultaPosicao[3])
+                if (consultaPosicao[1] != 'adm'):
+                    if re.search(nome, i, re.IGNORECASE):
+                        bloco_relacionado_associado = i
+                        bloco_texto_associado_list = bloco_relacionado_associado.split(",")
 
-                    db_connection.commit()
-                    # email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=bloco_relacionado_associado, email=consultaPosicao[2], data=consultaPosicao[6], caderno=consultaPosicao[7])
-                    os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
+                        c=0
+                        for z in bloco_texto_associado_list:
+                            if re.search(nome, z, re.IGNORECASE):
+                                t1 = bloco_texto_associado_list[c-2:c]
+                                t2 = bloco_texto_associado_list[c:c+10]
+                                t3 = t1+t2
+                                t3_string=''.join(t3)
+
+                                trecho_cortado='...'+t3_string+'...'
+
+                                sql = ("update processos set conteudo = %s"
+                                "where id= %s")
+                                update(sql, trecho_cortado, consultaPosicao[3])
+                        
+
+                                email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=trecho_cortado, email=consultaPosicao[2], data=consultaPosicao[6], caderno=consultaPosicao[7])
+                                os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
+                                
+                            c=c+1  
+
+                
+
 
     cursor.close()
     db_connection.close()
