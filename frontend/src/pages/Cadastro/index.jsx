@@ -1,4 +1,4 @@
-import React from "react";
+import  React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 
@@ -7,7 +7,13 @@ import { GlobalStyle } from "./globalStyles"
 import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha, DivInputButton, Trash } from "./styles"
 import NavBarHome from "../../components/navBar/navBarHome/index.navBarHome";
 
+let arrayEscolas = []
+
 function Cadastro() {
+  const [escolas, setEscolas] = useState([])
+
+
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const onSubmit = async data => {
@@ -39,17 +45,30 @@ function Cadastro() {
 
   // Lista Escolas
 
-  var arrayEscolas = []
-
   function submitEscola() {
-    let escola = document.getElementsByName('escola').value
+    let escola = document.getElementById('escolaTxt').value
     arrayEscolas.push(escola)
   }
 
+  function trash(esc) {
+    // let posicao = arrayEscolas.findIndex((e) => e == esc)
+    // arrayEscolas.splice(posicao, 1)
+    let a = arrayEscolas.filter(item => item != esc)
+    a.map((b) => arrayEscolas.push(b))
+    console.log(a)
+  }
+
+  // const todasEscolas = arrayEscolas.map((esc) => (
+  //   <li style={{ display: 'flex', justifyContent: 'space-between' }} key={esc}>
+  //     {esc}
+  //     <Trash style={{ cursor: 'pointer' }} onClick={() => {trash(esc)}}><ion-icon name="trash-outline"></ion-icon></Trash>
+  //   </li>
+  // ))
+
   const todasEscolas = arrayEscolas.map((esc) => (
-    <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <li style={{ display: 'flex', justifyContent: 'space-between' }} key={esc} >
       {esc}
-      <Trash style={{ cursor: 'pointer' }}><ion-icon name="trash-outline"></ion-icon></Trash>
+      <Trash style={{ cursor: 'pointer' }} onClick={() => {trash(esc)}}><ion-icon name="trash-outline"></ion-icon></Trash>
     </li>
   ))
 
@@ -106,7 +125,15 @@ function Cadastro() {
             </DivInputButton>
             <DivListaEscolas>
                 <ul style={{ listStyle: 'none' }}>
-                    {todasEscolas}
+                  {/* {arrayEscolas.map((value, index) => {
+                    return <li style={{ display: 'flex', justifyContent: 'space-between' }} key={index}>
+                              {value}
+                              <Trash style={{ cursor: 'pointer' }} onClick={(e) => {trash(value)}}><ion-icon name="trash-outline"></ion-icon></Trash>
+                            </li>
+                  })} */}
+                  <li>
+                      {todasEscolas}
+                  </li>
                 </ul>
             </DivListaEscolas>
           </CamposEscola>

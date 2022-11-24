@@ -34,14 +34,12 @@ function PaginaModal() {
         function fechar() {
             document.querySelector('.modal').classList.remove('show')
         }    
-
-
         
         return (
             <>
                 <Container>
                     <Modal className="modal">
-                        <div className="botao-fechar">
+                        <div className="botao-fechar" style={{marginLeft: '95%'}}>
                             <BotaoFecharModal onClick={fechar}>&times;</BotaoFecharModal>
                         </div>
                         <Paragrafo style={{ fontFamily: 'Roboto' }}>Nome:ㅤㅤ<span className="subtitulo-modal">{usuarios.nome}</span></Paragrafo>

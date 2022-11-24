@@ -67,11 +67,11 @@ def leitor():
                             "where id= %s")
                     update(sql, bloco_relacionado_associado, consultaPosicao[3])
 
-                    email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=bloco_relacionado_associado, email=consultaPosicao[2], data=consultaPosicao[6], caderno=consultaPosicao[7])
+                    db_connection.commit()
+                    # email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=bloco_relacionado_associado, email=consultaPosicao[2], data=consultaPosicao[6], caderno=consultaPosicao[7])
                     os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
 
     cursor.close()
-    db_connection.commit()
     db_connection.close()
     os.remove('monitorando/arquivo_monitoramento.txt')
 

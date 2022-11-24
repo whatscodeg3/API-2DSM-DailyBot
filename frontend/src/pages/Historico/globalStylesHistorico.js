@@ -9,7 +9,7 @@ const GlobalStyleHistorico = createGlobalStyle`
 
     html { 
         width: 100%;
-        height: 100%;
+        min-height: 100%;
         background: linear-gradient(142.3deg, #EA7A67 39.14%, #F5B769 91.7%);
         /* background: url(./fundo.svg) no-repeat center center fixed; 
         -webkit-background-size: cover;
@@ -19,12 +19,14 @@ const GlobalStyleHistorico = createGlobalStyle`
         padding: 0;
         margin: 0;
         padding-right:50px;
+        @media (max-width:768px) {
+            padding-right: 0;
+        }
     }
 
     body {
         width: 100%;
-        height: 100%;
-        position: relative;
+        min-height: 100%;
         overflow-y: hidden;
         overflow-x: hidden;
         padding: 0;
@@ -32,20 +34,8 @@ const GlobalStyleHistorico = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
     }
 
-    p{
-        content: '';
-    }
-
-    section {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 10%;
-        left: 5%;
-    }
-
     h1 {
-        font-size: max(2.2vw , min(20px));;
+        font-size: max(2.2vw , min(40px));
         color: #fff;
         font-family: 'Roboto';
         padding-top: 2%;
