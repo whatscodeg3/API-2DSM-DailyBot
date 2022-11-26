@@ -7,6 +7,8 @@ export const TituloPesquisa = styled.li`
     padding-bottom: 2%;
     cursor: pointer;
     overflow-y: hidden;
+    display: flex;
+    padding-top: 10px;
 `
 export const BotaoModal = styled.input`
     background-color: #EB2626;
@@ -19,12 +21,26 @@ export const BotaoModal = styled.input`
     width: 13%;
     margin-right: 1%;
     border: none;
+    @media (max-width: 650px) {
+        display: none;
+    }
+`;
+
+export const BotaoModalInput = styled.div`
+    cursor: pointer;
+    font-size: max(4vw ,min(30px));
+    color: red;
+    display: none;
+    @media (max-width: 650px) {
+        display: flex;
+    }
 `;
 
 export const Ul_class = styled.ul`
     width: 100%;
     height: 100%;   
     a {
+        padding-left: 10px;
         color: #A92364;
         font-family: 'IBM Plex Sans';
         font-size: max(2vw , min(20px));
