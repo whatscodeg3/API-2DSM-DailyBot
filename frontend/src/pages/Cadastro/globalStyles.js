@@ -20,4 +20,9 @@ export const GlobalStyle = createGlobalStyle`
     -o-background-size: cover;
     background-size: cover;
   }
+
+
+  label{
+    font-size:max(2.2vw, min(14px))
+  }
 `

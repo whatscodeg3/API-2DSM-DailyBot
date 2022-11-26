@@ -27,6 +27,7 @@ export const DivContainer = styled.form`
 
 export const BotaoCadastrar = styled.button`
   margin: auto;
+  margin-bottom:70px;
   appearance: button;
   backface-visibility: hidden;
   background-color: #EA7A67;
@@ -35,7 +36,7 @@ export const BotaoCadastrar = styled.button`
   font-family: 'Roboto';
   font-size: 100%;
   height: 44px;
-  width: 15vw;
+  width: 90px;
   border: 2px solid white;
   cursor: pointer;
 `;
@@ -206,6 +207,7 @@ export const DivRegras = styled.div`
   width: 100%;
   label {
     color: #F3F3F3;
+    font-size:max(1.8vw, min(12px));
   }
 `
 export const InputButton = styled.input`

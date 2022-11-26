@@ -31,7 +31,7 @@ function Cadastro() {
 
   function adicionaEscola() {
     let escola = document.getElementById('escolaInput').value
-    escolas.push({id: escolas.length, value: escola})
+    if(escola.length != 0){escolas.push({id: escolas.length, value: escola})}
     document.getElementById('escolaInput').value = ''
   }
 

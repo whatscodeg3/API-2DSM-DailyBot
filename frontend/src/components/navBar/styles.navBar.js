@@ -27,12 +27,12 @@ export const Bar = styled.aside`
             width: 100%;
             display: flex;
             justify-content: center;
-            gap: 7vw;
+            gap: 5vw;
             overflow-y: hidden;
         }
         img{
             padding-top:10px;
-            margin-right: 15px;
+            margin-right: 10px;
         }
     }
 `;
