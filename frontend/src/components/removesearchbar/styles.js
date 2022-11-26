@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 export const Search = styled.section`
-    width: 120%;
-    height: 100%;
+    width: 100%;
+    height: 3000px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     overflow-y: hidden;
-    padding-top: 3%;
-    padding-left: 3%;
+    padding-top: 40px;
 `;
 
 export const SearchOption = styled.div`
@@ -17,16 +17,19 @@ export const SearchOption = styled.div`
     align-items: center;
     background-color: #fff;
     border-radius: 50px;
-    box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.25);
-    margin-bottom: 2%;
+    box-shadow: 6px 7px 5px 3px rgba(0, 0, 0, 0.25);
+    margin-bottom: 7vh;
     overflow-y: hidden;
     padding-left: 1%;
+    @media (max-width:530px) {
+        margin-bottom: 7vh;
+    }
 `;
 
 export const Imagem = styled.img`
-    min-width: 25px;
-    max-width: 2vw;
-    margin-right: 10px;
+    min-width: 30px;
+    max-width: 3vw;
+    margin-right: 15px;
     margin-left: 1.5%;
 `;
 
@@ -34,7 +37,8 @@ export const Txt = styled.input`
     border: none;
     width: 100%;
     font-size: max(2vw , min(20px));
-    height: 10vh;
+    height: 5vw;
+    min-height: 50px;
     outline: none;
     padding-left: 1%;
     padding-right: 2%;
@@ -45,5 +49,4 @@ export const Nomes = styled.div`
     overflow-y: hidden;
     flex-direction: column;
     align-items: flex-start;
-    overflow-y: hidden;
 `;

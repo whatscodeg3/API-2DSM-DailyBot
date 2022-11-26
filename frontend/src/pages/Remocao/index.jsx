@@ -1,6 +1,6 @@
 import React from "react";
 import { GlobalStyle } from './globalStyles'
-import { DivLista, Titulo } from './styles'
+import { DivLista, Titulo, DivPrincipal, PosicaoTitulo } from './styles'
 import RemoveSearchBar from "../../components/removesearchbar";
 import PaginaModal from "../../components/ModalRemover/paginaModal";
 import NavBarRemocao from "../../components/navBar/navBarRemocao/index.navBarHome";
@@ -11,10 +11,14 @@ function Remocao() {
         <>
             <GlobalStyle />
             <NavBarRemocao />
-            <Titulo>Remoção de associados:</Titulo>
-            <DivLista>
-                <RemoveSearchBar />
-            </DivLista>
+            <DivPrincipal>
+                <PosicaoTitulo>
+                    <Titulo>Remoção de associados:</Titulo>
+                </PosicaoTitulo>
+                <DivLista>
+                    <RemoveSearchBar />
+                </DivLista>
+            </DivPrincipal>
         </>
     )
 }
