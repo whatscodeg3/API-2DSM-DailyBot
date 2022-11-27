@@ -17,20 +17,17 @@ function NavBarHome() {
         <>
             <Bar>
                 <header>
-                    <DivButton href="/home">
-                        <Icon><ion-icon name="home"></ion-icon></Icon>
+                    <DivButton>
+                        <a href="/"><Icon><ion-icon name="home"></ion-icon></Icon></a>
                     </DivButton>
-                    <DivButton href="/cadastro">
-                        <Icon><ion-icon name="person-add"></ion-icon></Icon>
+                    <DivButton >
+                        <a href="/cadastro"><Icon><ion-icon name="person-add"></ion-icon></Icon></a>
                     </DivButton>
-                    <DivButton href="/remocao">
-                        <Icon><ion-icon name="person-remove"></ion-icon></Icon>
+                    <DivButton >
+                        <a href="/remocao"><Icon><ion-icon name="person-remove"></ion-icon></Icon></a>
                     </DivButton>
-                    <DivButton href="https://b24-rbv154.bitrix24.com.br/calendar/">
-                        <IconAtalho><ion-icon name="reader" ></ion-icon></IconAtalho>
-                    </DivButton>
-                    <DivButton href="/">
-                        <IconExit><ion-icon name="log-out-sharp"></ion-icon></IconExit>
+                    <DivButton >
+                        <a href="https://b24-rbv154.bitrix24.com.br/calendar/"><IconAtalho><ion-icon name="reader" ></ion-icon></IconAtalho></a>
                     </DivButton>
                     <DivButton onClick={handleLogout}>
                         <IconExit><ion-icon name="log-out-sharp"></ion-icon></IconExit>

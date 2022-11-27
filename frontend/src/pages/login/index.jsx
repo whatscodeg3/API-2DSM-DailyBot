@@ -2,16 +2,10 @@ import React, { useSate, useContext } from 'react';
 import { useForm } from "react-hook-form";
 
 import robo from '../../assets/img/robo.svg';
-<<<<<<< HEAD
-import { api } from "../../services/api"
-import { DivLogin, DivImage, DivGeral } from './styles'
-import { GlobalStyle } from './globalStyles';
-=======
 import midall from '../../assets/img/whiteLogo.svg';
-import api from "../../services/api"
+import { api } from "../../services/api"
 import { DivLogin, DivImage, DivGeral, DivSubmit, DivParagrafoLogin, DivGeralLogin, Hr, DivHr, DivLabel } from './styles'
 import { GlobalStyle } from './globalStyles'
->>>>>>> f3ce4b261cd0739d7419ba9d757aa711a31a5982
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/auth';
 
@@ -34,15 +28,15 @@ function Login() {
           <Hr />
         </DivHr>
 
-        
+
         <DivGeralLogin>
           <DivImage>
             <img src={robo} alt="robo" />
-            <h1>Olá, eu sou<br/> Dailybot...</h1>
+            <h1>Olá, eu sou<br /> Dailybot...</h1>
           </DivImage>
           <DivLogin onSubmit={handleSubmit(onSubmit)}>
             <DivParagrafoLogin>
-              <a href="https://www.midall.com.br" style={{cursor: "pointer"}}><img src={midall} alt="midall_icon" /></a>
+              <a href="https://www.midall.com.br" style={{ cursor: "pointer" }}><img src={midall} alt="midall_icon" /></a>
               <h1>Login</h1>
             </DivParagrafoLogin>
             <DivLabel>

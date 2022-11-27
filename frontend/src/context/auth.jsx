@@ -39,7 +39,13 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("token", token);
 
     setUser(loggedUser);
-    navigate("/");
+    const adminVerification = 'admin' || 'administrador' || 'adm';
+    if (loggedUser.nome.toLowerCase() === adminVerification) {
+      navigate("/");
+    }
+    else {
+      navigate(`${loggedUser.id}`);
+    }
   };
 
   const logout = () => {

@@ -24,6 +24,8 @@ const Rotas = () => {
       : <Navigate to='/login' />
   }
 
+
+
   return (
     <div>
       <AuthProvider>
@@ -32,7 +34,7 @@ const Rotas = () => {
           <Route exact path="/historico" element={<Private><Historico /></Private>} />
           <Route exact path=":userId" element={<Private><Historico /></Private>} component={Historico} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/cadastro" element={<Cadastro />} />
+          <Route exact path="/cadastro" element={<Private><Cadastro /></Private>} />
           <Route exact path="/remocao" element={<Private><Remocao /></Private>} />
         </ Routes>
       </AuthProvider >
