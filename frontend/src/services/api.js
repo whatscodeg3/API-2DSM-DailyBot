@@ -5,10 +5,10 @@ axios.defaults.headers.common = {
   "Content-Type": "application/json"
 }
 
-const api = axios.create({
+export const api = axios.create({
   baseURL: "http://localhost:7071"
 })
 
-
-
-export default api;
+export const createSession = async (email, senha) => {
+  return api.post('/login', { email, senha });
+}

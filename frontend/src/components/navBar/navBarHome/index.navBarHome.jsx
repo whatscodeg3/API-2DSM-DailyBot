@@ -1,10 +1,19 @@
-import React from "react";
-import whiteLogo from "../../../assets/img/whiteLogo.svg"
-import { Bar, Icon, DivButton } from "../styles.navBar"
+import React, { useContext } from "react";
 
-function NavBarHome(){
+import { AuthContext } from "../../../context/auth";
 
-    return(
+import whiteLogo from "../../../assets/img/whiteLogo.svg";
+import { Bar, Icon, DivButton, IconExit, IconAtalho } from "../styles.navBar";
+
+function NavBarHome() {
+    const { logout } = useContext(AuthContext);
+
+
+    const handleLogout = () => {
+        logout();
+    }
+
+    return (
         <>
             <Bar>
                 <header>
@@ -17,6 +26,10 @@ function NavBarHome(){
                     <DivButton href="#pesquisa">
                         <Icon><ion-icon name="search"></ion-icon></Icon>
                     </DivButton>
+                    <DivButton onClick={handleLogout}>
+                        <IconExit><ion-icon name="log-out-sharp"></ion-icon></IconExit>
+                    </DivButton>
+
                 </header>
                 <footer>
                     <img src={whiteLogo} alt="whiteLogo"></img>
@@ -27,4 +40,4 @@ function NavBarHome(){
 }
 
 
-export default  NavBarHome;
+export default NavBarHome;

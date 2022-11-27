@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './nomes.styled.css'
-import api from '../../services/api';
+import { api } from '../../services/api';
 import { Link } from "react-router-dom"
 // import { UlClass } from './style'
 
@@ -20,7 +20,7 @@ function UlNomes() {
     }, []);
 
     const listUsers = usuarios.map((usuario) => <li style={{ fontFamily: 'Roboto' }} className="titulo-pesquisa" key={usuario.nome}>
-        <Link to={`/${usuario.id}`}>{usuario.nome}</Link> 
+        <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
     </li>)
 
 

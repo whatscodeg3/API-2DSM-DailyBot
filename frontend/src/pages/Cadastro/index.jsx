@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 
-import api from "../../services/api"
+import { api } from "../../services/api"
 import { GlobalStyle } from "./globalStyles"
 import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha } from "./styles"
 
@@ -82,7 +82,7 @@ function Cadastro() {
 
           <CamposEscola>
             <input type="text" name="escola" id="escolaTxt" placeholder="Digite aqui..." {...register("escola", { required: true })} />
-    
+
             {/* <BotaoSubmit className="botaoSubmit" onClick={submit}><ion-icon name="arrow-forward-outline"></ion-icon></BotaoSubmit>
 
             <DivListaEscolas>
@@ -93,7 +93,7 @@ function Cadastro() {
                 </ul>
             </DivListaEscolas> */}
           </CamposEscola>
-          
+
 
           {/* <DivEndereco>
             <label htmlFor="endereco"><b style={{ color: 'white' }}>Endereço: </b></label>
