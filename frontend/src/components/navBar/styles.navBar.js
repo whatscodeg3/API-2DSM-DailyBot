@@ -35,6 +35,7 @@ export const Bar = styled.aside`
     }
 `;
 
+
 export const Bar2 = styled.aside`
     padding-top:10px;
     position:fixed;
@@ -46,10 +47,12 @@ export const Bar2 = styled.aside`
     display:flex;
     flex-direction: column;
     justify-content:space-between;
+
     img{
         padding-left:5px;
         width: 45px;    
     }
+
     @media (max-width:768px) {
         padding-top:0px;
         bottom: 0;
@@ -92,23 +95,22 @@ export const IconExit = styled.span`
 `;
 
 export const DivButton = styled.button`
-    margin-bottom: 15px;
-    background: #A92364;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    @media (max-width:768px) {
-        height: 100%;
-    }
-`;
+margin-bottom: 15px;
+background: #A92364;
+cursor: pointer;
+border: none;
+display: flex;
+@media(max-width: 768px) {
+    height: 100%
+}`
 
 export const DivButton2 = styled.a`
-    margin-bottom: 15px;
-    background: #EA7A67;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    @media (max-width:768px) {
-        height: 100%;
-    }
+margin-bottom: 15px;
+background: #EA7A67;
+cursor: pointer;
+border:none;
+display:flex;
+@media(max-width: 768px) {
+    height:100%
+}
 `;

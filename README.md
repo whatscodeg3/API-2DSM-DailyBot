@@ -29,7 +29,7 @@
 
 <br>
 
-> Status do Projeto: Em andamento 🚧
+> Status do Projeto: Concluído ✅
 
 <br>
 
@@ -104,7 +104,6 @@ Proposta: Desenvolver Crawler que consiga buscar, ler o arquivo e identificar o 
 | Media 🟨 | Eu como backoffice, quero que o sistema envie automaticamente as informações pegos pelo robô para o cliente, na forma de um e-mail. | Tem como valor a automatização do processo de comunicar o associado. | 3 | ✅ |
 | Baixo 🟩 | Eu como backoffice, quero uma área de busca de maneira a achar mais fácil, um associado especifico em meio a lista. | Tem como valor uma melhor experiência para o usuario. | 2 | ✅ |
 | Baixo 🟩 | Eu como cliente, quero um sistema de login para maior segurança, além de posteriormente transformar o software de uso interno, para externo. | Tem como valor a segurança de informações sensiveis, além de facilitar o trabalho posterior ao projeto. | 3 | ✅ |
-| Baixo 🟩 | Eu como backoffice, quero um sistema uma maneira de poder registrar prazos, para poder ter o controle dos mesmos e notificar os associados. | Tem como valor a a facilitação de uma das obrigações do backoffice, tornando seu trabalho mais eficiente e agradável | 4 | 🔄 |
 
 
 - Tarefas geradas pelas User Stories ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/blob/main/doc/sprints/Tarefas.md))
@@ -128,18 +127,18 @@ Manual de Utilização ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-
 
 🔖 SPRINT 3 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/main/doc/sprints/Sprint%203)):  Concluído ✅
 
-🔖 SPRINT 4 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot)):  Aguardando 🚧
+🔖 SPRINT 4 ([Link da Pasta](https://github.com/whatscodeg3/API-2DSM-DailyBot/tree/main/doc/sprints/Sprint%204)):  Concluído ✅
 
 <br>
 
 ## :mortar_board: Equipe <a id="equipe"></a>
 
-| Membro                | Função        | Github                                                                                                                                                | Linkedin                                                                                                                                                                                         |
-| :-------------------: | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | 
-| Kevin Ribeiro         | Scrum Master  | <a href="https://github.com/KevinRomRib"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>   | <a href="https://www.linkedin.com/in/kevinrribeiro/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">                                  |
-| Jonatas Dallo         | Product Owner | <a href="https://github.com/Jonatas-Dallo"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/jonatas-dall%C3%B3-147638206"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>                |
-| Thiago Oliveira       | Desenvolvedor | <a href="https://github.com/ThiagoOAL"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>     | <a href="https://www.linkedin.com/in/thiagoleite042"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>                              |
-| Lucas Medici          | Desenvolvedor | <a href="https://github.com/LucasMedici"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>   | <a href="https://www.linkedin.com/in/lucas-medici-a15971237"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>                      |
+| Membro | Função | Github | Linkedin |
+| :----: | :----: | :----: | :------: | 
+| Kevin Ribeiro         | Scrum Master  | <a href="https://github.com/KevinRomRib"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>   | <a href="https://www.linkedin.com/in/kevinrribeiro/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"> |
+| Jonatas Dallo         | Product Owner | <a href="https://github.com/Jonatas-Dallo"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/jonatas-dall%C3%B3-147638206"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Thiago Oliveira       | Desenvolvedor | <a href="https://github.com/ThiagoOAL"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>     | <a href="https://www.linkedin.com/in/thiagoleite042"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| Lucas Medici          | Desenvolvedor | <a href="https://github.com/LucasMedici"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>   | <a href="https://www.linkedin.com/in/lucas-medici-a15971237"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | Matheus Augusto       | Desenvolvedor | <a href="https://github.com/MatheusAJesus"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/matheus-augusto-de-jesus-albernaz-918536216"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| Pedro Corrá           | Desenvolvedor | <a href="https://github.com/PHCorra"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>       | <a href="https://www.linkedin.com/in/pedro-c-95b57212a/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>                          |                       |
-| André Costa           | Desenvolvedor | <a href="https://github.com/fecosta290"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>       | <a href="https://www.linkedin.com/in/andré-felipe-353260243/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>                          |
+| Pedro Corrá           | Desenvolvedor | <a href="https://github.com/PHCorra"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>       | <a href="https://www.linkedin.com/in/pedro-c-95b57212a/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| André Costa           | Desenvolvedor | <a href="https://github.com/fecosta290"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>       | <a href="https://www.linkedin.com/in/andré-felipe-353260243/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |

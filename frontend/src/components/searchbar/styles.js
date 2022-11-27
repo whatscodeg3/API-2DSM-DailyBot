@@ -8,7 +8,10 @@ export const Search = styled.section`
     flex-direction: column;
     overflow-y: hidden;
     margin-top: 20%;
-    padding-top: 10%
+    padding-top: 10%;
+    @media (max-width:530px) {
+        margin-top: 10%;
+    }
 `;
 
 export const SearchOption = styled.div`
@@ -22,6 +25,9 @@ export const SearchOption = styled.div`
     margin-bottom: 15vh;
     overflow-y: hidden;
     padding-left: 1%;
+    @media (max-width:530px) {
+        margin-bottom: 7vh;
+    }
 `;
 
 export const Imagem = styled.img`
@@ -35,7 +41,8 @@ export const Txt = styled.input`
     border: none;
     width: 100%;
     font-size: max(2vw , min(20px));
-    height: 10vh;
+    height: 5vw;
+    min-height: 50px;
     outline: none;
     padding-left: 1%;
     padding-right: 2%;

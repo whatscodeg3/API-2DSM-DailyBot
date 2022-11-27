@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 import { api } from "../../services/api"
 import { GlobalStyle } from "./globalStyles"
-import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha } from "./styles"
+import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha, DivInputButton, Trash } from "./styles"
+import NavBarHome from "../../components/navBar/navBarHome/index.navBarHome";
 
 function Cadastro() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -36,9 +37,27 @@ function Cadastro() {
   //   console.log(arrayEscolas)
   // }
 
+  // Lista Escolas
+
+  var arrayEscolas = []
+
+  function submitEscola() {
+    let escola = document.getElementsByName('escola').value
+    arrayEscolas.push(escola)
+  }
+
+  const todasEscolas = arrayEscolas.map((esc) => (
+    <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+      {esc}
+      <Trash style={{ cursor: 'pointer' }}><ion-icon name="trash-outline"></ion-icon></Trash>
+    </li>
+  ))
+
   return (
     <>
+      <NavBarHome/>
       < GlobalStyle />
+
       <DivContainer onSubmit={handleSubmit(onSubmit)}>
         <DivNomeAssociado>
           <label htmlFor="name" ><b style={{ color: 'white' }}>Nome do associado(a): </b></label>
@@ -81,17 +100,22 @@ function Cadastro() {
           </DivEscolas>
 
           <CamposEscola>
+<<<<<<< HEAD
             <input type="text" name="escola" id="escolaTxt" placeholder="Digite aqui..." {...register("escola", { required: true })} />
 
             {/* <BotaoSubmit className="botaoSubmit" onClick={submit}><ion-icon name="arrow-forward-outline"></ion-icon></BotaoSubmit>
 
+=======
+            <DivInputButton>
+              <input type="text" name="escola" id="escolaTxt" placeholder="Digite aqui..." {...register("escola", { required: true })} />
+              <BotaoSubmit className="botaoSubmit" onClick={submitEscola}><ion-icon name="arrow-down-outline"></ion-icon></BotaoSubmit>
+            </DivInputButton>
+>>>>>>> f3ce4b261cd0739d7419ba9d757aa711a31a5982
             <DivListaEscolas>
-                <ul>
-                    <li>
-                      <ion-icon name="trash-outline"></ion-icon>
-                    </li>
+                <ul style={{ listStyle: 'none' }}>
+                    {todasEscolas}
                 </ul>
-            </DivListaEscolas> */}
+            </DivListaEscolas>
           </CamposEscola>
 
 

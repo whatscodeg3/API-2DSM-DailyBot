@@ -13,7 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
     font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100%;

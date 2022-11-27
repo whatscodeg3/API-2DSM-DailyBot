@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
     button#primeiro {
         margin: max(20px, min(10px));
         padding: max(15px, min(10px));
-        font-size: max(2.5vw , min(25px));
+        font-size: max(2.5vw , min(18px));
         font-family: 'Roboto';
         color: white;
         background: #EA7A67;

@@ -2,9 +2,16 @@ import React, { useSate, useContext } from 'react';
 import { useForm } from "react-hook-form";
 
 import robo from '../../assets/img/robo.svg';
+<<<<<<< HEAD
 import { api } from "../../services/api"
 import { DivLogin, DivImage, DivGeral } from './styles'
 import { GlobalStyle } from './globalStyles';
+=======
+import midall from '../../assets/img/whiteLogo.svg';
+import api from "../../services/api"
+import { DivLogin, DivImage, DivGeral, DivSubmit, DivParagrafoLogin, DivGeralLogin, Hr, DivHr, DivLabel } from './styles'
+import { GlobalStyle } from './globalStyles'
+>>>>>>> f3ce4b261cd0739d7419ba9d757aa711a31a5982
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/auth';
 
@@ -21,20 +28,36 @@ function Login() {
 
   return (
     <>
-      <DivGeral onSubmit={handleSubmit(onSubmit)}>
-        <GlobalStyle />
-        <DivImage>
-          <img src={robo} alt="robo" />
-          <h1>Olá, eu sou Dailybot...</h1>
-        </DivImage>
-        <DivLogin>
-          <h1>Login</h1>
-          <label htmlFor="email" ><b style={{ color: 'white' }}>E-mail: </b></label>
-          <input type="text" name="email" placeholder="Digite seu email" {...register("email", { required: true })} />
-          <label htmlFor="password"><b style={{ color: 'white' }}>Senha: </b></label>
-          <input type="password" name="password" placeholder="Digite sua senha" {...register("senha", { required: true })} />
-          <button type="submit" id="botaoLogin">Login</button>
-        </DivLogin>
+      <GlobalStyle />
+      <DivGeral>
+        <DivHr>
+          <Hr />
+        </DivHr>
+
+        
+        <DivGeralLogin>
+          <DivImage>
+            <img src={robo} alt="robo" />
+            <h1>Olá, eu sou<br/> Dailybot...</h1>
+          </DivImage>
+          <DivLogin onSubmit={handleSubmit(onSubmit)}>
+            <DivParagrafoLogin>
+              <a href="https://www.midall.com.br" style={{cursor: "pointer"}}><img src={midall} alt="midall_icon" /></a>
+              <h1>Login</h1>
+            </DivParagrafoLogin>
+            <DivLabel>
+              <label htmlFor="email" ><b style={{ color: 'white' }}>E-mail</b></label>
+            </DivLabel>
+            <input type="text" name="email" placeholder="Digite seu email" {...register("email", { required: true })} />
+            <DivLabel>
+              <label htmlFor="password"><b style={{ color: 'white' }}>Senha</b></label>
+            </DivLabel>
+            <input type="password" name="password" placeholder="Digite sua senha" {...register("senha", { required: true })} />
+            <DivSubmit>
+              <button type="submit" id="botaoLogin">Login</button>
+            </DivSubmit>
+          </DivLogin>
+        </DivGeralLogin>
       </DivGeral>
     </>
   )

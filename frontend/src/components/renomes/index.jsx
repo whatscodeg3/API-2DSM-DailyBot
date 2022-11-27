@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { api } from '../../services/api';
 import { Link } from "react-router-dom"
 import PaginaModal from "../ModalRemover/paginaModal"
-import { Ul_class, TituloPesquisa, BotaoModal } from './styles'
+import { Ul_class, TituloPesquisa, BotaoModal, BotaoModalInput } from './styles'
 
 
 
@@ -35,6 +35,9 @@ function RENomes() {
                 {usuarios.map((usuario) => (
                     <TituloPesquisa key={usuario.id} >
                         <BotaoModal type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}></BotaoModal>
+                        <BotaoModalInput type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}>
+                            <ion-icon name="trash"></ion-icon>
+                        </BotaoModalInput>
                         <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
                         <PaginaModal id={id} />
                     </TituloPesquisa>
