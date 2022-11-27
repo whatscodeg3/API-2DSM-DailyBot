@@ -1,12 +1,12 @@
 import React from "react";
 import whiteLogo from "../../../assets/img/whiteLogo.svg"
-import { Bar2, Icon, DivButton2, IconExit, IconAtalho } from "../styles.navBar"
+import { Bar, Icon, DivButton2, IconExit, IconAtalho } from "../styles.navBar"
 
 function NavBarRemocao(){
 
     return(
         <>
-            <Bar2>
+            <Bar style={{backgroundColor: " #EA7A67"}}>
                 <header>
                     <DivButton2 href="/home">
                         <Icon><ion-icon name="home"></ion-icon></Icon>
@@ -27,7 +27,7 @@ function NavBarRemocao(){
                 <footer>
                     <img src={whiteLogo} alt="whiteLogo"></img>
                 </footer>
-            </Bar2>
+            </Bar>
         </>
     )
 }

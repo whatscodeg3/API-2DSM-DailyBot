@@ -25,10 +25,10 @@ function Cadastro() {
       dataNascimento: new Date(data.dataNascimento),
 
     });
-
     navigate('/home');
   };
 
+  
   function adicionaEscola() {
     let escola = document.getElementById('escolaInput').value
     if(escola.length != 0){escolas.push({id: escolas.length, value: escola})}

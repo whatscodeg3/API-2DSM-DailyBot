@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
+
   }
   
   html {
@@ -23,6 +24,10 @@ export const GlobalStyle = createGlobalStyle`
 
 
   label{
-    font-size:max(2.2vw, min(14px))
+    font-size: max(1.2vw, min(14px))
   }
+
+  body::-webkit-scrollbar {
+        width: 0px;        
+    }   
 `

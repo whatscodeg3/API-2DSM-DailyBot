@@ -15,6 +15,10 @@ router.get("/associados/:id", associadoController.findOne);
 router.patch("/associados/:id", associadoController.update);
 router.delete("/associados/:id", associadoController.delete);
 
+
+//rota para reenviar emails
+router.post("/email/:id",associadoController.sendEmail);
+
 // Processos
 
 router.post("/processos", processoController.create);

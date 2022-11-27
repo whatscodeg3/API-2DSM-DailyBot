@@ -11,7 +11,7 @@ export const DivContainer = styled.form`
   text-align: center;
   justify-content: center; 
   gap: 10px;
-  font: white;
+  color: white;
   input {
     padding: 1em;
     border-radius: 16px;
@@ -28,7 +28,6 @@ export const DivContainer = styled.form`
 export const BotaoCadastrar = styled.button`
   margin: auto;
   margin-bottom:70px;
-  appearance: button;
   backface-visibility: hidden;
   background-color: #EA7A67;
   border-radius: 15px;
@@ -207,7 +206,7 @@ export const DivRegras = styled.div`
   width: 100%;
   label {
     color: #F3F3F3;
-    font-size:max(1.8vw, min(12px));
+    font-size:max(1vw, min(12px));
   }
 `
 export const InputButton = styled.input`
