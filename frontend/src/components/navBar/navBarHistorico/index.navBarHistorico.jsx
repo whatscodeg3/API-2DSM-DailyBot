@@ -3,15 +3,15 @@ import whiteLogo from "../../../assets/img/whiteLogo.svg"
 import { Bar, Icon } from "../styles.navBar"
 import { Link } from 'react-router-dom'
 
-function NavBarHistorico(){
-    return(
+function NavBarHistorico() {
+    return (
         <>
             <Bar>
                 <header>
-                    <Link to={"/home"}>
-                    <div style={{display: "flex"}}>
-                        <Icon><ion-icon name="home"></ion-icon></Icon>
-                    </div>
+                    <Link to={"/"}>
+                        <div style={{ display: "flex" }}>
+                            <Icon><ion-icon name="home"></ion-icon></Icon>
+                        </div>
                     </Link>
                 </header>
                 <footer>
@@ -19,7 +19,7 @@ function NavBarHistorico(){
                 </footer>
             </Bar>
         </>
-    )   
+    )
 
 }
 

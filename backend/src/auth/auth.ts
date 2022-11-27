@@ -29,9 +29,9 @@ export class AuthenticateUser {
 
     const generateTokenProvider = new GenerateTokenProvider();
     const token = await generateTokenProvider.execute(userAlreadyExist.id);
-    const { id } = userAlreadyExist;
+    const { id, nome } = userAlreadyExist;
 
-    return { token, email, id };
+    return { token, email, nome, id };
 
 
   }

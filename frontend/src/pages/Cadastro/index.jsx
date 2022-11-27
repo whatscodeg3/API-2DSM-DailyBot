@@ -22,7 +22,7 @@ function Cadastro() {
 
     });
 
-    navigate('/home');
+    navigate('/');
   };
 
 
@@ -55,7 +55,7 @@ function Cadastro() {
 
   return (
     <>
-      <NavBarHome/>
+      <NavBarHome />
       < GlobalStyle />
 
       <DivContainer onSubmit={handleSubmit(onSubmit)}>
@@ -100,21 +100,14 @@ function Cadastro() {
           </DivEscolas>
 
           <CamposEscola>
-<<<<<<< HEAD
-            <input type="text" name="escola" id="escolaTxt" placeholder="Digite aqui..." {...register("escola", { required: true })} />
-
-            {/* <BotaoSubmit className="botaoSubmit" onClick={submit}><ion-icon name="arrow-forward-outline"></ion-icon></BotaoSubmit>
-
-=======
             <DivInputButton>
               <input type="text" name="escola" id="escolaTxt" placeholder="Digite aqui..." {...register("escola", { required: true })} />
               <BotaoSubmit className="botaoSubmit" onClick={submitEscola}><ion-icon name="arrow-down-outline"></ion-icon></BotaoSubmit>
             </DivInputButton>
->>>>>>> f3ce4b261cd0739d7419ba9d757aa711a31a5982
             <DivListaEscolas>
-                <ul style={{ listStyle: 'none' }}>
-                    {todasEscolas}
-                </ul>
+              <ul style={{ listStyle: 'none' }}>
+                {todasEscolas}
+              </ul>
             </DivListaEscolas>
           </CamposEscola>
 
