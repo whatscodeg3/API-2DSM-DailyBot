@@ -1,4 +1,4 @@
-import { ProcessoModel } from "../database/models/associados";
+import { ProcessoModel } from "../database/models/modelos";
 
 export interface IProcessoAtributes {
   id?: string | number

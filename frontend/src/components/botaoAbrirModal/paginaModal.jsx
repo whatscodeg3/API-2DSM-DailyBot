@@ -5,29 +5,29 @@ import { useParams } from 'react-router-dom'
 import './styleAbrirFecharModal.css'
 import { Modal, BotaoFecharModal, Container, Paragrafo, Escola } from './style.js'
 
-import api from '../../services/api'
+import { api } from '../../services/api'
 
 
 function PaginaModal() {
 
-        // Trazendo dados do banco
+    // Trazendo dados do banco
 
-        const FindId = useParams();
-        const idUsuario = new Number(FindId.userId)
-    
-    
-        const [usuarios, setUsuarios] = useState([]);
-    
-        useEffect(() => {
-    
-            async function loadUsuarios() {
-    
-                const response = await api.get(`/associados/${idUsuario}`);
-                setUsuarios(response.data);
-    
-            }
-            loadUsuarios();
-        }, []);
+    const FindId = useParams();
+    const idUsuario = new Number(FindId.userId)
+
+
+    const [usuarios, setUsuarios] = useState([]);
+
+    useEffect(() => {
+
+        async function loadUsuarios() {
+
+            const response = await api.get(`/associados/${idUsuario}`);
+            setUsuarios(response.data);
+
+        }
+        loadUsuarios();
+    }, []);
 
 
         // fechar
@@ -49,10 +49,10 @@ function PaginaModal() {
                             {/* <Escola className="modal-historico">Escolas vinculadas:ㅤ</Escola>
                                 <Escola className="escolas-associadas" id="subtitulo"> &#9900; Escola 1</Escola>
                                 <Escola className="escolas-associadas" id="subtitulo"> &#9900; Escola 2</Escola> */}
-                    </Modal>
-                </Container>
-            </>
-        )
-    }
+                </Modal>
+            </Container>
+        </>
+    )
+}
 
 export default PaginaModal;

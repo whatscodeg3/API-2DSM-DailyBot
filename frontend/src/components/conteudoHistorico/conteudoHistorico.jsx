@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
-import api from '../../services/api'
+import { api } from '../../services/api'
 
 import { ConteudoPrincipal, Details, Summary, DivInput, InputButton, Trecho, Linha, ConteudoDatails } from './styles'
 import { ParagrafoNome } from "../cabeçalho/styles"
@@ -46,15 +46,15 @@ function Conteudo() {
         loadUsuarios();
     }, []);
 
-    
+
 
     // Opção Relatório
 
     var nomeProfessor = usuarios.nome
     var emailProfessor = usuarios.email
 
-     function gerarpdf(id){
-        var doc= new jsPDF({format: [2500, 600],});
+    function gerarpdf(id) {
+        var doc = new jsPDF({ format: [2500, 600], });
         const processoUnico = processos.find(processoId => processoId.id === id)
 
         var date = new Date()
@@ -63,7 +63,7 @@ function Conteudo() {
         doc.text('Sindicato dos professores', 10, 15)
         doc.text(`Relatório do dia ${dataDia}`, 130, 15)
 
-		var strArr = doc.splitTextToSize(`No dia ${processoUnico.dataProcesso} houve uma menção no caderno ${processoUnico.caderno} ao professor ${nomeProfessor}, que foi enviado para o e-mail de contato ${emailProfessor} pela equipe do sindicato atráves desse relatório, segue adiante o trecho encontrado de menção.`, 190)
+        var strArr = doc.splitTextToSize(`No dia ${processoUnico.dataProcesso} houve uma menção no caderno ${processoUnico.caderno} ao professor ${nomeProfessor}, que foi enviado para o e-mail de contato ${emailProfessor} pela equipe do sindicato atráves desse relatório, segue adiante o trecho encontrado de menção.`, 190)
         doc.text(strArr, 10, 30);
 
         var strArr = doc.splitTextToSize(processoUnico.conteudo, 190)
@@ -74,7 +74,7 @@ function Conteudo() {
 
     // Retornando valores na tela
 
-    if(processos == 'null') {
+    if (processos == 'null') {
         return (
             <>
                 <ConteudoPrincipal>
@@ -85,17 +85,17 @@ function Conteudo() {
     } else {
         const listProcess = processos.map((processo) => (
             <Details key={processo}>
-              <Summary>
-                <p>{processo.dataProcesso}</p>
-                <DivInput>
-                  <InputButton type="button" value="Relatório" onClick={() => gerarpdf(Number(processo.id))} />
-                  <InputButton type="button" value="Link" onClick={() => {return window.open(processo.link, '_blank')}} />
-                </DivInput>
-              </Summary>
-              <ConteudoDatails>
-                <Linha />
-                <Trecho>{processo.conteudo}</Trecho>
-              </ConteudoDatails>
+                <Summary>
+                    <p>{processo.dataProcesso}</p>
+                    <DivInput>
+                        <InputButton type="button" value="Relatório" onClick={() => gerarpdf(Number(processo.id))} />
+                        <InputButton type="button" value="Link" onClick={() => { return window.open(processo.link, '_blank') }} />
+                    </DivInput>
+                </Summary>
+                <ConteudoDatails>
+                    <Linha />
+                    <Trecho>{processo.conteudo}</Trecho>
+                </ConteudoDatails>
             </Details>
         ));
         return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './nomes.styled.css'
-import api from '../../services/api';
+import { api } from '../../services/api';
 import { Link } from "react-router-dom"
 // import { UlClass } from './style'
 

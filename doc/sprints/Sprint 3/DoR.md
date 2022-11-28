@@ -11,7 +11,7 @@
 <img src="/doc/front-end/mockup-pg2-3-sprint.jpeg" alt="mockup 2 página" width="655" height="500" >
 <img src="/doc/front-end/mockup-pg3-3-sprint.jpeg" alt="mockup 2 página" width="655" height="500" >
 
-- Backlog da Sprint 2
+- Backlog da Sprint 3
 
 | Prioridade | User Stories | Critério de Aceitação | Sprint | Status |
 | :--------: | :----------: | :-------------------: | :----: | :----: |
@@ -33,7 +33,7 @@
 
 <img src="/doc/front-end/MER-3-SPRINT.png" alt="Modelo Entidade Relacional" width="555" height="500" >
 
-- Burndown da 2 sprint:
+- Burndown da 3 sprint:
 
 <img src="/doc/front-end/burndown-3sp.jpeg" alt="Burndown 3 sprint" width="655" height="500" >
 

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import './listaEscola.css'
 
-import api from "../../services/api"
+import { api } from "../../services/api"
 import { GlobalStyle } from "./globalStyles"
 import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha, DivInputButton, Trash } from "./styles"
 import NavBarHome from "../../components/navBar/navBarHome/index.navBarHome";
