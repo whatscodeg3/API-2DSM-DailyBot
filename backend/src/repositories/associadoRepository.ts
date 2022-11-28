@@ -1,4 +1,4 @@
-import { AssociadoModel } from "../database/models/associados";
+import { AssociadoModel } from "../database/models/modelos";
 import { IEscolaAtributes } from "./escolaRepository";
 
 export interface IAssociadoAtributes {

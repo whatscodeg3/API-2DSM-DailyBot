@@ -1,14 +1,17 @@
 import styled from "styled-components"
 
 export const DivContainer = styled.form`
-  width: 100%;
+  padding-top:3%;
+  margin:auto;
+  min-width:300px;
+  max-width:500px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   text-align: center;
   justify-content: center; 
   gap: 10px;
-  font: white;
+  color: white;
   input {
     padding: 1em;
     border-radius: 16px;
@@ -17,11 +20,14 @@ export const DivContainer = styled.form`
     background-color: #FFCCC3;
   } 
   overflow-y: hidden;
+  @media (max-width:520px) {
+    margin: 0 15px;
+  }
 `
 
 export const BotaoCadastrar = styled.button`
   margin: auto;
-  appearance: button;
+  margin-bottom:70px;
   backface-visibility: hidden;
   background-color: #EA7A67;
   border-radius: 15px;
@@ -29,7 +35,7 @@ export const BotaoCadastrar = styled.button`
   font-family: 'Roboto';
   font-size: 100%;
   height: 44px;
-  width: 15vw;
+  width: 90px;
   border: 2px solid white;
   cursor: pointer;
 `;
@@ -200,6 +206,7 @@ export const DivRegras = styled.div`
   width: 100%;
   label {
     color: #F3F3F3;
+    font-size:max(1vw, min(12px));
   }
 `
 export const InputButton = styled.input`

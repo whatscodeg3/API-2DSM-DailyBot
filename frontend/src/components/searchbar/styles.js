@@ -27,11 +27,12 @@ export const SearchOption = styled.div`
     padding-left: 1%;
     @media (max-width:530px) {
         margin-bottom: 7vh;
+        width: 92%;
     }
 `;
 
 export const Imagem = styled.img`
-    min-width: 30px;
+    min-width: 20px;
     max-width: 3vw;
     margin-right: 15px;
     margin-left: 1.5%;
@@ -40,9 +41,9 @@ export const Imagem = styled.img`
 export const Txt = styled.input`
     border: none;
     width: 100%;
-    font-size: max(2vw , min(20px));
+    font-size: max(2vw , min(18px));
     height: 5vw;
-    min-height: 50px;
+    min-height: 30px;
     outline: none;
     padding-left: 1%;
     padding-right: 2%;
@@ -53,4 +54,20 @@ export const Nomes = styled.div`
     overflow-y: hidden;
     flex-direction: column;
     align-items: flex-start;
+    li{ 
+        display: flex;
+        align-items:center;
+        margin-bottom: 5px;
+        padding-left:7px;
+    }
+    @media (max-width:530px) {
+        width: 100%;
+    }
+    img{
+        display: flex;
+        max-width:20px;
+    }
+    div{
+        display: flex;
+    }
 `;

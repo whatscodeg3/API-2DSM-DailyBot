@@ -2,6 +2,8 @@ import express from "express";
 import associadoController from "./controllers/AssociadoController";
 import processoController from "./controllers/processoController";
 import escolaController from "./controllers/EscolaController";
+import { authenticateUser } from './auth/AuthenthicateController'
+import { ensureAuthenticated } from './middlewares/middlewareAuthentication';
 
 
 
@@ -14,6 +16,10 @@ router.get("/associados/findByEmail/:email", associadoController.findByEmail);
 router.get("/associados/:id", associadoController.findOne);
 router.patch("/associados/:id", associadoController.update);
 router.delete("/associados/:id", associadoController.delete);
+
+
+//rota para reenviar emails
+router.post("/email/:id",associadoController.sendEmail);
 
 // Processos
 
@@ -33,3 +39,6 @@ router.get("/escolas/:id", escolaController.findOne);
 router.patch("/escolas/:id", escolaController.update);
 router.delete("/escolas/:id", escolaController.delete);
 
+
+// Login
+router.post("/login", authenticateUser.handle.bind(authenticateUser));

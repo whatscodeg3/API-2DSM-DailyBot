@@ -1,12 +1,3 @@
-.titulo-pesquisa {
-    color: white;
-    font-family: 'IBM Plex Sans';
-    font-size: 2vw;
-    padding-bottom: 5px;
-    cursor: pointer;
-    overflow-y: hidden;
-}
-
 .ul_class {
     width: 100%;
     height: 60vh;
@@ -14,15 +5,23 @@
 
 .ul_class a {
     color: white;
-    font-family: 'IBM Plex Sans';
-    font-size: max(2vw , min(20px));
+    font-family: 'Roboto';
     cursor: pointer; 
     overflow-y: hidden;
 }
 
+/* estilização somente do texto na linha */
+.nome{
+
+    font-size: max(2vw , min(14px));
+    padding-left: 10px;
+}
+
+
+
 .ul_class::-webkit-scrollbar {
     width: 9px;
-    background-color: #EA7A67;
+    background-color: #eb8270;
 }
 
 .ul_class::-webkit-scrollbar-track-piece {

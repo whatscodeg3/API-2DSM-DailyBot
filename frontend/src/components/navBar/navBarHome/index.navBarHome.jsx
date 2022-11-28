@@ -1,28 +1,38 @@
-import React from "react";
-import whiteLogo from "../../../assets/img/whiteLogo.svg"
-import { Bar, Icon, DivButton, IconExit, IconAtalho } from "../styles.navBar"
+import React, { useContext } from "react";
 
-function NavBarHome(){
+import { AuthContext } from "../../../context/auth";
 
-    return(
+import whiteLogo from "../../../assets/img/whiteLogo.svg";
+import { Bar, Icon, DivButton, IconExit, IconAtalho } from "../styles.navBar";
+
+function NavBarHome() {
+    const { logout } = useContext(AuthContext);
+
+
+    const handleLogout = () => {
+        logout();
+    }
+
+    return (
         <>
             <Bar>
                 <header>
-                    <DivButton href="/home">
-                        <Icon><ion-icon name="home"></ion-icon></Icon>
+                    <DivButton>
+                        <a href="/"><Icon><ion-icon name="home"></ion-icon></Icon></a>
                     </DivButton>
-                    <DivButton href="/cadastro">
-                        <Icon><ion-icon name="person-add"></ion-icon></Icon>
+                    <DivButton >
+                        <a href="/cadastro"><Icon><ion-icon name="person-add"></ion-icon></Icon></a>
                     </DivButton>
-                    <DivButton href="/remocao">
-                        <Icon><ion-icon name="person-remove"></ion-icon></Icon>
+                    <DivButton >
+                        <a href="/remocao"><Icon><ion-icon name="person-remove"></ion-icon></Icon></a>
                     </DivButton>
-                    <DivButton href="https://b24-rbv154.bitrix24.com.br/calendar/">
-                        <IconAtalho><ion-icon name="reader" ></ion-icon></IconAtalho>
+                    <DivButton >
+                        <a href="https://b24-rbv154.bitrix24.com.br/calendar/"><IconAtalho><ion-icon name="reader" ></ion-icon></IconAtalho></a>
                     </DivButton>
-                    <DivButton href="/">
+                    <DivButton onClick={handleLogout}>
                         <IconExit><ion-icon name="log-out-sharp"></ion-icon></IconExit>
                     </DivButton>
+
                 </header>
                 <footer>
                     <img src={whiteLogo} alt="whiteLogo"></img>
@@ -33,4 +43,4 @@ function NavBarHome(){
 }
 
 
-export default  NavBarHome;
+export default NavBarHome;

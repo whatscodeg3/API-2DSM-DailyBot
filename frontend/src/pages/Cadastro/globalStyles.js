@@ -10,12 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100%;
+
   }
   
   html {
@@ -25,4 +21,13 @@ export const GlobalStyle = createGlobalStyle`
     -o-background-size: cover;
     background-size: cover;
   }
+
+
+  label{
+    font-size: max(1.2vw, min(14px))
+  }
+
+  body::-webkit-scrollbar {
+        width: 0px;        
+    }   
 `

@@ -1,13 +1,14 @@
 import { Request, Response } from "express";
 import { AssociadoRepository } from "../repositories/associadoRepository";
 
+import  fs  from "fs/promises"
+
 interface IAssociadoController {
   create: (req: Request, res: Response) => Promise<Response>;
   findAll: (req: Request, res: Response) => Promise<Response>;
   findOne: (req: Request, res: Response) => Promise<Response>;
   update: (req: Request, res: Response) => Promise<Response>;
   delete: (req: Request, res: Response) => Promise<Response>;
-
 }
 
 
@@ -70,6 +71,11 @@ export class AssociadoController implements IAssociadoController {
     await associadoRepository.delete(id);
     return res.status(204).send("Associado deletado com sucesso");
   };
+
+  async sendEmail(req: Request){
+    const { id } = req.params;
+    fs.writeFile('./src/robo_leitor_pdf/monitorando/arquivo_monitoramento.txt', id.toString())
+  }
 }
 
 export default new AssociadoController(new AssociadoRepository);

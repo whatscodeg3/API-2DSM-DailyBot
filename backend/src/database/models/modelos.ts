@@ -1,48 +1,3 @@
-// import { DataTypes, Model, Optional } from 'sequelize';
-// import db from '../config';
-
-// interface IAssociado {
-//   id: number;
-//   nome: string;
-//   cpf: string;
-//   email: string;
-//   dataNascimento: Date;
-// }
-
-// export interface IAssociadoInput extends Optional<IAssociado, 'id'> { };
-
-// export class Associado extends Model<IAssociado, IAssociadoInput> implements IAssociado {
-//   public id!: number;
-//   public nome!: string;
-//   public cpf!: string;
-//   public email!: string;
-//   public dataNascimento: Date;
-// }
-
-// Associado.init({
-//   id: {
-//     type: DataTypes.INTEGER.UNSIGNED,
-//     autoIncrement: true,
-//     primaryKey: true,
-//   },
-//   nome: {
-//     type: DataTypes.STRING,
-//     allowNull: false,
-//   },
-//   cpf: {
-//     type: DataTypes.STRING,
-//     allowNull: false,
-//   },
-//   email: {
-//     type: DataTypes.STRING,
-//     allowNull: false,
-//   },
-//   dataNascimento: {
-//     type: DataTypes.DATE,
-//     allowNull: false,
-//   }
-// }, { sequelize: db });
-
 import { DataTypes } from "sequelize";
 import db from "../config";
 
@@ -104,6 +59,10 @@ export const ProcessoModel = db.define("processos", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  emailEnviado: {
+    type: DataTypes.INTEGER,
+    allowNull: true
+  }
 });
 
 export const EscolaModel = db.define("escolas", {

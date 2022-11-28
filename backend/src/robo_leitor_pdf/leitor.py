@@ -33,7 +33,8 @@ def email(nome,link,trecho, email, data, caderno):
 
 
 def leitor():
-    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="root", database="apimidall")
+
+    db_connection = mysql.connector.connect(host="localhost", user="root", passwd="@root", database="apimidall")
     cursor = db_connection.cursor(buffered=True)
 
 
@@ -48,6 +49,29 @@ def leitor():
         valor = valor
         valor2 = valor2
         return cursor.execute(sql,(valor,valor2))
+
+    # executa aqui quando clica no botão de tentar reenviar email para cada associado.
+    with open("monitorando/arquivo_monitoramento.txt", 'r') as arquivo:
+        falhaEmail = arquivo.read()
+        if falhaEmail == 'falha no envio do email':
+            consulta = select("select a.id, a.nome, a.email, p.id, p.conteudo, p.link, p.dataProcesso, p.caderno  from associados a, processos p where a.id = p.associadoId and p.emailEnviado=0;")
+
+            for processo in consulta:
+                try:
+                    email(nome=processo[1], link=processo[5], trecho=processo[4], email=processo[2], data=processo[6], caderno=processo[7])                                    
+                except smtplib.SMTPAuthenticationError:
+                    print(f'\n*** Erro ao enviar email de {processo[1]} ***\n')
+                else:
+                    print(f'\n*** Email de {processo[1]} enviado com sucesso ***\n') 
+                    sql3 = ("update processos set emailEnviado = %s where id= %s;")
+                    update(sql3, 1, processo[3] )
+
+            cursor.close()
+            db_connection.commit()
+            db_connection.close()
+            arquivo.close()
+            os.remove('monitorando/arquivo_monitoramento.txt')
+            return print('\n*** Processo de tentativa de reenvio de email concluído ***\n') 
             
     consulta = select("select a.id, a.nome, a.email, p.id, p.conteudo, p.link, p.dataProcesso, p.caderno  from associados a, processos p where a.id = p.associadoId;")
     for consultaPosicao in consulta:
@@ -78,16 +102,26 @@ def leitor():
                                 sql = ("update processos set conteudo = %s"
                                 "where id= %s")
                                 update(sql, trecho_cortado, consultaPosicao[3])
-                        
-
-                                email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=trecho_cortado, email=consultaPosicao[2], data=consultaPosicao[6], caderno=consultaPosicao[7])
-                                os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
                                 
+
+                                try:
+                                    email(nome=consultaPosicao[1], link=consultaPosicao[5], trecho=trecho_cortado, email=consultaPosicao[2], data=consultaPosicao[6], caderno=consultaPosicao[7])                                    
+                                except smtplib.SMTPAuthenticationError:
+                                    print('\n*** Erro ao enviar email ***\n')
+                                    sql2 = ("update processos set emailEnviado = %s where id= %s;")
+                                    update(sql2, 0, consultaPosicao[3] )
+                                else:
+                                    print('\n*** Email enviado com sucesso ***\n')
+                                    sql3 = ("update processos set emailEnviado = %s where id= %s;")
+                                    update(sql3, 1, consultaPosicao[3] )
+                                    
+                                os.remove(f'PDFs/{consultaPosicao[1]}.pdf')
+                            
                             c=c+1  
 
-                
-
-
+    
+    
+    
     cursor.close()
     db_connection.commit()
     db_connection.close()

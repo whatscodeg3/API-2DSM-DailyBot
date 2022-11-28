@@ -1,4 +1,4 @@
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 import './removestyleAbrirFecharModal.css'
 import { Modal, BotaoCancelar, BotaoExcluir, Container, ModalTexto } from './styles'
@@ -21,9 +21,9 @@ function PaginaModal({ id }) {
         <>
             <Container>
                 <Modal className="modal">
-                        <ModalTexto>Tem certeza que deseja <br /> excluir este associado?</ModalTexto>
-                        <BotaoCancelar onClick={fechar}>Cancelar</BotaoCancelar>
-                        <BotaoExcluir onClick={() => remover()}>Excluir</BotaoExcluir>
+                    <ModalTexto>Tem certeza que deseja <br /> excluir este associado?</ModalTexto>
+                    <BotaoCancelar onClick={fechar}>Cancelar</BotaoCancelar>
+                    <BotaoExcluir onClick={() => remover()}>Excluir</BotaoExcluir>
                 </Modal>
             </Container>
         </>

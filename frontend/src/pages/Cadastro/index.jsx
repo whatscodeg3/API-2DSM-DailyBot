@@ -1,13 +1,17 @@
-import React from "react";
+import  React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
+import './listaEscola.css'
 
-import api from "../../services/api"
+import { api } from "../../services/api"
 import { GlobalStyle } from "./globalStyles"
 import { DivContainer, CamposEscola, DivListaEscolas, BotaoSubmit, InputButton, BotaoCadastrar, DivNomeAssociado, DivCpfRg, DivDataNascEstadoCivil, DivEscolaEndereco, DivEmailTelefone, DivCpf, DivDataNasc, DivEscolas, DivEmail, DivRegras, DivSenha, DivInputButton, Trash } from "./styles"
 import NavBarHome from "../../components/navBar/navBarHome/index.navBarHome";
 
+
+
 function Cadastro() {
+  const [escolas, setEscolas] = useState([])
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const onSubmit = async data => {
@@ -21,43 +25,32 @@ function Cadastro() {
       dataNascimento: new Date(data.dataNascimento),
 
     });
-
     navigate('/home');
   };
 
-
-  // // Função escolas
-
-  // const arrayEscolas = []
-
-  // const escola = document.getElementById('escolaTxt')
-
-  // function submit() {
-  //   arrayEscolas.add(0, escola.value)
-  //   console.log(arrayEscolas)
-  // }
-
-  // Lista Escolas
-
-  var arrayEscolas = []
-
-  function submitEscola() {
-    let escola = document.getElementsByName('escola').value
-    arrayEscolas.push(escola)
+  
+  function adicionaEscola() {
+    let escola = document.getElementById('escolaInput').value
+    if(escola.length != 0){escolas.push({id: escolas.length, value: escola})}
+    document.getElementById('escolaInput').value = ''
   }
 
-  const todasEscolas = arrayEscolas.map((esc) => (
-    <li style={{ display: 'flex', justifyContent: 'space-between' }}>
-      {esc}
-      <Trash style={{ cursor: 'pointer' }}><ion-icon name="trash-outline"></ion-icon></Trash>
-    </li>
-  ))
+  function deletaEscola(index) {
+    const escolasCopy = Array.from(escolas)
+    escolasCopy.splice(index, 1)
+    setEscolas(escolasCopy);
+  }
+
+  //mostrar/esconder lista
+  let condicao ='esconder'
+  if(escolas.length > 0){
+    condicao = 'mostrar'
+  }
 
   return (
     <>
-      <NavBarHome/>
       < GlobalStyle />
-
+      <NavBarHome />
       <DivContainer onSubmit={handleSubmit(onSubmit)}>
         <DivNomeAssociado>
           <label htmlFor="name" ><b style={{ color: 'white' }}>Nome do associado(a): </b></label>
@@ -70,10 +63,6 @@ function Cadastro() {
             <label htmlFor="cpf"><b style={{ color: 'white' }}>CPF: </b></label>
             <input type="text" name="cpf" placeholder="Digite seu CPF" {...register("cpf", { required: true })} />
           </ DivCpf>
-          {/* < DivRg>
-            <label htmlFor="rg"><b style={{ color: 'white' }}>RG: </b></label>
-            <input type="text" name="rg" placeholder="Digite seu RG" {...register("rg", { required: true })} />
-          </ DivRg> */}
         </DivCpfRg>
 
         <DivDataNascEstadoCivil>
@@ -81,17 +70,6 @@ function Cadastro() {
             <label htmlFor="dataNascimento"><b style={{ color: 'white' }}>Data de Nascimento: </b></label>
             <input type="date" name="dataNascimento" placeholder="aaaa-mm-dd" {...register("dataNascimento", { required: true })} />
           </DivDataNasc>
-          {/* <DivEstadoCivil>
-            <label htmlFor="estadoCivil"><b style={{ color: '#F3F3F3' }}>Estado Civil: </b></label>
-            <select id="estadoCivil"  {...register("estadoCivvil", { required: true })}>
-              <option value=""></option>
-              <option value="solteiro">Solteiro</option>
-              <option value="casado">Casado</option>
-              <option value="separado">Separado</option>
-              <option value="divocriado">Divorciado</option>
-              <option value="viuvo">Viúvo</option>
-            </select>
-          </DivEstadoCivil> */}
         </DivDataNascEstadoCivil>
 
         <DivEscolaEndereco>
@@ -101,21 +79,20 @@ function Cadastro() {
 
           <CamposEscola>
             <DivInputButton>
-              <input type="text" name="escola" id="escolaTxt" placeholder="Digite aqui..." {...register("escola", { required: true })} />
-              <BotaoSubmit className="botaoSubmit" onClick={submitEscola}><ion-icon name="arrow-down-outline"></ion-icon></BotaoSubmit>
+              <input type="text" name="escola" id="escolaInput" placeholder="Digite aqui..." {...register("escola", { required: true })}/>
+              <BotaoSubmit className="botaoSubmit" onClick={adicionaEscola}><ion-icon name="arrow-down-outline"></ion-icon></BotaoSubmit>
             </DivInputButton>
-            <DivListaEscolas>
+            <DivListaEscolas className={condicao}>
                 <ul style={{ listStyle: 'none' }}>
-                    {todasEscolas}
+                  {escolas.map(({id,value}, index) => (
+                    <li id="escola" style={{ display: 'flex', justifyContent: 'space-between' }} key={id}>
+                      {value}
+                      <Trash style={{ cursor: 'pointer' }} onClick={() => {deletaEscola(index)}}><ion-icon name="trash-outline"></ion-icon></Trash>
+                    </li>
+                  ))}
                 </ul>
             </DivListaEscolas>
           </CamposEscola>
-          
-
-          {/* <DivEndereco>
-            <label htmlFor="endereco"><b style={{ color: 'white' }}>Endereço: </b></label>
-            <input type="text" name="endereco" placeholder="Digite seu endereco" {...register("endereco", { required: true })} />
-          </DivEndereco> */}
         </DivEscolaEndereco>
 
         <DivEmailTelefone>
@@ -123,13 +100,7 @@ function Cadastro() {
             <label htmlFor="email"><b style={{ color: 'white' }}>Email: </b></label>
             <input type="email" name="email" placeholder="Digite seu email" {...register("email", { required: true })} />
           </DivEmail>
-
-          {/* <DivTel>
-            <label htmlFor="telefone"><b style={{ color: 'white' }}>Telefone: </b></label>
-            <input type="tel" name="telefone" placeholder="(99) 9999-9999" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" {...register("telefone", { required: true })} />
-          </DivTel> */}
-
-        </DivEmailTelefone>
+       </DivEmailTelefone>
 
         <DivSenha>
           <label htmlFor="password"><b style={{ color: 'white' }}>Senha: </b></label>

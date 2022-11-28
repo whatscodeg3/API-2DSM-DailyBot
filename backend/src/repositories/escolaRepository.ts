@@ -1,11 +1,8 @@
-import { EscolaModel } from "../database/models/associados";
+import { EscolaModel } from "../database/models/modelos";
 
 export interface IEscolaAtributes {
   nome?: string;
 }
-
-
-
 
 export class EscolaRepository {
   async findAll() {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { ProcessoModel } from "../database/models/associados";
+import { ProcessoModel } from "../database/models/modelos";
 import { ProcessoRepository } from "../repositories/processoRepository";
 
 interface IProcessoController {

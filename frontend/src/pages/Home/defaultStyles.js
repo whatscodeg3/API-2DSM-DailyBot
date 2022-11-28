@@ -14,12 +14,3 @@ export const Principal = styled.div`
         margin-top:88px
     }
 `;
-
-// export const conteudoPrincipal = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     padding-top: 20%;
-//     width: 100%;
-// `;
-
