@@ -2,7 +2,7 @@
 
 - Video do projeto rodando:
 
- <a href="">Clique aqui! </a>
+ <a href="https://youtu.be/VzXsT7nAOhg">Clique aqui! </a>
 
 - Explicação do uso das tecnologias no codigo: 
 
