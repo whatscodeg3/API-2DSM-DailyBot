@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-export const Modal = styled.div`
+export const Modal = styled.section`
     background: #fff;
     border: 2px solid #A92364;
     position: absolute;
-    width: 30%;
-    height: 70%;
     border-radius: 10px;
     overflow-y: scroll;
     animation-duration: 2.5s;
@@ -19,7 +17,7 @@ export const BotaoModal = styled.input`
     padding: 0.5%;
     border-radius: 10px;
     font-family: 'IBM Plex Sans';
-    font-size: 25px;
+    font-size: max(1.7vw, min(20px));
     cursor: pointer;
 `;
 
@@ -33,12 +31,11 @@ export const BotaoFecharModal = styled.button`
     margin: 1%;
 `;
 
-export const Container = styled.div`
+export const Container = styled.main`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     padding-top: 1%;
-    padding-right: 10%;
 `;
 
 export const Paragrafo = styled.p`
@@ -46,7 +43,7 @@ export const Paragrafo = styled.p`
     flex-direction: row;
     align-items: center;
     color: #A92364;
-    font-size: 1.5rem;
+    font-size: max(1.5vw, min(15px));
     font-family: 'IBM Plex Sans';
     padding-bottom: 2%;
     padding-left: 5%;

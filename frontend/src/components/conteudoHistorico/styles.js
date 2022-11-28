@@ -6,14 +6,14 @@ export const ConteudoPrincipal = styled.div`
     padding-top: 1%;
     overflow: scroll;
     width: 100%;
-    height: 100%;
-    gap: 1%;
+    gap: 10px;
 `;
 
 export const Details = styled.details`
+    display: flex;
     background-color: #EA7A67;
     color: white;
-    font-size: 2rem;
+    font-size: max(2vw , min(20px));
     border-radius: 15px;
 `;
 
@@ -21,8 +21,8 @@ export const Summary = styled.summary`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     font-weight: 400;
     text-decoration: none;
     cursor: pointer;
@@ -35,8 +35,7 @@ export const DivInput = styled.div`
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     display: flex;
-    width: 25%;
-    gap: 10%;
+    gap: 15px;
 `;
 
 export const InputButton = styled.input`
@@ -47,10 +46,13 @@ export const InputButton = styled.input`
     border-radius: 15px;
     color: #EA7A67;
     font-weight: 600;
-    padding: 3%;
-    font-size: 1.7rem;
+    padding: 6px;
+    font-size: max(1.7vw, min(15px));
     align-items: center;
     cursor: pointer;
+    @media (max-width:768px) {
+        border: 2px solid #EA7A67;
+    }
 `;
 
 export const Trecho = styled.p`
@@ -96,3 +98,4 @@ export const DivButton = styled.a`
     bottom: 8px;
     right: 8px;
 `;
+

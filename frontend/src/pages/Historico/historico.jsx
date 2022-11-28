@@ -27,7 +27,6 @@ function Historico() {
                 <PaginaModal />
                 <Conteudo />
             </Principal>
-           
         </>
     )
 

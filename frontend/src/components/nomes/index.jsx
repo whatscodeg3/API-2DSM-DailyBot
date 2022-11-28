@@ -10,18 +10,45 @@ function UlNomes() {
     const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
-
         async function loadUsuarios() {
             const response = await api.get("/associados");
-            console.log(response.data);
             setUsuarios(response.data);
         }
         loadUsuarios();
     }, []);
 
-    const listUsers = usuarios.map((usuario) => <li style={{ fontFamily: 'Roboto' }} className="titulo-pesquisa" key={usuario.nome}>
-        <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
-    </li>)
+
+    const [processos, setProcessos] = useState([]);
+    useEffect(() => {
+        async function loadProcessos() {
+            const response = await api.get(`/processos`);
+            setProcessos(response.data);
+        }
+        loadProcessos();
+    }, []);
+
+    const listUsers = usuarios.map((usuario) => {
+        let cor;
+        for(let processo of processos){
+            cor = 'semprocesso.svg'
+            if(processo.associadoId == usuario.id && processo.emailEnviado == 0){
+                cor = 'vermelho.svg'
+                break
+            }else if(processo.associadoId == usuario.id && processo.emailEnviado == 1){
+                cor = 'verde.svg'
+                break
+            }
+        };
+
+        if(usuario.nome != 'adm'){
+            return(
+                <li className="titulo-pesquisa" key={usuario.nome}>
+                    <img src={`./src/assets/img/${cor}`}/>
+                    <div><Link className="nome" to={`/${usuario.id}`}>{usuario.nome}</Link></div>
+                </li>
+            )
+        }
+    })
 
 
     return (

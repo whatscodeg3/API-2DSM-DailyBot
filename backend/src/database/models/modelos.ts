@@ -59,6 +59,10 @@ export const ProcessoModel = db.define("processos", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  emailEnviado: {
+    type: DataTypes.INTEGER,
+    allowNull: true
+  }
 });
 
 export const EscolaModel = db.define("escolas", {
