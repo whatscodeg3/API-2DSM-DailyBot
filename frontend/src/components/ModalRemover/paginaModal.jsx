@@ -22,8 +22,10 @@ function PaginaModal({ id }) {
             <Container>
                 <Modal className="modal">
                     <ModalTexto>Tem certeza que deseja <br /> excluir este associado?</ModalTexto>
-                    <BotaoCancelar onClick={fechar}>Cancelar</BotaoCancelar>
-                    <BotaoExcluir onClick={() => remover()}>Excluir</BotaoExcluir>
+                    <div style={{display: 'flex', gap: '70px', justifyContent: 'center'}}>
+                        <BotaoCancelar onClick={fechar}>Cancelar</BotaoCancelar>
+                        <BotaoExcluir onClick={() => remover()}>Excluir</BotaoExcluir>
+                    </div>
                 </Modal>
             </Container>
         </>

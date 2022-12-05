@@ -13,12 +13,11 @@ export const TituloPesquisa = styled.li`
 export const BotaoModal = styled.input`
     background-color: #EB2626;
     color: #fff;
-    padding: 0.5%;
     border-radius: 10px;
     font-family: 'IBM Plex Sans';
     font-size: 25px;
+    padding: 15px;
     cursor: pointer;
-    width: 13%;
     margin-right: 1%;
     border: none;
     @media (max-width: 650px) {
@@ -29,6 +28,7 @@ export const BotaoModal = styled.input`
 export const BotaoModalInput = styled.div`
     cursor: pointer;
     font-size: max(4vw ,min(30px));
+    z-index: 1;
     color: red;
     display: none;
     @media (max-width: 650px) {

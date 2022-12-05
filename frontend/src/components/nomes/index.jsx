@@ -43,7 +43,7 @@ function UlNomes() {
         if(usuario.nome != 'adm'){
             return(
                 <li className="titulo-pesquisa" key={usuario.nome}>
-                    <img src={`./src/assets/img/${cor}`}/>
+                    {/* <img src={`./src/assets/img/${cor}`}/> */}
                     <div><Link className="nome" to={`/${usuario.id}`}>{usuario.nome}</Link></div>
                 </li>
             )

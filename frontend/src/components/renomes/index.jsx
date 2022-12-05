@@ -27,21 +27,25 @@ function RENomes() {
         document.querySelector('.modal').classList.add('show')
     }
 
-
+    let nomes = usuarios.map((usuario) => {
+        if(usuario.nome != 'adm'){
+            return (
+                <TituloPesquisa key={usuario.id} >
+                    <BotaoModal type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}></BotaoModal>
+                    <BotaoModalInput type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}>
+                        <ion-icon name="trash"></ion-icon>
+                    </BotaoModalInput>
+                    <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
+                </TituloPesquisa>
+            )
+        }
+    })
 
     return (
         <>
+            <PaginaModal id={id} />
             <Ul_class id="lista_para_busca">
-                {usuarios.map((usuario) => (
-                    <TituloPesquisa key={usuario.id} >
-                        <BotaoModal type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}></BotaoModal>
-                        <BotaoModalInput type="button" value="Excluir" className="botao-modal" onClick={() => abrir(usuario.id)}>
-                            <ion-icon name="trash"></ion-icon>
-                        </BotaoModalInput>
-                        <Link to={`/${usuario.id}`}>{usuario.nome}</Link>
-                        <PaginaModal id={id} />
-                    </TituloPesquisa>
-                ))}
+                {nomes}
             </Ul_class>
         </>
     )

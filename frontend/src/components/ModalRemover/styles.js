@@ -4,13 +4,11 @@ import styled from 'styled-components'
 export const BotaoExcluir = styled.button`
     color: #fff;
     border: none;
-    font-size: 30px;
+    font-size: 25px;
+    padding: 15px;
     cursor: pointer;
     text-align: center;
-    margin-left: 24%;
     margin-bottom: 0.5%;
-    width: 30%;
-    height: 25%;
     background: #EB2626;
     box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
@@ -19,12 +17,10 @@ export const BotaoExcluir = styled.button`
 export const BotaoCancelar = styled.button`
     color: #fff;
     border: none;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     text-align: center;
-    margin-left: 8%;
-    width: 30%;
-    height: 25%;
+    padding: 15px;
     background: #26D04C;
     box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
@@ -42,10 +38,8 @@ export const ModalTexto = styled.p`
 
 export const Container = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding-top: 1%;
-    padding-right: 10%;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const BotaoModal = styled.input`
@@ -64,13 +58,12 @@ export const Modal = styled.div`
     background: #fff;
     border: 2px solid #A92364;
     position: absolute;
-    width: 60%;
-    height: 50%;
     border-radius: 20px;
     overflow-y: scroll;
     animation-duration: 2.5s;
     animation: animacao-modal 2s;
     display: none;
+    z-index: 2;
     box-sizing: border-box;
     padding: 2%;
     font-family: 'IBM Plex Sans';
